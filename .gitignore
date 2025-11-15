@@ -1,0 +1,139 @@
+# Secrets and sensitive files
+*.conf
+*.key
+*.pem
+*_rsa
+*_rsa.pub
+*_ed25519
+*_ed25519.pub
+*.env
+.env
+.env.local
+secrets/
+credentials/
+auth_keys/
+
+# SSH keys
+id_rsa
+id_ed25519
+homelab_rsa
+known_hosts
+
+# Tailscale auth keys (except examples)
+tskey-*
+!*.example
+
+# Cloud-init generated files
+user-data-*.yaml
+meta-data-*.yaml
+network-config-*.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+*.bak
+*.backup
+
+# Ansible
+*.retry
+.ansible/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Local configuration (keep examples)
+config/*.conf
+config/*.yaml
+!config/*.example.yml
+!config/*.example.yaml
+!config/*.example.conf
+
+# Inventory files (keep examples)
+inventory.yml
+inventory.yaml
+hosts.ini
+!inventory.example.yml
+!inventory.example.yaml
+
+# Node modules (if using any JavaScript tools)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Large VM images (if accidentally placed in repo)
+*.img
+*.qcow2
+*.vmdk
+*.vdi

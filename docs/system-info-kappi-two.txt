@@ -1,0 +1,420 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: kappi-two
+Date: Tue Oct 21 12:18:23 EDT 2025
+User: kappi
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux kappi-two 5.15.0-1085-raspi #88-Ubuntu SMP PREEMPT Wed Aug 20 20:28:30 UTC 2025 armv7l armv7l armv7l GNU/Linux
+
+--- OS Release ---
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+
+--- Uptime ---
+ 12:18:23 up 23 min,  1 user,  load average: 0.36, 0.32, 0.37
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+Architecture:                armv7l
+  Byte Order:                Little Endian
+CPU(s):                      4
+  On-line CPU(s) list:       0-3
+Vendor ID:                   ARM
+  Model name:                Cortex-A53
+    Model:                   4
+    Thread(s) per core:      1
+    Core(s) per socket:      4
+    Socket(s):               1
+    Stepping:                r0p4
+    CPU max MHz:             1400.0000
+    CPU min MHz:             600.0000
+    BogoMIPS:                51.20
+    Flags:                   half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 i
+                             diva idivt vfpd32 lpae evtstrm crc32
+Vulnerabilities:             
+  Gather data sampling:      Not affected
+  Indirect target selection: Not affected
+  Itlb multihit:             Not affected
+  L1tf:                      Not affected
+  Mds:                       Not affected
+  Meltdown:                  Not affected
+  Mmio stale data:           Not affected
+  Reg file data sampling:    Not affected
+  Retbleed:                  Not affected
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Not affected
+  Spectre v1:                Mitigation; __user pointer sanitization
+  Spectre v2:                Not affected
+  Srbds:                     Not affected
+  Tsx async abort:           Not affected
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:           917Mi       112Mi       268Mi       4.0Mi       536Mi       784Mi
+Swap:             0B          0B          0B
+
+--- Memory Details ---
+MemTotal:         939804 kB
+MemFree:          274296 kB
+MemAvailable:     802680 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+
+--- Disk Information ---
+NAME FSTYPE FSVER LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0
+     squash 4.0                                                    0   100% /snap/lxd/35818
+loop2
+     squash 4.0                                                    0   100% /snap/core20/2601
+loop3
+     squash 4.0                                                    0   100% /snap/lxd/31332
+loop4
+     squash 4.0                                                    0   100% /snap/snapd/21762
+loop5
+     squash 4.0                                                    0   100% /snap/snapd/25203
+loop6
+     squash 4.0                                                    0   100% /snap/core20/2668
+sda                                                                         
+├─sda1
+│    vfat   FAT32 system-boot
+│                       A0CD-3E3F                             379.4M    25% /boot/firmware
+└─sda2
+     ext4   1.0   writable
+                        1d3a99ec-eeaa-468a-b9f9-bc05134ecaa2  108.8G     3% /
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs            92M  3.0M   89M   4% /run
+/dev/sda2       118G  3.5G  109G   4% /
+tmpfs           459M  2.1M  457M   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda1       505M  125M  380M  25% /boot/firmware
+tmpfs            92M  4.0K   92M   1% /run/user/1000
+
+--- Storage Details ---
+H/W path          Device       Class          Description
+=========================================================
+/1/1/3/0.0.0      /dev/sda     disk           128GB Flash Drive FIT
+/1/1/3/0.0.0/0    /dev/sda     disk           128GB 
+
+--- PCI Devices ---
+
+--- USB Devices ---
+Bus 001 Device 004: ID 04e8:6300 Samsung Electronics Co., Ltd Flash Drive FIT
+Bus 001 Device 005: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) 
+Bus 001 Device 003: ID 0424:2514 Microchip Technology, Inc. (formerly SMSC) USB 2.0 Hub
+Bus 001 Device 002: ID 0424:2514 Microchip Technology, Inc. (formerly SMSC) USB 2.0 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether b8:27:eb:d0:46:bc brd ff:ff:ff:ff:ff:ff
+    inet 192.168.50.151/24 metric 100 brd 192.168.50.255 scope global dynamic eth0
+       valid_lft 85482sec preferred_lft 85482sec
+    inet 192.168.50.200/24 scope global secondary eth0
+       valid_lft forever preferred_lft forever
+    inet6 fd74:7fd2:616f:594b:ba27:ebff:fed0:46bc/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 1737sec preferred_lft 1737sec
+    inet6 fe80::ba27:ebff:fed0:46bc/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether b8:27:eb:85:13:e9 brd ff:ff:ff:ff:ff:ff
+
+--- Routing Table ---
+default via 192.168.50.1 dev eth0 proto dhcp src 192.168.50.151 metric 100 
+192.168.50.0/24 dev eth0 proto kernel scope link src 192.168.50.151 metric 100 
+192.168.50.1 dev eth0 proto dhcp scope link src 192.168.50.151 metric 100 
+
+--- DNS Configuration ---
+nameserver 8.8.8.8
+
+--- Network Connections ---
+Netid      State       Recv-Q      Send-Q                  Local Address:Port              Peer Address:Port      Process      
+udp        UNCONN      0           0                             0.0.0.0:58326                  0.0.0.0:*                      
+udp        UNCONN      0           0                             0.0.0.0:53                     0.0.0.0:*                      
+udp        UNCONN      0           0                 192.168.50.151%eth0:68                     0.0.0.0:*                      
+udp        UNCONN      0           0                             0.0.0.0:123                    0.0.0.0:*                      
+udp        UNCONN      0           0                           127.0.0.1:5335                   0.0.0.0:*                      
+udp        UNCONN      0           0                             0.0.0.0:5353                   0.0.0.0:*                      
+udp        UNCONN      0           0                                [::]:53                        [::]:*                      
+udp        UNCONN      0           0                                [::]:123                       [::]:*                      
+udp        UNCONN      0           0                                [::]:5353                      [::]:*                      
+udp        UNCONN      0           0                                [::]:59708                     [::]:*                      
+tcp        LISTEN      0           256                         127.0.0.1:8953                   0.0.0.0:*                      
+tcp        LISTEN      0           256                         127.0.0.1:5335                   0.0.0.0:*                      
+tcp        LISTEN      0           200                           0.0.0.0:443                    0.0.0.0:*                      
+tcp        LISTEN      0           200                           0.0.0.0:80                     0.0.0.0:*                      
+tcp        LISTEN      0           128                           0.0.0.0:22                     0.0.0.0:*                      
+tcp        LISTEN      0           32                            0.0.0.0:53                     0.0.0.0:*                      
+tcp        LISTEN      0           200                              [::]:443                       [::]:*                      
+tcp        LISTEN      0           200                              [::]:80                        [::]:*                      
+tcp        LISTEN      0           128                              [::]:22                        [::]:*                      
+tcp        LISTEN      0           32                               [::]:53                        [::]:*                      
+
+--- Tailscale Status ---
+Tailscale not installed
+
+=========================================
+DOCKER INFORMATION
+=========================================
+Docker not installed
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+  UNIT                                                     LOAD   ACTIVE SUB     DESCRIPTION
+  apparmor.service                                         loaded active exited  Load AppArmor profiles
+  apport.service                                           loaded active exited  LSB: automatic crash report generation
+  avahi-daemon.service                                     loaded active running Avahi mDNS/DNS-SD Stack
+  blk-availability.service                                 loaded active exited  Availability of block devices
+  bluetooth.service                                        loaded active running Bluetooth service
+  bthelper@hci0.service                                    loaded active exited  Raspberry Pi bluetooth helper
+  cloud-config.service                                     loaded active exited  Cloud-init: Config Stage
+  cloud-final.service                                      loaded active exited  Cloud-init: Final Stage
+  cloud-init-local.service                                 loaded active exited  Cloud-init: Local Stage (pre-network)
+  cloud-init.service                                       loaded active exited  Cloud-init: Network Stage
+  console-setup.service                                    loaded active exited  Set console font and keymap
+  cron.service                                             loaded active running Regular background program processing daemon
+  dbus.service                                             loaded active running D-Bus System Message Bus
+  finalrd.service                                          loaded active exited  Create final runtime dir for shutdown pivot root
+  getty@tty1.service                                       loaded active running Getty on tty1
+  hciuart.service                                          loaded active running Configure Bluetooth Modems connected by UART
+  ipvsadm.service                                          loaded active exited  LSB: ipvsadm daemon
+  irqbalance.service                                       loaded active running irqbalance daemon
+  keepalived.service                                       loaded active running Keepalive Daemon (LVS and VRRP)
+
+--- Enabled Services ---
+UNIT FILE                              STATE   VENDOR PRESET
+apparmor.service                       enabled enabled
+avahi-daemon.service                   enabled enabled
+blk-availability.service               enabled enabled
+bluetooth.service                      enabled enabled
+cloud-config.service                   enabled enabled
+cloud-final.service                    enabled enabled
+cloud-init-local.service               enabled enabled
+cloud-init.service                     enabled enabled
+console-setup.service                  enabled enabled
+cron.service                           enabled enabled
+dmesg.service                          enabled enabled
+e2scrub_reap.service                   enabled enabled
+finalrd.service                        enabled enabled
+getty@.service                         enabled enabled
+hciuart.service                        enabled enabled
+irqbalance.service                     enabled enabled
+keepalived.service                     enabled enabled
+keyboard-setup.service                 enabled enabled
+lvm2-monitor.service                   enabled enabled
+
+--- Top Processes by CPU ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root       695  6.2  3.2 657164 30888 ?        Ssl  11:56   1:21 /usr/lib/snapd/snapd
+root       232  4.2  0.0      0     0 ?        I    11:54   1:00 [kworker/3:3-mm_percpu_wq]
+root      1946  3.0  0.0      0     0 ?        I    12:05   0:23 [kworker/3:1-events]
+root        36  2.3  0.0      0     0 ?        I    11:54   0:33 [kworker/3:0-events]
+root         1  2.2  0.9  34060  9088 ?        Ss   11:54   0:32 /sbin/init fixrtc
+pihole     798  1.3  1.9  22648 18248 ?        S<sl 11:56   0:17 /usr/bin/pihole-FTL -f
+kappi     2109  0.8  0.7  13124  7476 ?        Ss   12:15   0:01 /lib/systemd/systemd --user
+kappi     2234  0.3  0.2   5112  2404 pts/0    S+   12:18   0:00 bash
+root       226  0.2  0.0      0     0 ?        S    11:54   0:02 [usb-storage]
+unbound    794  0.2  1.3  21740 12816 ?        Ss   11:56   0:02 /usr/sbin/unbound -d -p
+root       429  0.1  0.4  20616  4300 ?        Ss   11:54   0:01 /lib/systemd/systemd-udevd
+avahi      673  0.1  0.2   6012  2632 ?        Ss   11:56   0:01 avahi-daemon: running [kappi-two.local]
+message+   674  0.1  0.3   6936  3448 ?        Ss   11:56   0:02 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         2  0.0  0.0      0     0 ?        S    11:54   0:00 [kthreadd]
+
+--- Top Processes by Memory ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root       695  6.2  3.2 657164 30888 ?        Ssl  11:56   1:21 /usr/lib/snapd/snapd
+pihole     798  1.3  1.9  22648 18248 ?        S<sl 11:56   0:17 /usr/bin/pihole-FTL -f
+root       387  0.0  1.8  60268 17468 ?        S<s  11:54   0:01 /lib/systemd/systemd-journald
+root       750  0.0  1.5  34484 14552 ?        Ssl  11:56   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+unbound    794  0.2  1.3  21740 12816 ?        Ss   11:56   0:02 /usr/sbin/unbound -d -p
+root       683  0.0  1.3  22468 12800 ?        Ss   11:56   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         1  2.2  0.9  34060  9088 ?        Ss   11:54   0:32 /sbin/init fixrtc
+root      2106  0.0  0.8  13804  7556 ?        Ss   12:15   0:00 sshd: kappi [priv]
+kappi     2109  0.8  0.7  13124  7476 ?        Ss   12:15   0:01 /lib/systemd/systemd --user
+root       730  0.0  0.6  21440  6484 ?        Ss   11:56   0:00 /usr/sbin/keepalived --dont-fork
+root       795  0.0  0.6  11204  6480 ?        Ss   11:56   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+systemd+   661  0.0  0.6  11776  6008 ?        Ss   11:54   0:00 /lib/systemd/systemd-networkd
+root       758  0.0  0.6  38176  5792 ?        Ssl  11:56   0:00 /usr/libexec/polkitd --no-debug
+root       699  0.0  0.5  11348  5296 ?        Ss   11:56   0:00 /lib/systemd/systemd-logind
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+/dev/sda2 on / type ext4 (rw,relatime,discard,errors=remount-ro)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+none on /run/credentials/systemd-sysusers.service type ramfs (ro,nosuid,nodev,noexec,relatime,mode=700)
+/var/lib/snapd/snaps/core20_2601.snap on /snap/core20/2601 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/lxd_31332.snap on /snap/lxd/31332 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd_21762.snap on /snap/snapd/21762 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd_25203.snap on /snap/snapd/25203 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/dev/sda1 on /boot/firmware type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+/var/lib/snapd/snaps/core20_2668.snap on /snap/core20/2668 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/lxd_35818.snap on /snap/lxd/35818 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+nsfs on /run/snapd/ns/lxd.mnt type nsfs (rw)
+
+--- Disk I/O Statistics ---
+iostat not available
+
+--- ZFS Pools (if available) ---
+ZFS not available
+
+--- LVM Information ---
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+No crontab for current user
+
+--- System Crontab ---
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+# You can also override PATH, but by default, newer versions inherit it from the environment
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+
+--- SSH Configuration ---
+
+--- Firewall Status ---
+Status: inactive
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/home/kappi
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/bash
+USER=kappi
+
+--- Installed Packages (sample) ---
+ii  dash                            0.5.11+git20210903+057cd650a4ed-3build1 armhf        POSIX-compliant shell
+ii  git                             1:2.34.1-1ubuntu1.15                    armhf        fast, scalable, distributed revision control system
+ii  git-man                         1:2.34.1-1ubuntu1.15                    all          fast, scalable, distributed revision control system (manual pages)
+ii  libplymouth5:armhf              0.9.5+git20211018-1ubuntu3              armhf        graphical boot animation and logger - shared libraries
+ii  libraspberrypi-bin              0~20220324+gitc4fd1b8-0ubuntu1~22.04.1  armhf        Miscellaneous Raspberry Pi utilities
+ii  libraspberrypi0:armhf           0~20220324+gitc4fd1b8-0ubuntu1~22.04.1  armhf        EGL/GLES/OpenVG/etc libraries for the Raspberry Pi's VideoCore IV
+ii  librtmp1:armhf                  2.4+20151223.gitfa8646d.1-2build4       armhf        toolkit for RTMP streams (shared library)
+ii  linux-firmware                  20220329.git681281e4-0ubuntu3.39        all          Firmware for Linux kernel drivers
+ii  lshw                            02.19.git.2021.06.19.996aaad9c7-2build1 armhf        information about hardware configuration
+ii  plymouth                        0.9.5+git20211018-1ubuntu3              armhf        boot animation, logger and I/O multiplexer
+ii  plymouth-theme-ubuntu-text      0.9.5+git20211018-1ubuntu3              armhf        boot animation, logger and I/O multiplexer - ubuntu text theme
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+Oct 21 12:17:01 kappi-two CRON[2224]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 21 12:17:01 kappi-two CRON[2225]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Oct 21 12:17:01 kappi-two CRON[2224]: pam_unix(cron:session): session closed for user root
+Oct 21 12:18:23 kappi-two sudo[2248]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/bin/lshw -class disk -short
+Oct 21 12:18:23 kappi-two sudo[2248]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 21 12:18:29 kappi-two sudo[2248]: pam_unix(sudo:session): session closed for user root
+Oct 21 12:18:29 kappi-two systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Oct 21 12:18:37 kappi-two sudo[2280]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/lvs
+Oct 21 12:18:37 kappi-two sudo[2280]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 21 12:18:38 kappi-two sudo[2280]: pam_unix(sudo:session): session closed for user root
+Oct 21 12:18:38 kappi-two sudo[2283]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/vgs
+Oct 21 12:18:38 kappi-two sudo[2283]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 21 12:18:38 kappi-two sudo[2283]: pam_unix(sudo:session): session closed for user root
+Oct 21 12:18:38 kappi-two sudo[2286]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/pvs
+Oct 21 12:18:38 kappi-two sudo[2286]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 21 12:18:38 kappi-two sudo[2286]: pam_unix(sudo:session): session closed for user root
+Oct 21 12:18:38 kappi-two crontab[2289]: (kappi) LIST (kappi)
+Oct 21 12:18:38 kappi-two sudo[2292]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+Oct 21 12:18:38 kappi-two sudo[2292]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 21 12:18:39 kappi-two sudo[2292]: pam_unix(sudo:session): session closed for user root
+
+--- Docker Logs (if available) ---
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/ACCVRAIZ1.pem
+/etc/ssl/certs/AC_RAIZ_FNMT-RCM.pem
+/etc/ssl/certs/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+/etc/ssl/certs/ANF_Secure_Server_Root_CA.pem
+/etc/ssl/certs/Actalis_Authentication_Root_CA.pem
+/etc/ssl/certs/AffirmTrust_Commercial.pem
+/etc/ssl/certs/AffirmTrust_Networking.pem
+/etc/ssl/certs/AffirmTrust_Premium.pem
+/etc/ssl/certs/AffirmTrust_Premium_ECC.pem
+/etc/ssl/certs/Amazon_Root_CA_1.pem
+
+--- Users with Shell Access ---
+root:x:0:0:root:/root:/bin/bash
+kappi:x:1000:1003::/home/kappi:/bin/bash
+
+--- Sudo Configuration ---
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: kappi-two
+Completed: Tue Oct 21 12:18:39 EDT 2025

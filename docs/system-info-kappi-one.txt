@@ -1,0 +1,443 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: kappi-one
+Date: Mon Oct 20 17:51:11 EDT 2025
+User: kappi
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux kappi-one 5.15.0-1085-raspi #88-Ubuntu SMP PREEMPT Wed Aug 20 20:28:30 UTC 2025 armv7l armv7l armv7l GNU/Linux
+
+--- OS Release ---
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+
+--- Uptime ---
+ 17:51:12 up 27 days,  2:27,  1 user,  load average: 0.51, 0.34, 0.29
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+Architecture:                            armv7l
+Byte Order:                              Little Endian
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Vendor ID:                               ARM
+Model name:                              Cortex-A53
+Model:                                   4
+Thread(s) per core:                      1
+Core(s) per socket:                      4
+Socket(s):                               1
+Stepping:                                r0p4
+CPU max MHz:                             1400.0000
+CPU min MHz:                             600.0000
+BogoMIPS:                                44.80
+Flags:                                   half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Not affected
+Vulnerability Spectre v1:                Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:                Not affected
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsx async abort:           Not affected
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:           917Mi       213Mi       333Mi        12Mi       371Mi       672Mi
+Swap:             0B          0B          0B
+
+--- Memory Details ---
+MemTotal:         939804 kB
+MemFree:          341392 kB
+MemAvailable:     688896 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+
+--- Disk Information ---
+NAME   FSTYPE   FSVER LABEL       UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0  squashfs 4.0                                                          0   100% /snap/lxd/35818
+loop1  squashfs 4.0                                                          0   100% /snap/core20/2601
+loop3  squashfs 4.0                                                          0   100% /snap/lxd/31332
+loop4  squashfs 4.0                                                          0   100% /snap/snapd/21762
+loop5  squashfs 4.0                                                          0   100% /snap/snapd/25203
+loop6  squashfs 4.0                                                          0   100% /snap/core20/2668
+sda                                                                                   
+├─sda1 vfat     FAT32 system-boot A0CD-3E3F                             379.4M    25% /boot/firmware
+└─sda2 ext4     1.0   writable    1d3a99ec-eeaa-468a-b9f9-bc05134ecaa2  108.4G     3% /
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs            92M  3.1M   89M   4% /run
+/dev/sda2       118G  3.9G  109G   4% /
+tmpfs           459M     0  459M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda1       505M  125M  380M  25% /boot/firmware
+tmpfs            92M  4.0K   92M   1% /run/user/1000
+
+--- Storage Details ---
+H/W path          Device       Class          Description
+=========================================================
+/1/1/2/0.0.0      /dev/sda     disk           128GB Flash Drive FIT
+/1/1/2/0.0.0/0    /dev/sda     disk           128GB 
+
+--- PCI Devices ---
+
+--- USB Devices ---
+Bus 001 Device 004: ID 04e8:6300 Samsung Electronics Co., Ltd Flash Drive FIT
+Bus 001 Device 005: ID 0424:7800 Microchip Technology, Inc. (formerly SMSC) 
+Bus 001 Device 003: ID 0424:2514 Microchip Technology, Inc. (formerly SMSC) USB 2.0 Hub
+Bus 001 Device 002: ID 0424:2514 Microchip Technology, Inc. (formerly SMSC) USB 2.0 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether b8:27:eb:b4:cb:66 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.50.88/24 metric 100 brd 192.168.50.255 scope global dynamic eth0
+       valid_lft 84806sec preferred_lft 84806sec
+    inet 192.168.50.200/24 scope global secondary eth0
+       valid_lft forever preferred_lft forever
+    inet6 fd74:7fd2:616f:594b:ba27:ebff:feb4:cb66/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 1745sec preferred_lft 1745sec
+    inet6 fe80::ba27:ebff:feb4:cb66/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether b8:27:eb:e1:9e:33 brd ff:ff:ff:ff:ff:ff
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:27:9b:8a:ab brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+--- Routing Table ---
+default via 192.168.50.1 dev eth0 proto dhcp src 192.168.50.88 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+192.168.50.0/24 dev eth0 proto kernel scope link src 192.168.50.88 metric 100 
+192.168.50.1 dev eth0 proto dhcp scope link src 192.168.50.88 metric 100 
+
+--- DNS Configuration ---
+nameserver 8.8.8.8
+
+--- Network Connections ---
+Netid State  Recv-Q Send-Q      Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0                 0.0.0.0:53         0.0.0.0:*          
+udp   UNCONN 0      0      192.168.50.88%eth0:68         0.0.0.0:*          
+udp   UNCONN 0      0                 0.0.0.0:123        0.0.0.0:*          
+udp   UNCONN 0      0               127.0.0.1:5335       0.0.0.0:*          
+udp   UNCONN 0      0                 0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                 0.0.0.0:34549      0.0.0.0:*          
+udp   UNCONN 0      0                    [::]:53            [::]:*          
+udp   UNCONN 0      0                    [::]:123           [::]:*          
+udp   UNCONN 0      0                    [::]:5353          [::]:*          
+udp   UNCONN 0      0                    [::]:59339         [::]:*          
+tcp   LISTEN 0      32                0.0.0.0:53         0.0.0.0:*          
+tcp   LISTEN 0      128               0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      200               0.0.0.0:80         0.0.0.0:*          
+tcp   LISTEN 0      4096            127.0.0.1:39061      0.0.0.0:*          
+tcp   LISTEN 0      200               0.0.0.0:443        0.0.0.0:*          
+tcp   LISTEN 0      256             127.0.0.1:5335       0.0.0.0:*          
+tcp   LISTEN 0      256             127.0.0.1:8953       0.0.0.0:*          
+tcp   LISTEN 0      32                   [::]:53            [::]:*          
+tcp   LISTEN 0      128                  [::]:22            [::]:*          
+tcp   LISTEN 0      200                  [::]:80            [::]:*          
+tcp   LISTEN 0      200                  [::]:443           [::]:*          
+
+--- Tailscale Status ---
+Tailscale not installed
+
+=========================================
+DOCKER INFORMATION
+=========================================
+--- Docker Version ---
+Docker version 27.5.1, build 27.5.1-0ubuntu3~22.04.2
+
+--- Docker System Info ---
+Client:
+ Version:    27.5.1
+ Context:    default
+ Debug Mode: false
+
+Server:
+
+--- Running Containers ---
+
+--- All Containers ---
+
+--- Docker Images ---
+
+--- Docker Networks ---
+
+--- Docker Volumes ---
+
+--- Docker Compose Files ---
+
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+  UNIT                                                     LOAD   ACTIVE SUB     DESCRIPTION
+  apparmor.service                                         loaded active exited  Load AppArmor profiles
+  apport.service                                           loaded active exited  LSB: automatic crash report generation
+  avahi-daemon.service                                     loaded active running Avahi mDNS/DNS-SD Stack
+  blk-availability.service                                 loaded active exited  Availability of block devices
+  bluetooth.service                                        loaded active running Bluetooth service
+  bthelper@hci0.service                                    loaded active exited  Raspberry Pi bluetooth helper
+  cloud-config.service                                     loaded active exited  Cloud-init: Config Stage
+  cloud-final.service                                      loaded active exited  Cloud-init: Final Stage
+  cloud-init-local.service                                 loaded active exited  Cloud-init: Local Stage (pre-network)
+  cloud-init.service                                       loaded active exited  Cloud-init: Network Stage
+  console-setup.service                                    loaded active exited  Set console font and keymap
+  containerd.service                                       loaded active running containerd container runtime
+  cron.service                                             loaded active running Regular background program processing daemon
+  dbus.service                                             loaded active running D-Bus System Message Bus
+  docker.service                                           loaded active running Docker Application Container Engine
+  finalrd.service                                          loaded active exited  Create final runtime dir for shutdown pivot root
+  getty@tty1.service                                       loaded active running Getty on tty1
+  hciuart.service                                          loaded active running Configure Bluetooth Modems connected by UART
+  ipvsadm.service                                          loaded active exited  LSB: ipvsadm daemon
+
+--- Enabled Services ---
+UNIT FILE                              STATE   VENDOR PRESET
+apparmor.service                       enabled enabled
+avahi-daemon.service                   enabled enabled
+blk-availability.service               enabled enabled
+bluetooth.service                      enabled enabled
+cloud-config.service                   enabled enabled
+cloud-final.service                    enabled enabled
+cloud-init-local.service               enabled enabled
+cloud-init.service                     enabled enabled
+console-setup.service                  enabled enabled
+containerd.service                     enabled enabled
+cron.service                           enabled enabled
+dmesg.service                          enabled enabled
+docker.service                         enabled enabled
+e2scrub_reap.service                   enabled enabled
+finalrd.service                        enabled enabled
+getty@.service                         enabled enabled
+hciuart.service                        enabled enabled
+irqbalance.service                     enabled enabled
+keepalived.service                     enabled enabled
+
+--- Top Processes by CPU ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+kappi    17363  6.3  0.7  13116  7448 ?        Ss   17:51   0:01 /lib/systemd/systemd --user
+root     17230  3.6  0.0      0     0 ?        I    17:48   0:07 [kworker/0:4-events_freezable]
+root     14812  3.1  0.0      0     0 ?        I    16:54   1:47 [kworker/0:1-events]
+root     16468  2.8  0.0      0     0 ?        I    17:31   0:34 [kworker/0:2-events]
+root     16949  2.3  0.0      0     0 ?        I    17:41   0:13 [kworker/0:3-events]
+kappi     1080  2.0  7.6  77388 71508 ?        Sl   Oct17  93:29 /usr/bin/pihole-FTL no-daemon
+kappi    17448  0.6  0.3   5876  3236 pts/0    Ss   17:51   0:00 -bash
+root     17338  0.3  0.7  13836  7460 ?        Ss   17:50   0:00 sshd: kappi [priv]
+kappi    17466  0.3  0.2   5112  2444 pts/0    S+   17:51   0:00 bash
+root       767  0.2  1.7 663552 16560 ?        Ssl  Sep23  80:40 /usr/bin/containerd
+root     17486  0.2  0.0      0     0 ?        I    17:51   0:00 [kworker/1:2-events]
+avahi      685  0.1  0.2   6276  2520 ?        Ss   Sep23  53:34 avahi-daemon: running [kappi-one.local]
+unbound    895  0.1  2.4  34376 23428 ?        Ss   Sep23  50:20 /usr/sbin/unbound -d -p
+root       964  0.1  2.3 707480 22252 ?        Ssl  Sep23  56:53 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+--- Top Processes by Memory ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+kappi     1080  2.0  7.6  77388 71508 ?        Sl   Oct17  93:29 /usr/bin/pihole-FTL no-daemon
+root       392  0.0  4.1 175168 39364 ?        S<s  Sep23   1:58 /lib/systemd/systemd-journald
+unbound    895  0.1  2.4  34376 23428 ?        Ss   Sep23  50:20 /usr/sbin/unbound -d -p
+root       964  0.1  2.3 707480 22252 ?        Ssl  Sep23  56:53 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root       710  0.0  1.9 657164 18232 ?        Ssl  Sep23  10:52 /usr/lib/snapd/snapd
+root       767  0.2  1.7 663552 16560 ?        Ssl  Sep23  80:40 /usr/bin/containerd
+root       765  0.0  1.0  34484 10148 ?        Ssl  Sep23   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root       695  0.0  1.0  22724 10116 ?        Ss   Sep23   0:33 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root     14546  0.0  1.0  90516 10020 ?        Ssl  Sep24   0:46 /usr/libexec/packagekitd
+root         1  0.0  0.8  34056  7728 ?        Ss   Sep23   2:39 /sbin/init fixrtc
+root     17338  0.3  0.7  13836  7460 ?        Ss   17:50   0:00 sshd: kappi [priv]
+kappi    17363  6.3  0.7  13116  7448 ?        Ss   17:51   0:01 /lib/systemd/systemd --user
+kappi    17447  0.0  0.5  13836  5128 ?        S    17:51   0:00 sshd: kappi@pts/0
+kappi    17364  0.0  0.5  37260  5124 ?        S    17:51   0:00 (sd-pam)
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+/dev/sda2 on / type ext4 (rw,relatime,discard,errors=remount-ro)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,pagesize=2M)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+none on /run/credentials/systemd-sysusers.service type ramfs (ro,nosuid,nodev,noexec,relatime,mode=700)
+/var/lib/snapd/snaps/core20_2601.snap on /snap/core20/2601 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/lxd_31332.snap on /snap/lxd/31332 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd_21762.snap on /snap/snapd/21762 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/snapd_25203.snap on /snap/snapd/25203 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/dev/sda1 on /boot/firmware type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+overlay on /var/lib/docker/overlay2/e87c12ca278d0f548e494270e11cdd83607ab3dd1692414a23689f5430dd5f7c/merged type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/JJTWAIT4AR34ZVJTNH5IFATKRJ:/var/lib/docker/overlay2/l/GODFMDMIR2ZPCQ463CVQZIFTNE:/var/lib/docker/overlay2/l/M3LPDBTEECD244OM4CMHXLRFLD:/var/lib/docker/overlay2/l/Q3SZMY5LL7KZ2LSYSBGAEUYI6S:/var/lib/docker/overlay2/l/PTYVAWRSMKRWJCH7FBGWTOYAZL:/var/lib/docker/overlay2/l/NAXO7EUYOUWC764GV64ZO4SWN2:/var/lib/docker/overlay2/l/YXRMCSIO2TLKYKCAFV45LZ7RK5:/var/lib/docker/overlay2/l/GLGKBPGVRNQPQQPGPKSIWRWF6K:/var/lib/docker/overlay2/l/SZVNZNKK2ICVAKUSO7XJDJWWD7:/var/lib/docker/overlay2/l/CJ2TYGE6NKRAPBH44QVQTLTTOM:/var/lib/docker/overlay2/l/PETUYGQI35AAGXZRTOVKBNLVWL:/var/lib/docker/overlay2/l/IAP3254E5YGSUX36ML723VPZRV,upperdir=/var/lib/docker/overlay2/e87c12ca278d0f548e494270e11cdd83607ab3dd1692414a23689f5430dd5f7c/diff,workdir=/var/lib/docker/overlay2/e87c12ca278d0f548e494270e11cdd83607ab3dd1692414a23689f5430dd5f7c/work)
+nsfs on /run/docker/netns/default type nsfs (rw)
+/var/lib/snapd/snaps/core20_2668.snap on /snap/core20/2668 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+/var/lib/snapd/snaps/lxd_35818.snap on /snap/lxd/35818 type squashfs (ro,nodev,relatime,errors=continue,x-gdu.hide)
+nsfs on /run/snapd/ns/lxd.mnt type nsfs (rw)
+
+--- Disk I/O Statistics ---
+iostat not available
+
+--- ZFS Pools (if available) ---
+ZFS not available
+
+--- LVM Information ---
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+No crontab for current user
+
+--- System Crontab ---
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+# You can also override PATH, but by default, newer versions inherit it from the environment
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+
+--- SSH Configuration ---
+
+--- Firewall Status ---
+Status: inactive
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/home/kappi
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/bash
+USER=kappi
+
+--- Installed Packages (sample) ---
+ii  dash                            0.5.11+git20210903+057cd650a4ed-3build1 armhf        POSIX-compliant shell
+ii  docker.io                       27.5.1-0ubuntu3~22.04.2                 armhf        Linux container runtime
+ii  git                             1:2.34.1-1ubuntu1.15                    armhf        fast, scalable, distributed revision control system
+ii  git-man                         1:2.34.1-1ubuntu1.15                    all          fast, scalable, distributed revision control system (manual pages)
+ii  libplymouth5:armhf              0.9.5+git20211018-1ubuntu3              armhf        graphical boot animation and logger - shared libraries
+ii  libraspberrypi-bin              0~20220324+gitc4fd1b8-0ubuntu1~22.04.1  armhf        Miscellaneous Raspberry Pi utilities
+ii  libraspberrypi0:armhf           0~20220324+gitc4fd1b8-0ubuntu1~22.04.1  armhf        EGL/GLES/OpenVG/etc libraries for the Raspberry Pi's VideoCore IV
+ii  librtmp1:armhf                  2.4+20151223.gitfa8646d.1-2build4       armhf        toolkit for RTMP streams (shared library)
+ii  linux-firmware                  20220329.git681281e4-0ubuntu3.39        all          Firmware for Linux kernel drivers
+ii  lshw                            02.19.git.2021.06.19.996aaad9c7-2build1 armhf        information about hardware configuration
+ii  plymouth                        0.9.5+git20211018-1ubuntu3              armhf        boot animation, logger and I/O multiplexer
+ii  plymouth-theme-ubuntu-text      0.9.5+git20211018-1ubuntu3              armhf        boot animation, logger and I/O multiplexer - ubuntu text theme
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+Oct 20 17:51:04 kappi-one systemd[17363]: Startup finished in 1.837s.
+Oct 20 17:51:04 kappi-one systemd[1]: Started User Manager for UID 1000.
+Oct 20 17:51:04 kappi-one systemd[1]: Started Session 2019 of User kappi.
+Oct 20 17:51:12 kappi-one sudo[17481]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/bin/lshw -class disk -short
+Oct 20 17:51:12 kappi-one sudo[17481]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 20 17:51:18 kappi-one sudo[17481]: pam_unix(sudo:session): session closed for user root
+Oct 20 17:51:20 kappi-one systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+Oct 20 17:51:30 kappi-one sudo[17575]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/lvs
+Oct 20 17:51:30 kappi-one sudo[17575]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 20 17:51:30 kappi-one sudo[17575]: pam_unix(sudo:session): session closed for user root
+Oct 20 17:51:30 kappi-one sudo[17599]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/vgs
+Oct 20 17:51:30 kappi-one sudo[17599]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 20 17:51:31 kappi-one sudo[17599]: pam_unix(sudo:session): session closed for user root
+Oct 20 17:51:31 kappi-one sudo[17602]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/pvs
+Oct 20 17:51:31 kappi-one sudo[17602]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 20 17:51:31 kappi-one sudo[17602]: pam_unix(sudo:session): session closed for user root
+Oct 20 17:51:31 kappi-one crontab[17605]: (kappi) LIST (kappi)
+Oct 20 17:51:31 kappi-one sudo[17608]:    kappi : TTY=pts/0 ; PWD=/home/kappi ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+Oct 20 17:51:31 kappi-one sudo[17608]: pam_unix(sudo:session): session opened for user root(uid=0) by kappi(uid=1000)
+Oct 20 17:51:31 kappi-one sudo[17608]: pam_unix(sudo:session): session closed for user root
+
+--- Docker Logs (if available) ---
+Recent container logs:
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/ACCVRAIZ1.pem
+/etc/ssl/certs/AC_RAIZ_FNMT-RCM.pem
+/etc/ssl/certs/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+/etc/ssl/certs/ANF_Secure_Server_Root_CA.pem
+/etc/ssl/certs/Actalis_Authentication_Root_CA.pem
+/etc/ssl/certs/AffirmTrust_Commercial.pem
+/etc/ssl/certs/AffirmTrust_Networking.pem
+/etc/ssl/certs/AffirmTrust_Premium.pem
+/etc/ssl/certs/AffirmTrust_Premium_ECC.pem
+/etc/ssl/certs/Amazon_Root_CA_1.pem
+
+--- Users with Shell Access ---
+root:x:0:0:root:/root:/bin/bash
+kappi:x:1000:1003::/home/kappi:/bin/bash
+
+--- Sudo Configuration ---
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: kappi-one
+Completed: Mon Oct 20 17:51:32 EDT 2025
+
+Please save this output and share it for documentation enhancement.
+Note: Some commands may require sudo privileges for complete information.

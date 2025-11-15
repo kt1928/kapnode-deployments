@@ -1,0 +1,908 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: Ridgeserver
+Date: Mon Oct 20 21:49:05 EDT 2025
+User: root
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux Ridgeserver 6.12.24-Unraid #1 SMP PREEMPT_DYNAMIC Sat May  3 00:12:52 PDT 2025 x86_64 AMD Ryzen 7 7700X 8-Core Processor AuthenticAMD GNU/Linux
+
+--- OS Release ---
+NAME="Unraid OS"
+ID="unraid-os"
+ID_LIKE="slackware"
+PRETTY_NAME="Unraid OS 7.1 x86_64"
+CPE_NAME="cpe:/o:limetech:unraid-os:7.1.4"
+VERSION="7.1.4 2025-06-18"
+VERSION_ID="7.1.4"
+VERSION_CODENAME="stable"
+HOME_URL="https://unraid.net/"
+SUPPORT_URL="https://support.unraid.net/"
+BUG_REPORT_URL="https://forums.unraid.net/"
+DOCUMENTATION_URL="https://docs.unraid.net/"
+VENDOR_NAME="Lime Technology, Inc."
+
+--- Uptime ---
+ 21:49:05 up 28 days,  8:32,  0 users,  load average: 0.52, 0.83, 0.74
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+Architecture:             x86_64
+  CPU op-mode(s):         32-bit, 64-bit
+  Address sizes:          48 bits physical, 48 bits virtual
+  Byte Order:             Little Endian
+CPU(s):                   16
+  On-line CPU(s) list:    0-15
+Vendor ID:                AuthenticAMD
+  Model name:             AMD Ryzen 7 7700X 8-Core Processor
+    CPU family:           25
+    Model:                97
+    Thread(s) per core:   2
+    Core(s) per socket:   8
+    Socket(s):            1
+    Stepping:             2
+    Frequency boost:      enabled
+    CPU(s) scaling MHz:   63%
+    CPU max MHz:          5573.0000
+    CPU min MHz:          400.0000
+    BogoMIPS:             8983.15
+    Flags:                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht sys
+                          call nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl xtopology nonstop_tsc cp
+                          uid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt a
+                          es xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch o
+                          svw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pst
+                          ate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid 
+                          cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl 
+                          xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irpe
+                          rf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid deco
+                          deassists pausefilter pfthreshold avic vgif x2avic v_spec_ctrl vnmi avx512vbmi umip pku ospke avx512_vbm
+                          i2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid overflow_recov succor smca fsrm
+                           flush_l1d amd_lbr_pmc_freeze
+Virtualization features:  
+  Virtualization:         AMD-V
+Caches (sum of all):      
+  L1d:                    256 KiB (8 instances)
+  L1i:                    256 KiB (8 instances)
+  L2:                     8 MiB (8 instances)
+  L3:                     32 MiB (1 instance)
+NUMA:                     
+  NUMA node(s):           1
+  NUMA node0 CPU(s):      0-15
+Vulnerabilities:          
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Not affected
+  Spec rstack overflow:   Mitigation; Safe RET
+  Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not a
+                          ffected; BHI Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       9.6Gi       615Mi       2.6Gi        23Gi        20Gi
+Swap:             0B          0B          0B
+
+--- Memory Details ---
+MemTotal:       31989248 kB
+MemFree:          629928 kB
+MemAvailable:   21901892 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+
+--- Disk Information ---
+NAME        FSTYPE   FSVER LABEL  UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0       squashfs 4.0                                                 12.8G    16% /usr
+loop1       squashfs 4.0                                                 12.8G    16% /lib
+loop2       btrfs                 9f69dc8f-df16-42c0-af75-15ae270f91a7   90.7G     9% /var/lib/docker/btrfs
+                                                                                      /var/lib/docker
+sda                                                                                   
+└─sda1      btrfs                 b618bdf2-9e8a-46cf-a88d-a540b44472ee                
+sdb                                                                                   
+└─sdb1      btrfs                 d16cbf93-d057-4663-83da-16ca3a3bf65b                
+sdc                                                                                   
+└─sdc1      btrfs                 4fd27549-8fb7-4561-860f-31e146fb23f3                
+sdd                                                                                   
+└─sdd1      btrfs                 ecd4fd2c-25d9-440c-9bfe-86f2f47852e8                
+sde                                                                                   
+└─sde1      btrfs                 7e3abe6d-4c6a-4f14-bcac-1cff6f01664e                
+sdf                                                                                   
+└─sdf1      vfat     FAT32 UNRAID 2732-64F5                              28.1G     6% /boot
+sdg                                                                                   
+└─sdg1      btrfs                 f3d34719-9256-4111-a091-20e67b50d9b3                
+sdh                                                                                   
+└─sdh1      xfs                   8d3e4323-cc07-439f-ab65-1b88c2b8face                
+sdi                                                                                   
+└─sdi1      xfs                   a53ceb1b-5215-4001-8272-0ae5d102fa26                
+sdj                                                                                   
+└─sdj1      btrfs                 1ad1f496-a20d-4df4-b536-def0bc16ca2b                
+sdk                                                                                   
+└─sdk1      xfs                   4764031b-cc84-46c1-a93f-2bb67e9c69d2                
+sdl                                                                                   
+└─sdl1      btrfs                 3fe3282a-8f3f-44d5-a329-272d2921b243                
+sdm                                                                                   
+└─sdm1      btrfs                 2017ab8e-8dce-4ffb-ae7f-1447c2cf1cd6                
+sdn                                                                                   
+└─sdn1      btrfs                 e1facb0d-4408-404f-89a9-3441ec971e52                
+sdo                                                                                   
+└─sdo1      btrfs                 7e183e98-c5a1-4f58-a3a5-fa832bfe285e                
+md1p1                                                                   959.7G    94% /mnt/disk1
+md2p1                                                                   254.6G    98% /mnt/disk2
+md3p1                                                                       1T    91% /mnt/disk3
+md4p1                                                                     1.1T    88% /mnt/disk4
+md5p1                                                                     1.8T    76% /mnt/disk5
+md6p1                                                                       2T    81% /mnt/disk6
+md7p1                                                                     2.1T    77% /mnt/disk7
+md8p1                                                                     2.2T    85% /mnt/disk8
+md9p1                                                                     4.5T    69% /mnt/disk9
+md10p1                                                                  513.1G    91% /mnt/disk10
+md11p1                                                                    1.2T    89% /mnt/disk11
+md12p1                                                                    2.7T    81% /mnt/disk12
+md13p1                                                                   11.3T    11% /mnt/disk13
+md14p1                                                                   11.3T    11% /mnt/disk14
+sr0                                                                                   
+nvme1n1                                                                               
+└─nvme1n1p1 btrfs                 54754f65-bd84-4654-873c-2ddb385a55fe                
+nvme0n1                                                                               
+└─nvme0n1p1 btrfs                 54754f65-bd84-4654-873c-2ddb385a55fe                
+nvme2n1                                                                               
+└─nvme2n1p1 btrfs                 54754f65-bd84-4654-873c-2ddb385a55fe    1.6T    11% /mnt/cache
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs           16G  2.5G   13G  17% /
+tmpfs           128M  1.6M  127M   2% /run
+/dev/sdf1        30G  1.8G   29G   6% /boot
+overlay          16G  2.5G   13G  17% /usr
+overlay          16G  2.5G   13G  17% /lib
+tmpfs           128M   39M   90M  31% /var/log
+devtmpfs        8.0M     0  8.0M   0% /dev
+tmpfs            16G     0   16G   0% /dev/shm
+efivarfs        128K   63K   61K  52% /sys/firmware/efi/efivars
+/dev/md1p1       17T   16T  960G  95% /mnt/disk1
+/dev/md2p1       15T   15T  255G  99% /mnt/disk2
+/dev/md3p1       11T  9.9T  1.1T  91% /mnt/disk3
+/dev/md4p1      9.1T  8.1T  1.1T  89% /mnt/disk4
+/dev/md5p1      7.3T  5.6T  1.8T  76% /mnt/disk5
+/dev/md6p1       11T  8.9T  2.1T  82% /mnt/disk6
+/dev/md7p1      9.1T  7.1T  2.1T  78% /mnt/disk7
+/dev/md8p1       15T   13T  2.2T  86% /mnt/disk8
+/dev/md9p1       15T   11T  4.6T  70% /mnt/disk9
+/dev/md10p1     5.5T  5.0T  514G  91% /mnt/disk10
+/dev/md11p1      11T  9.8T  1.2T  90% /mnt/disk11
+/dev/md12p1      15T   12T  2.8T  82% /mnt/disk12
+/dev/md13p1      13T  1.5T   12T  12% /mnt/disk13
+/dev/md14p1      13T  1.5T   12T  12% /mnt/disk14
+/dev/nvme2n1p1  2.3T  250G  1.6T  14% /mnt/cache
+shfs            164T  121T   43T  74% /mnt/user0
+shfs            164T  121T   43T  74% /mnt/user
+/dev/loop2      100G  8.8G   91G   9% /var/lib/docker
+
+--- Storage Details ---
+H/W path                            Device          Class          Description
+==============================================================================
+/0/100/2.1/0/0/0/2.0.0              /dev/sdk        disk           12TB HUH721212ALE601
+/0/100/2.1/0/4/0/0                  hwmon2          disk           NVMe disk
+/0/100/2.1/0/4/0/2                  /dev/ng0n1      disk           NVMe disk
+/0/100/2.1/0/4/0/1                  /dev/nvme0n1    disk           1024GB NVMe disk
+/0/100/2.1/0/8/0/0/0/9/0/0.3.0      /dev/sdj        disk           16TB WDC WD160EMFZ-11
+/0/100/2.1/0/8/0/0/0/9/0/0.0.0      /dev/sdg        disk           16TB WDC WD160EMFZ-11
+/0/100/2.1/0/8/0/0/0/9/0/0.1.0      /dev/sdh        disk           14TB WDC WD140EDGZ-11
+/0/100/2.1/0/8/0/0/0/9/0/0.2.0      /dev/sdi        disk           14TB WDC WD140EDGZ-11
+/0/100/2.1/0/8/0/8/0/0              hwmon1          disk           NVMe disk
+/0/100/2.1/0/8/0/8/0/2              /dev/ng1n1      disk           NVMe disk
+/0/100/2.1/0/8/0/8/0/1              /dev/nvme1n1    disk           2TB NVMe disk
+/0/100/2.1/0/8/0/c/0/0/3/0.0.0      /dev/cdrom      disk           Virtual Media
+/0/100/2.1/0/8/0/c/0/1/2/0.0.0      /dev/sdf        disk           32GB Flash Drive FIT
+/0/100/2.1/0/8/0/c/0/1/2/0.0.0/0    /dev/sdf        disk           32GB 
+/0/100/2.1/0/8/0/d/0/0              /dev/sdl        disk           6001GB WDC WD6003FFBX-6
+/0/100/2.1/0/8/0/d/0/1              /dev/sdm        disk           16TB ST16000NE000-2RW
+/0/100/2.1/0/d/0/0                  /dev/sdn        disk           10TB ST10000NE0008-2J
+/0/100/2.1/0/d/0/1                  /dev/sdo        disk           12TB ST12000VN0008-2J
+/0/100/2.2/0/0                      hwmon3          disk           NVMe disk
+/0/100/2.2/0/2                      /dev/ng2n1      disk           NVMe disk
+/0/100/2.2/0/1                      /dev/nvme2n1    disk           2TB NVMe disk
+/0/100/8.1/0.4/1/2/0.0.0            /dev/sda        disk           8001GB USB3.0
+/0/100/8.1/0.4/1/2/0.0.1            /dev/sdb        disk           12TB USB3.0
+/0/100/8.1/0.4/1/2/0.0.2            /dev/sdc        disk           10TB USB3.0
+/0/100/8.1/0.4/1/2/0.0.3            /dev/sdd        disk           18TB USB3.0
+/0/100/8.1/0.4/1/2/0.0.4            /dev/sde        disk           16TB USB3.0
+
+--- PCI Devices ---
+00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Root Complex
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge IOMMU
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Dummy Host Bridge
+00:01.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge GPP Bridge
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Dummy Host Bridge
+00:02.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge GPP Bridge
+00:02.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge GPP Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Dummy Host Bridge
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Dummy Host Bridge
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Internal GPP Bridge to Bus [C:A]
+00:08.3 PCI bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Internal GPP Bridge to Bus [C:A]
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 71)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Data Fabric; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Data Fabric; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Data Fabric; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Data Fabric; Function 3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Data Fabric; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Raphael/Granite Ridge Data Fabric; Function 5
+
+--- USB Devices ---
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 1d6b:0104 Linux Foundation Multifunction Composite Gadget
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 090c:1000 Silicon Motion, Inc. - Taiwan (formerly Feiya Technology Corp.) Flash Drive
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 002: ID 0e8d:0608 MediaTek Inc. Wireless_Device
+Bus 003 Device 003: ID 0764:0601 Cyber Power System, Inc. PR1500LCDRT2U UPS
+Bus 003 Device 004: ID 0b05:19af ASUSTek Computer, Inc. AURA LED Controller
+Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 007 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 008 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 008 Device 002: ID 152d:0578 JMicron Technology Corp. / JMicron USA Technology Corp. JMS578 SATA 6Gb/s
+Bus 009 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 010 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: eth0: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc fq master bond0 state UP group default qlen 1000
+    link/ether c8:7f:54:02:d9:03 brd ff:ff:ff:ff:ff:ff
+4: wlan0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 10:6f:d9:dc:9a:a7 brd ff:ff:ff:ff:ff:ff
+5: bond0: <BROADCAST,MULTICAST,MASTER,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 state UP group default qlen 1000
+    link/ether c8:7f:54:02:d9:03 brd ff:ff:ff:ff:ff:ff
+6: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether c8:7f:54:02:d9:03 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.86.44/24 brd 192.168.86.255 scope global dynamic noprefixroute br0
+       valid_lft 84339sec preferred_lft 70123sec
+8: tailscale1: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq state UNKNOWN group default qlen 500
+    link/none 
+    inet 100.107.45.13/32 scope global tailscale1
+       valid_lft forever preferred_lft forever
+    inet6 fd7a:115c:a1e0::8a33:2d0d/128 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::4c10:7801:127d:8704/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+9: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:db:b5:90:85 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:dbff:feb5:9085/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+63: veth911b32b@if62: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether ba:9e:f7:17:fc:b5 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::b89e:f7ff:fe17:fcb5/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+65: veth68fa061@if64: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 7e:cc:f8:19:e3:a8 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::7ccc:f8ff:fe19:e3a8/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+67: vethd8e9f6d@if66: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 62:dd:72:35:95:46 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::60dd:72ff:fe35:9546/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+69: veth03c81a0@if68: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 06:0d:5a:ea:b6:a0 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+    inet6 fe80::40d:5aff:feea:b6a0/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+71: veth22e0a83@if70: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 16:0c:3b:3f:14:af brd ff:ff:ff:ff:ff:ff link-netnsid 4
+    inet6 fe80::140c:3bff:fe3f:14af/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+73: veth82ebd63@if72: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 56:b5:c7:b3:e0:a2 brd ff:ff:ff:ff:ff:ff link-netnsid 5
+    inet6 fe80::54b5:c7ff:feb3:e0a2/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+75: vethc4d6e76@if74: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether ae:ad:c7:22:d2:be brd ff:ff:ff:ff:ff:ff link-netnsid 6
+    inet6 fe80::acad:c7ff:fe22:d2be/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+77: vethcd912ec@if76: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether be:e8:2a:7f:23:1a brd ff:ff:ff:ff:ff:ff link-netnsid 7
+    inet6 fe80::bce8:2aff:fe7f:231a/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+79: vethefcaab1@if78: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 4a:7e:4c:47:a8:62 brd ff:ff:ff:ff:ff:ff link-netnsid 8
+    inet6 fe80::487e:4cff:fe47:a862/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+81: vethe1532f3@if80: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 0e:c9:d7:51:a4:4e brd ff:ff:ff:ff:ff:ff link-netnsid 9
+    inet6 fe80::cc9:d7ff:fe51:a44e/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+83: vethe4bac58@if82: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 36:3a:e0:18:f8:b1 brd ff:ff:ff:ff:ff:ff link-netnsid 10
+    inet6 fe80::343a:e0ff:fe18:f8b1/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+87: veth91193b8@if86: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 02:fc:9c:5b:f6:5e brd ff:ff:ff:ff:ff:ff link-netnsid 12
+    inet6 fe80::fc:9cff:fe5b:f65e/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+95: vethdcd1da6@if94: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 12:83:40:c5:e9:6c brd ff:ff:ff:ff:ff:ff link-netnsid 13
+    inet6 fe80::1083:40ff:fec5:e96c/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+
+--- Routing Table ---
+default via 192.168.86.1 dev br0 proto dhcp src 192.168.86.44 metric 1006 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+192.168.86.0/24 dev br0 proto dhcp scope link src 192.168.86.44 metric 1006 
+
+--- DNS Configuration ---
+# Generated by dhcpcd from br0.dhcp
+domain lan
+nameserver 192.168.86.1
+# Generated by rc.inet1
+
+--- Network Connections ---
+Netid       State        Recv-Q       Send-Q                            Local Address:Port                Peer Address:Port       
+udp         UNCONN       0            0                                       0.0.0.0:47979                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:32410                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:32412                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:32413                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:32414                    0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:68                       0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:111                      0.0.0.0:*          
+udp         UNCONN       0            0                                 100.107.45.13:111                      0.0.0.0:*          
+udp         UNCONN       0            0                                     127.0.0.1:111                      0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:123                      0.0.0.0:*          
+udp         UNCONN       0            0                                     127.0.0.1:123                      0.0.0.0:*          
+udp         UNCONN       0            0                                 100.107.45.13:32925                    0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:49682                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:33324                    0.0.0.0:*          
+udp         UNCONN       0            0                                     127.0.0.1:703                      0.0.0.0:*          
+udp         UNCONN       0            0                                     127.0.0.1:50565                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:1901                     0.0.0.0:*          
+udp         UNCONN       0            0                                 100.107.45.13:2049                     0.0.0.0:*          
+udp         UNCONN       0            0                                     127.0.0.1:2049                     0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:2049                     0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:3702                     0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:3702                     0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:53558                    0.0.0.0:*          
+udp         UNCONN       0            0                                     127.0.0.1:37800                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:5353                     0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:5355                     0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:5355                     0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:39782                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:40773                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:41641                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:58631                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:59620                    0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:59765                    0.0.0.0:*          
+udp         UNCONN       0            0                                 192.168.86.44:44231                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:45936                    0.0.0.0:*          
+udp         UNCONN       0            0                                       0.0.0.0:47588                    0.0.0.0:*          
+udp         UNCONN       0            0                   [fd7a:115c:a1e0::8a33:2d0d]:111                         [::]:*          
+udp         UNCONN       0            0                                         [::1]:111                         [::]:*          
+udp         UNCONN       0            0                                          [::]:49368                       [::]:*          
+udp         UNCONN       0            0                   [fd7a:115c:a1e0::8a33:2d0d]:2049                        [::]:*          
+udp         UNCONN       0            0                                          [::]:3702                        [::]:*          
+udp         UNCONN       0            0                                          [::]:53045                       [::]:*          
+udp         UNCONN       0            0                   [fd7a:115c:a1e0::8a33:2d0d]:37148                       [::]:*          
+udp         UNCONN       0            0                                          [::]:54130                       [::]:*          
+udp         UNCONN       0            0                                          [::]:5355                        [::]:*          
+udp         UNCONN       0            0                                          [::]:54857                       [::]:*          
+udp         UNCONN       0            0                                          [::]:41641                       [::]:*          
+udp         UNCONN       0            0                                          [::]:58502                       [::]:*          
+udp         UNCONN       0            0                                          [::]:45936                       [::]:*          
+udp         UNCONN       0            0                                          [::]:46176                       [::]:*          
+tcp         LISTEN       0            4096                              192.168.86.44:2049                     0.0.0.0:*          
+tcp         LISTEN       0            64                                      0.0.0.0:42573                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:9117                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:8989                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:8991                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:8990                     0.0.0.0:*          
+tcp         LISTEN       0            511                               192.168.86.44:443                      0.0.0.0:*          
+tcp         LISTEN       0            50                                192.168.86.44:445                      0.0.0.0:*          
+tcp         LISTEN       0            128                               192.168.86.44:22                       0.0.0.0:*          
+tcp         LISTEN       0            511                               192.168.86.44:81                       0.0.0.0:*          
+tcp         LISTEN       0            50                                192.168.86.44:139                      0.0.0.0:*          
+tcp         LISTEN       0            128                                   127.0.0.1:32600                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:60281                    0.0.0.0:*          
+tcp         LISTEN       0            1024                                  127.0.0.1:32401                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:46495                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:45936                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:48145                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:34059                    0.0.0.0:*          
+tcp         LISTEN       0            4096                              100.107.45.13:56193                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:111                      0.0.0.0:*          
+tcp         LISTEN       0            128                                     0.0.0.0:23                       0.0.0.0:*          
+tcp         LISTEN       0            5                            0.0.0.0%tailscale1:3702                     0.0.0.0:*          
+tcp         LISTEN       0            5                                   0.0.0.0%br0:3702                     0.0.0.0:*          
+tcp         LISTEN       0            4096                              100.107.45.13:5252                     0.0.0.0:*          
+tcp         LISTEN       0            50                                    127.0.0.1:445                      0.0.0.0:*          
+tcp         LISTEN       0            511                                   127.0.0.1:443                      0.0.0.0:*          
+tcp         LISTEN       0            4096                              100.107.45.13:2049                     0.0.0.0:*          
+tcp         LISTEN       0            5                            0.0.0.0%tailscale1:5355                     0.0.0.0:*          
+tcp         LISTEN       0            5                                   0.0.0.0%br0:5355                     0.0.0.0:*          
+tcp         LISTEN       0            511                                   127.0.0.1:81                       0.0.0.0:*          
+tcp         LISTEN       0            50                                    127.0.0.1:139                      0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:4545                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:4547                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:4546                     0.0.0.0:*          
+tcp         LISTEN       0            128                                   127.0.0.1:34285                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:54239                    0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:5055                     0.0.0.0:*          
+tcp         LISTEN       0            50                                100.107.45.13:139                      0.0.0.0:*          
+tcp         LISTEN       0            511                               100.107.45.13:81                       0.0.0.0:*          
+tcp         LISTEN       0            128                               100.107.45.13:22                       0.0.0.0:*          
+tcp         LISTEN       0            4096                                  127.0.0.1:2049                     0.0.0.0:*          
+tcp         LISTEN       0            511                               100.107.45.13:443                      0.0.0.0:*          
+tcp         LISTEN       0            50                                100.107.45.13:445                      0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:8181                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:8081                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:7879                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                    0.0.0.0:7878                     0.0.0.0:*          
+tcp         LISTEN       0            4096                                       [::]:9117                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:8989                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:8991                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:8990                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:46495                       [::]:*          
+tcp         LISTEN       0            4096                                       [::]:45936                       [::]:*          
+tcp         LISTEN       0            64                                         [::]:45611                       [::]:*          
+tcp         LISTEN       0            1024                                          *:32400                          *:*          
+tcp         LISTEN       0            4096                [fd7a:115c:a1e0::8a33:2d0d]:42121                       [::]:*          
+tcp         LISTEN       0            511                                       [::1]:443                         [::]:*          
+tcp         LISTEN       0            511                                       [::1]:81                          [::]:*          
+tcp         LISTEN       0            4096                                       [::]:111                         [::]:*          
+tcp         LISTEN       0            5                               [::]%tailscale1:3702                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:51569                       [::]:*          
+tcp         LISTEN       0            511                                           *:3001                           *:*          
+tcp         LISTEN       0            4096                [fd7a:115c:a1e0::8a33:2d0d]:5252                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:52029                       [::]:*          
+tcp         LISTEN       0            5                               [::]%tailscale1:5355                        [::]:*          
+tcp         LISTEN       0            4096                [fd7a:115c:a1e0::8a33:2d0d]:2049                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:4545                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:4547                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:4546                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:53695                       [::]:*          
+tcp         LISTEN       0            4096                                       [::]:5055                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:54037                       [::]:*          
+tcp         LISTEN       0            4096                                       [::]:8181                        [::]:*          
+tcp         LISTEN       0            50                  [fd7a:115c:a1e0::8a33:2d0d]:139                         [::]:*          
+tcp         LISTEN       0            4096                                       [::]:8081                        [::]:*          
+tcp         LISTEN       0            511                 [fd7a:115c:a1e0::8a33:2d0d]:81                          [::]:*          
+tcp         LISTEN       0            128                 [fd7a:115c:a1e0::8a33:2d0d]:22                          [::]:*          
+tcp         LISTEN       0            4096                                       [::]:7879                        [::]:*          
+tcp         LISTEN       0            4096                                       [::]:7878                        [::]:*          
+tcp         LISTEN       0            511                 [fd7a:115c:a1e0::8a33:2d0d]:443                         [::]:*          
+tcp         LISTEN       0            50                  [fd7a:115c:a1e0::8a33:2d0d]:445                         [::]:*          
+tcp         LISTEN       0            4096                                          *:7090                           *:*          
+
+--- Tailscale Status ---
+100.107.45.13   ridgeserver          kennytran88@ linux   -
+100.97.61.81    forest-point         kennytran88@ windows offline
+100.91.132.102  iphone               kennytran88@ iOS     offline
+100.99.51.49    kapmox               kennytran88@ linux   -
+100.98.212.77   kappys-mac-mini      kennytran88@ macOS   -
+100.115.151.114 kapserver            kennytran88@ linux   offline
+100.109.117.14  kaptop               kennytran88@ macOS   active; direct 72.229.169.169:1384, tx 8465100 rx 936028
+100.121.136.23  minikapserver        kennytran88@ linux   active; direct 72.229.169.169:1333, tx 583046340 rx 319476476
+100.78.240.7    tower                tagged-devices linux   -
+
+# Health check:
+#     - Linux DNS config not ideal. /etc/resolv.conf overwritten. See https://tailscale.com/s/dns-fight
+
+=========================================
+DOCKER INFORMATION
+=========================================
+--- Docker Version ---
+Docker version 27.5.1, build 9f9e405
+
+--- Docker System Info ---
+Client:
+ Version:    27.5.1
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.20.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.35.1
+    Path:     /usr/lib/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 15
+  Running: 15
+  Paused: 0
+  Stopped: 0
+ Images: 13
+ Server Version: 27.5.1
+ Storage Driver: btrfs
+  Btrfs: 
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+
+--- Running Containers ---
+NAMES                       IMAGE                               STATUS                PORTS
+dashdot                     mauricenino/dashdot:latest          Up 3 days             
+tautulli                    lscr.io/linuxserver/tautulli        Up 6 days             0.0.0.0:8181->8181/tcp, :::8181->8181/tcp
+overseerr                   ghcr.io/hotio/overseerr:latest      Up 6 days             0.0.0.0:5055->5055/tcp, :::5055->5055/tcp
+qbittorrent-new             ghcr.io/hotio/qbittorrent:release   Up 6 days             0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp, 0.0.0.0:45936->45935/tcp, 0.0.0.0:45936->45935/udp, [::]:45936->45935/tcp, [::]:45936->45935/udp
+binhex-plex                 ghcr.io/binhex/arch-plex            Up 6 days (healthy)   
+sonarr-kdrama               ghcr.io/hotio/sonarr:latest         Up 6 days             0.0.0.0:8991->8989/tcp, [::]:8991->8989/tcp
+binhex-jackett              binhex/arch-jackett                 Up 6 days (healthy)   0.0.0.0:9117->9117/tcp, :::9117->9117/tcp
+Unraid-Cloudflared-Tunnel   figro/unraid-cloudflared-tunnel     Up 6 days             0.0.0.0:46495->46495/tcp, :::46495->46495/tcp
+requestrr-kdrama            darkalfx/requestrr:latest           Up 6 days             0.0.0.0:4547->4545/tcp, [::]:4547->4545/tcp
+requestrr-anime             darkalfx/requestrr:latest           Up 6 days             0.0.0.0:4546->4545/tcp, [::]:4546->4545/tcp
+requestrr                   darkalfx/requestrr:latest           Up 6 days             0.0.0.0:4545->4545/tcp, :::4545->4545/tcp
+radarr-4k                   cr.hotio.dev/hotio/radarr           Up 6 days             0.0.0.0:7879->7878/tcp, [::]:7879->7878/tcp
+radarr                      cr.hotio.dev/hotio/radarr           Up 6 days             0.0.0.0:7878->7878/tcp, :::7878->7878/tcp
+sonarr-anime                cr.hotio.dev/hotio/sonarr:v4        Up 3 days             0.0.0.0:8990->8989/tcp, [::]:8990->8989/tcp
+sonarr                      cr.hotio.dev/hotio/sonarr:v4        Up 6 days             0.0.0.0:8989->8989/tcp, :::8989->8989/tcp
+
+--- All Containers ---
+NAMES                       IMAGE                               STATUS                PORTS
+dashdot                     mauricenino/dashdot:latest          Up 3 days             
+tautulli                    lscr.io/linuxserver/tautulli        Up 6 days             0.0.0.0:8181->8181/tcp, :::8181->8181/tcp
+overseerr                   ghcr.io/hotio/overseerr:latest      Up 6 days             0.0.0.0:5055->5055/tcp, :::5055->5055/tcp
+qbittorrent-new             ghcr.io/hotio/qbittorrent:release   Up 6 days             0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp, 0.0.0.0:45936->45935/tcp, 0.0.0.0:45936->45935/udp, [::]:45936->45935/tcp, [::]:45936->45935/udp
+binhex-plex                 ghcr.io/binhex/arch-plex            Up 6 days (healthy)   
+sonarr-kdrama               ghcr.io/hotio/sonarr:latest         Up 6 days             0.0.0.0:8991->8989/tcp, [::]:8991->8989/tcp
+binhex-jackett              binhex/arch-jackett                 Up 6 days (healthy)   0.0.0.0:9117->9117/tcp, :::9117->9117/tcp
+Unraid-Cloudflared-Tunnel   figro/unraid-cloudflared-tunnel     Up 6 days             0.0.0.0:46495->46495/tcp, :::46495->46495/tcp
+requestrr-kdrama            darkalfx/requestrr:latest           Up 6 days             0.0.0.0:4547->4545/tcp, [::]:4547->4545/tcp
+requestrr-anime             darkalfx/requestrr:latest           Up 6 days             0.0.0.0:4546->4545/tcp, [::]:4546->4545/tcp
+requestrr                   darkalfx/requestrr:latest           Up 6 days             0.0.0.0:4545->4545/tcp, :::4545->4545/tcp
+radarr-4k                   cr.hotio.dev/hotio/radarr           Up 6 days             0.0.0.0:7879->7878/tcp, [::]:7879->7878/tcp
+radarr                      cr.hotio.dev/hotio/radarr           Up 6 days             0.0.0.0:7878->7878/tcp, :::7878->7878/tcp
+sonarr-anime                cr.hotio.dev/hotio/sonarr:v4        Up 3 days             0.0.0.0:8990->8989/tcp, [::]:8990->8989/tcp
+sonarr                      cr.hotio.dev/hotio/sonarr:v4        Up 6 days             0.0.0.0:8989->8989/tcp, :::8989->8989/tcp
+
+--- Docker Images ---
+REPOSITORY                        TAG       SIZE      CREATED AT
+lscr.io/linuxserver/tautulli      latest    146MB     2025-10-09 19:34:05 -0400 EDT
+ghcr.io/hotio/overseerr           latest    1.41GB    2025-10-08 23:11:13 -0400 EDT
+ghcr.io/hotio/qbittorrent         release   159MB     2025-10-08 23:09:08 -0400 EDT
+ghcr.io/hotio/sonarr              latest    259MB     2025-10-08 19:22:24 -0400 EDT
+binhex/arch-jackett               latest    1.31GB    2025-10-03 04:17:33 -0400 EDT
+ghcr.io/binhex/arch-plex          latest    1.75GB    2025-09-22 15:20:24 -0400 EDT
+mauricenino/dashdot               latest    204MB     2025-08-10 07:06:59 -0400 EDT
+plexinc/pms-docker                latest    354MB     2025-05-27 11:42:25 -0400 EDT
+ghcr.io/hotio/qbittorrent         <none>    129MB     2025-02-08 08:13:38 -0500 EST
+figro/unraid-cloudflared-tunnel   latest    8.9MB     2024-04-03 16:59:52 -0400 EDT
+darkalfx/requestrr                latest    448MB     2024-01-02 19:00:05 -0500 EST
+cr.hotio.dev/hotio/radarr         latest    234MB     2023-12-24 11:50:19 -0500 EST
+cr.hotio.dev/hotio/sonarr         v4        231MB     2023-09-11 16:48:06 -0400 EDT
+
+--- Docker Networks ---
+NETWORK ID     NAME      DRIVER    SCOPE
+89868484f5d4   br0       macvlan   local
+66f32e0d2897   bridge    bridge    local
+2cbcdceda6e7   host      host      local
+d0fd43b47abc   none      null      local
+
+--- Docker Volumes ---
+DRIVER    VOLUME NAME
+local     1bc2978616c52f16dd78a0fff2e44abc5b70206306f676e8446ff55bcc26b410
+local     88ef131c5947cccd93bb84856a4a9618283ff107e9de6fa8958edbe2e9acf842
+local     573889c353f026734fda6378a9cfdd1a9d3cbeda92c413a3d872727ee009036c
+local     7907087a3a0c09df19ada63d9ca335677abc57267f30183c869d3aab3276469d
+local     abae0f0f8e0ff1035548fa0a9567e98dec83ff0a3f63c6f2881f35e1588a342f
+local     b2c8a7c2ba56029556cafb41a292df4da4d9de93847e9e21b74382acefb10f16
+local     binhex-shared
+local     c75cfa1f82b6f2fc2139895678d73c766196867f7f27610dec8868265109d45e
+local     d324c5d3ed15bb24be12575d8fe6bd190c634d782466e2f50859894fab28d399
+
+--- Docker Compose Files ---
+
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+Systemd not available
+
+--- Top Processes by CPU ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      621982  100  0.0   5968  3744 pts/1    R+   21:49   0:00 ps aux --sort=-%cpu
+root       20634  8.9  0.2 822540 88612 ?        Ssl  Sep22 3645:16 /usr/libexec/unraid/shfs /mnt/user -disks 32767 -o default_permissions,allow_other,noatime -o remember=330
+nobody   1523596  3.2  0.0   2624   844 ?        S    Oct14 300:34 Plex EAE Service
+nobody   1386230  2.9  1.0 4943780 321996 ?      Sl   Oct14 269:04 /usr/lib/plexmediaserver/Plex Media Server
+nobody   1308940  2.6  3.9 1288600 1257884 ?     Ssl  Oct14 242:33 /app/qbittorrent-nox-lib1 --profile=/app --webui-port=8080 --confirm-legal-notice
+root         209  0.9  0.0      0     0 ?        S    Sep22 403:39 [kswapd0]
+root      626044  0.6  0.1 684476 40096 ?        Ssl  Oct17  32:25 node .
+nobody   1333494  0.6  0.6 2626196 216736 ?      Ssl  Oct14  58:22 /app/bin/Sonarr --nobrowser --data=/config
+nobody   1317807  0.5  0.7 2622652 235084 ?      Ssl  Oct14  52:56 /app/bin/Sonarr --nobrowser --data=/config
+nobody    728395  0.5  0.6 2612316 212632 ?      Ssl  Oct17  24:30 /app/bin/Sonarr --nobrowser --data=/config
+nobody   1307963  0.2  1.4 11552028 453412 ?     Sl   Oct14  25:45 /usr/bin/node dist/index.js
+root        8939  0.2  0.4 22302088 157840 ?     Ssl  Sep22 111:23 node /usr/local/unraid-api/dist/main.js
+nobody   1329208  0.2  0.7 2620368 248780 ?      Ssl  Oct14  21:47 /app/bin/Radarr --nobrowser --data=/config
+root        6045  0.2  0.0 345796  4496 ?        Ssl  Sep22  93:50 /usr/libexec/unraid/emhttpd
+
+--- Top Processes by Memory ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nobody   1308940  2.6  3.9 1288600 1257884 ?     Ssl  Oct14 242:33 /app/qbittorrent-nox-lib1 --profile=/app --webui-port=8080 --confirm-legal-notice
+nobody   1307963  0.2  1.4 11552028 453412 ?     Sl   Oct14  25:45 /usr/bin/node dist/index.js
+root     1319806  0.0  1.2 31202536 412584 ?     Ssl  Oct14   2:37 dotnet Requestrr.WebApi.dll
+root     1321536  0.0  1.2 31270068 410900 ?     Ssl  Oct14   3:47 dotnet Requestrr.WebApi.dll
+root     1318129  0.0  1.2 31202320 395828 ?     Ssl  Oct14   2:20 dotnet Requestrr.WebApi.dll
+root       21276  0.0  1.1 6293352 360496 ?      Sl   Sep22  37:02 /usr/bin/dockerd -p /var/run/dockerd.pid --log-opt max-size=50m --log-opt max-file=1 --log-level=fatal --storage-driver=btrfs
+nobody   1386230  2.9  1.0 4943780 321996 ?      Sl   Oct14 269:04 /usr/lib/plexmediaserver/Plex Media Server
+nobody   1327377  0.1  0.8 2619556 276708 ?      Ssl  Oct14   9:25 /app/bin/Radarr --nobrowser --data=/config
+nobody   1329208  0.2  0.7 2620368 248780 ?      Ssl  Oct14  21:47 /app/bin/Radarr --nobrowser --data=/config
+nobody   1317807  0.5  0.7 2622652 235084 ?      Ssl  Oct14  52:56 /app/bin/Sonarr --nobrowser --data=/config
+nobody   1333494  0.6  0.6 2626196 216736 ?      Ssl  Oct14  58:22 /app/bin/Sonarr --nobrowser --data=/config
+nobody    728395  0.5  0.6 2612316 212632 ?      Ssl  Oct17  24:30 /app/bin/Sonarr --nobrowser --data=/config
+nobody   1321282  0.0  0.5 274377088 187236 ?    Sl   Oct14   0:52 /usr/lib/jackett/jackett --NoRestart --NoUpdates --DataFolder /config/Jackett
+root        8939  0.2  0.4 22302088 157840 ?     Ssl  Sep22 111:23 node /usr/local/unraid-api/dist/main.js
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+rootfs on / type rootfs (rw,size=15977128k,nr_inodes=3994282,inode64)
+none on /sys/kernel/debug type debugfs (rw,relatime)
+/dev/sdf1 on /boot type vfat (rw,noatime,nodiratime,fmask=0177,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,flush,errors=remount-ro)
+/boot/bzfirmware on /usr type squashfs (ro,relatime,errors=continue)
+overlay on /usr type overlay (rw,relatime,lowerdir=/usr,upperdir=/var/local/overlay/usr,workdir=/var/local/overlay-work/usr,uuid=on)
+/boot/bzmodules on /lib type squashfs (ro,relatime,errors=continue)
+overlay on /lib type overlay (rw,relatime,lowerdir=/lib,upperdir=/var/local/overlay/lib,workdir=/var/local/overlay-work/lib,uuid=on)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+hugetlbfs on /hugetlbfs type hugetlbfs (rw,relatime,pagesize=2M)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+rootfs on /mnt type rootfs (rw,size=15977128k,nr_inodes=3994282,inode64)
+/dev/md1p1 on /mnt/disk1 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md2p1 on /mnt/disk2 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md3p1 on /mnt/disk3 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md4p1 on /mnt/disk4 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md5p1 on /mnt/disk5 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md6p1 on /mnt/disk6 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md7p1 on /mnt/disk7 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md8p1 on /mnt/disk8 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md9p1 on /mnt/disk9 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md10p1 on /mnt/disk10 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md11p1 on /mnt/disk11 type xfs (rw,noatime,nouuid,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+/dev/md12p1 on /mnt/disk12 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md13p1 on /mnt/disk13 type xfs (rw,noatime,nouuid,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+/dev/md14p1 on /mnt/disk14 type xfs (rw,noatime,nouuid,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+/dev/nvme2n1p1 on /mnt/cache type btrfs (rw,noatime,ssd,discard=async,space_cache=v2,subvolid=5,subvol=/)
+shfs on /mnt/user0 type fuse.shfs (rw,nosuid,nodev,noatime,user_id=0,group_id=0,default_permissions,allow_other)
+shfs on /mnt/user type fuse.shfs (rw,nosuid,nodev,noatime,user_id=0,group_id=0,default_permissions,allow_other)
+/mnt/disk1/system/docker/docker.img on /var/lib/docker type btrfs (rw,noatime,ssd,discard=async,space_cache=v2,subvolid=5,subvol=/)
+/mnt/disk1/system/docker/docker.img on /var/lib/docker/btrfs type btrfs (rw,noatime,ssd,discard=async,space_cache=v2,subvolid=5,subvol=/)
+nsfs on /run/docker/netns/default type nsfs (rw)
+nsfs on /run/docker/netns/0edc4fdb6d95 type nsfs (rw)
+nsfs on /run/docker/netns/155aedb3f470 type nsfs (rw)
+nsfs on /run/docker/netns/6bd4ea7401e4 type nsfs (rw)
+nsfs on /run/docker/netns/92b188523031 type nsfs (rw)
+nsfs on /run/docker/netns/31052473ebc9 type nsfs (rw)
+nsfs on /run/docker/netns/df807b316633 type nsfs (rw)
+nsfs on /run/docker/netns/42bb4bf856f9 type nsfs (rw)
+nsfs on /run/docker/netns/08c129142298 type nsfs (rw)
+nsfs on /run/docker/netns/a3b2f1296e4a type nsfs (rw)
+nsfs on /run/docker/netns/499b35c3859f type nsfs (rw)
+nsfs on /run/docker/netns/37d8120f5dda type nsfs (rw)
+nsfs on /run/docker/netns/d37fc63f372b type nsfs (rw)
+nsfs on /run/docker/netns/36734e18e15d type nsfs (rw)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,relatime)
+
+--- Disk I/O Statistics ---
+Linux 6.12.24-Unraid (Ridgeserver)      10/20/2025      _x86_64_        (16 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.97    0.18    1.56    3.61    0.00   93.68
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+loop0            0.52     16.67     0.00   0.00    0.30    31.93    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   2.15
+loop1            0.00      0.02     0.00   0.00    0.30    50.42    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop2            3.11    166.46     0.01   0.27  130.43    53.49    8.55   1688.63     0.02   0.22   19.72   197.56    0.76   1713.82     0.00   0.00    3.08  2253.11    0.05  439.84    0.60   3.69
+nvme0n1          0.22     49.84     0.00   0.21    2.67   223.19    2.68    120.70     3.19  54.36    2.88    45.11    0.00     46.13     0.00   0.00    1.33 65438.77    0.55    0.93    0.01   0.26
+nvme1n1          2.41   1003.19     0.01   0.22    1.28   415.44    5.52   1484.85     2.59  31.94   43.90   269.12    0.17   1560.52     0.00   0.00    0.85  9184.82    0.55    0.78    0.25   0.36
+nvme2n1          5.19   2313.08     0.01   0.24    1.06   445.88    5.13   1453.23     1.03  16.66   46.72   283.40    0.17   1560.49     0.00   0.00    0.77  9184.68    0.55    0.30    0.25   0.21
+sda              0.98    824.76   205.21  99.52    9.68   841.22    0.17    128.09    31.85  99.46    7.78   742.69    0.00      0.00     0.00   0.00    0.00     0.00    0.00  331.60    0.01   0.63
+sdb              5.48   2399.96   594.51  99.09    5.17   438.17    0.88    314.26    77.68  98.88    5.53   355.85    0.00      0.00     0.00   0.00    0.00     0.00    0.00  340.89    0.03   1.90
+sdc              3.21   1590.56   394.43  99.19    6.08   494.99    1.46    450.42   111.14  98.70    3.64   307.84    0.00      0.00     0.00   0.00    0.00     0.00    0.00  139.62    0.02   1.42
+sdd             11.62   1989.33   485.71  97.66    3.81   171.20   17.42   1762.76   423.35  96.05    2.81   101.21    0.00      0.00     0.00   0.00    0.00     0.00    0.15  123.64    0.11   6.05
+sde              2.07   1762.76   438.62  99.53   10.93   853.01    0.00      0.04     0.01  74.84    1.74    15.89    0.00      0.00     0.00   0.00    0.00     0.00    0.00   33.50    0.02   1.26
+sdf              0.37      7.82     0.02   5.53    0.55    21.31    0.00      0.15     0.00  44.37   17.32   326.48    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.02
+sdg              2.93   1320.11   327.10  99.11   13.50   451.05    0.00      0.02     0.00  83.90    3.34    24.81    0.00      0.00     0.00   0.00    0.00     0.00    0.00  179.55    0.04   0.70
+sdh              0.90    109.98    26.59  96.73    1.17   122.15    0.27     36.84     8.97  97.09   10.20   136.81    0.00      0.00     0.00   0.00    0.00     0.00    0.03   19.54    0.00   0.26
+sdi             12.12    306.06    64.40  84.16   15.31    25.26   10.96    503.31   116.75  91.42   33.23    45.91    0.00      0.00     0.00   0.00    0.00     0.00    1.87   90.04    0.72  23.91
+sdj              4.94   2120.68   525.23  99.07   12.01   429.16    0.00      0.04     0.01  84.78    3.99    26.26    0.00      0.00     0.00   0.00    0.00     0.00    0.00  212.74    0.06   1.14
+sdk              3.17    409.38    99.18  96.91    1.16   129.26    0.00      0.00     0.00  79.11    2.08    18.52    0.00      0.00     0.00   0.00    0.00     0.00    0.00    4.04    0.00   0.21
+sdl              1.12    566.04   140.39  99.21   13.97   505.07    0.00      0.01     0.00  81.49    2.03    21.58    0.00      0.00     0.00   0.00    0.00     0.00    0.00   11.30    0.02   0.29
+sdm              2.87   1462.67   362.79  99.21   12.64   509.07    0.00      0.02     0.00  81.78    4.19    21.94    0.00      0.00     0.00   0.00    0.00     0.00    0.00   86.31    0.04   0.75
+sdn              1.42    500.29   123.65  98.86   13.00   351.41    0.00      0.01     0.00  83.93    2.44    24.85    0.00      0.00     0.00   0.00    0.00     0.00    0.00   50.44    0.02   0.39
+sdo              2.19   1039.60   257.71  99.16   14.64   475.27    0.00      0.00     0.00  89.34    2.20    37.48    0.00      0.00     0.00   0.00    0.00     0.00    0.00   32.00    0.03   0.68
+
+
+
+--- ZFS Pools (if available) ---
+no pools available
+
+--- LVM Information ---
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+# If you don't want the output of a cron job mailed to you, you have to direct
+# any output to /dev/null.  We'll do this here since these jobs should run
+# properly on a newly installed system.  If a script fails, run-parts will
+# mail a notice to root.
+#
+# Run the hourly, daily, weekly, and monthly cron jobs.
+# Jobs that need different timing may be entered into the crontab as before,
+# but most really don't need greater granularity than this.  If the exact
+# times of the hourly, daily, weekly, and monthly cron jobs do not suit your
+# needs, feel free to adjust them.
+#
+# Run hourly cron jobs at 47 minutes after the hour:
+47 * * * * /usr/bin/run-parts /etc/cron.hourly 1> /dev/null
+#
+# Run daily cron jobs at 4:40 every day:
+40 4 * * * /usr/bin/run-parts /etc/cron.daily 1> /dev/null
+#
+# Run weekly cron jobs at 4:30 on the first day of the week:
+30 4 * * 0 /usr/bin/run-parts /etc/cron.weekly 1> /dev/null
+#
+# Run monthly cron jobs at 4:20 on the first day of the month:
+20 4 1 * * /usr/bin/run-parts /etc/cron.monthly 1> /dev/null
+
+--- System Crontab ---
+/etc/crontab not readable
+
+--- SSH Configuration ---
+PermitRootLogin yes
+
+--- Firewall Status ---
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ts-input   all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+DOCKER-USER  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-ISOLATION-STAGE-1  all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+DOCKER     all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+ts-forward  all  --  0.0.0.0/0            0.0.0.0/0           
+WIREGUARD  all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/root
+PATH=/usr/local/node/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
+USER=root
+
+--- Installed Packages (sample) ---
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+Oct 20 21:42:40 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:42:40 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 21:42:40 Ridgeserver sudo:     root : TTY=pts/1 ; PWD=/mnt/user ; USER=root ; COMMAND=/usr/sbin/iptables -L -n
+Oct 20 21:42:40 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:42:40 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 21:49:05 Ridgeserver sudo:     root : TTY=pts/1 ; PWD=/mnt/user ; USER=root ; COMMAND=/usr/sbin/lshw -class disk -short
+Oct 20 21:49:05 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 21:49:08 Ridgeserver sudo:     root : TTY=pts/1 ; PWD=/mnt/user ; USER=root ; COMMAND=/sbin/lvs
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 21:49:08 Ridgeserver sudo:     root : TTY=pts/1 ; PWD=/mnt/user ; USER=root ; COMMAND=/sbin/vgs
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 21:49:08 Ridgeserver sudo:     root : TTY=pts/1 ; PWD=/mnt/user ; USER=root ; COMMAND=/sbin/pvs
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 21:49:08 Ridgeserver sudo:     root : TTY=pts/1 ; PWD=/mnt/user ; USER=root ; COMMAND=/usr/sbin/iptables -L -n
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 21:49:08 Ridgeserver sudo: pam_unix(sudo:session): session closed for user root
+
+--- Docker Logs (if available) ---
+Recent container logs:
+--- dashdot ---
+Speed-test completed successfully [speedtest-cli] {
+  speedDown: 743267172.4379259,
+  speedUp: 442926832.4532018,
+  publicIp: undefined
+}
+--- tautulli ---
+2025-10-20 21:42:48 - DEBUG :: Thread-45 (run) : Tautulli ActivityHandler :: Session 325 started by user 78694159 (ta********4) with ratingKey 53370 (ParaNorman).
+2025-10-20 21:43:38 - DEBUG :: Thread-45 (run) : Tautulli ActivityHandler :: Session 326 started by user 302179036 (br********4) with ratingKey 53350 (Mr. Scorsese - Stranger in a Strange Land).
+2025-10-20 21:45:11 - DEBUG :: Thread-45 (run) : Tautulli ActivityHandler :: Session 323 paused.
+2025-10-20 21:45:23 - DEBUG :: Thread-45 (run) : Tautulli ActivityHandler :: Session 323 resumed.
+2025-10-20 21:46:09 - DEBUG :: Thread-45 (run) : Tautulli ActivityHandler :: Session 325 paused.
+--- overseerr ---
+2025-10-21T01:49:00.019Z [debug][Jobs]: Starting scheduled job: Download Sync 
+2025-10-21T01:49:00.024Z [debug][Download Tracker]: Found 10 item(s) in progress on Sonarr server: Anime 
+2025-10-21T01:49:00.024Z [debug][Download Tracker]: Found 10 item(s) in progress on Sonarr server: TV Shows 
+2025-10-21T01:49:00.024Z [debug][Download Tracker]: Found 10 item(s) in progress on Sonarr server: Kdrama 
+2025-10-21T01:49:00.025Z [debug][Download Tracker]: Found 3 item(s) in progress on Radarr server: Movies 
+--- qbittorrent-new ---
+******** Information ********
+To control qBittorrent, access the WebUI at: http://localhost:8080
+--- binhex-plex ---
+Generated new chapter thumbnails for Betrayals (1).
+
+2025-10-20 02:13:40,339 DEBG 'start-script' stdout output:
+Generated new chapter thumbnails for Transformers: Age of Extinction.
+
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/vTrus_Root_CA.pem
+/etc/ssl/certs/vTrus_ECC_Root_CA.pem
+/etc/ssl/certs/unraid_bundle.pem
+/etc/ssl/certs/emSign_Root_CA_-_G1.pem
+/etc/ssl/certs/emSign_Root_CA_-_C1.pem
+/etc/ssl/certs/emSign_ECC_Root_CA_-_G3.pem
+/etc/ssl/certs/emSign_ECC_Root_CA_-_C3.pem
+/etc/ssl/certs/ePKI_Root_Certification_Authority.pem
+/etc/ssl/certs/e-Szigno_Root_CA_2017.pem
+/etc/ssl/certs/certSIGN_Root_CA_G2.pem
+
+--- Users with Shell Access ---
+root:x:0:0:Console and webGui login account:/root:/bin/bash
+
+--- Sudo Configuration ---
+Defaults!/usr/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+root ALL=(ALL:ALL) ALL
+@includedir /etc/sudoers.d
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: Ridgeserver
+Completed: Mon Oct 20 21:49:08 EDT 2025

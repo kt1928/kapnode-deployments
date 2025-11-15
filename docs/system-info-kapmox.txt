@@ -1,0 +1,510 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: kapmox
+Date: Tue Oct 21 12:20:42 PM EDT 2025
+User: root
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux kapmox 6.14.8-2-pve #1 SMP PREEMPT_DYNAMIC PMX 6.14.8-2 (2025-07-22T10:04Z) x86_64 GNU/Linux
+
+--- OS Release ---
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.0
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+--- Uptime ---
+ 12:20:42 up 3 days, 14:06,  1 user,  load average: 0.20, 0.07, 0.01
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             39 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      8
+  On-line CPU(s) list:       0-7
+Vendor ID:                   GenuineIntel
+  Model name:                Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz
+    CPU family:              6
+    Model:                   158
+    Thread(s) per core:      1
+    Core(s) per socket:      8
+    Socket(s):               1
+    Stepping:                12
+    CPU(s) scaling MHz:      95%
+    CPU max MHz:             4900.0000
+    CPU min MHz:             800.0000
+    BogoMIPS:                7200.00
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca 
+                             cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht t
+                             m pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_
+                             perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpui
+                             d aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx 
+                             est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 
+                             x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c
+                              rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ib
+                             rs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsg
+                             sbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rds
+                             eed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 
+                             xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_win
+                             dow hwp_epp vnmi md_clear flush_l1d arch_capabilities
+Virtualization features:     
+  Virtualization:            VT-x
+Caches (sum of all):         
+  L1d:                       256 KiB (8 instances)
+  L1i:                       256 KiB (8 instances)
+  L2:                        2 MiB (8 instances)
+  L3:                        12 MiB (1 instance)
+NUMA:                        
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0-7
+Vulnerabilities:             
+  Gather data sampling:      Vulnerable
+  Ghostwrite:                Not affected
+  Indirect target selection: Not affected
+  Itlb multihit:             KVM: Mitigation: Split huge pages
+  L1tf:                      Not affected
+  Mds:                       Mitigation; Clear CPU buffers; SMT disabled
+  Meltdown:                  Not affected
+  Mmio stale data:           Mitigation; Clear CPU buffers; SMT disabled
+  Reg file data sampling:    Not affected
+  Retbleed:                  Mitigation; IBRS
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer s
+                             anitization
+  Spectre v2:                Mitigation; IBRS; IBPB conditional; STIBP disabled; RSB f
+                             illing; PBRSB-eIBRS Not affected; BHI Not affected
+  Srbds:                     Mitigation; Microcode
+  Tsx async abort:           Mitigation; TSX disabled
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       2.3Gi        60Gi        47Mi       958Mi        60Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+--- Memory Details ---
+MemTotal:       65762044 kB
+MemFree:        63066944 kB
+MemAvailable:   63367060 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388604 kB
+
+--- Disk Information ---
+NAME FSTYPE FSVER LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+sda  iso966       PVE   2025-08-05-10-48-40-00                                
+├─sda1
+│                                                                             
+├─sda2
+│    vfat   FAT12       4DEC-4CE2                                             
+├─sda3
+│    hfsplu       PVE                                                         
+└─sda4
+                                                                              
+nvme1n1
+│                                                                             
+├─nvme1n1p1
+│                                                                             
+├─nvme1n1p2
+│    vfat   FAT32       F481-3829                              1013.2M     1% /boot/efi
+└─nvme1n1p3
+  │  LVM2_m LVM2        NhrdeK-jKwu-ZFT2-TgJE-k0lS-wI9H-OYQ430                
+  ├─pve-swap
+  │  swap   1           154a8ed3-266d-4b6b-a5a8-b9306a0965e9                  [SWAP]
+  ├─pve-root
+  │  ext4   1.0         8a961547-2d64-4303-a8b1-33f6f7be8646     85.7G     4% /
+  ├─pve-data_tmeta
+  │ │                                                                           
+  │ └─pve-data
+  │                                                                             
+  └─pve-data_tdata
+    │                                                                           
+    └─pve-data
+                                                                                
+nvme2n1
+│                                                                             
+├─nvme2n1p1
+│                                                                             
+├─nvme2n1p2
+│    vfat   FAT32       AFA4-556A                                             
+└─nvme2n1p3
+  │  LVM2_m LVM2        2gisGD-nL3W-lBnC-ffba-f22m-JNpr-6FfbGy                
+  ├─pve--OLD--0BDB1363-swap
+  │  swap   1           697caf2d-2462-4035-a0cf-04a42a53f96d                  
+  ├─pve--OLD--0BDB1363-root
+  │  ext4   1.0         7afb2004-c674-4eff-ab56-4cf20572ddf1                  
+  ├─pve--OLD--0BDB1363-data_tmeta
+  │ │                                                                           
+  │ └─pve--OLD--0BDB1363-data
+  │                                                                             
+  └─pve--OLD--0BDB1363-data_tdata
+    │                                                                           
+    └─pve--OLD--0BDB1363-data
+                                                                                
+nvme0n1
+                                                                              
+
+--- Disk Usage ---
+Filesystem            Size  Used Avail Use% Mounted on
+udev                   32G     0   32G   0% /dev
+tmpfs                 6.3G  1.7M  6.3G   1% /run
+/dev/mapper/pve-root   94G  3.5G   86G   4% /
+tmpfs                  32G   46M   32G   1% /dev/shm
+efivarfs              192K   85K  103K  46% /sys/firmware/efi/efivars
+tmpfs                 5.0M     0  5.0M   0% /run/lock
+tmpfs                 1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs                  32G     0   32G   0% /tmp
+/dev/nvme1n1p2       1022M  8.8M 1014M   1% /boot/efi
+/dev/fuse             128M   16K  128M   1% /etc/pve
+tmpfs                 1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs                 6.3G  4.0K  6.3G   1% /run/user/0
+
+--- Storage Details ---
+
+--- PCI Devices ---
+00:00.0 Host bridge: Intel Corporation 8th/9th Gen Core 8-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S] (rev 0a)
+00:01.0 PCI bridge: Intel Corporation 6th-10th Gen Core Processor PCIe Controller (x16) (rev 0a)
+00:14.0 USB controller: Intel Corporation Cannon Lake PCH USB 3.1 xHCI Host Controller (rev 10)
+00:14.2 RAM memory: Intel Corporation Cannon Lake PCH Shared SRAM (rev 10)
+00:16.0 Communication controller: Intel Corporation Cannon Lake PCH HECI Controller (rev 10)
+00:17.0 SATA controller: Intel Corporation Cannon Lake PCH SATA AHCI Controller (rev 10)
+00:1b.0 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #17 (rev f0)
+00:1b.4 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #21 (rev f0)
+00:1c.0 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #1 (rev f0)
+00:1c.4 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #5 (rev f0)
+00:1d.0 PCI bridge: Intel Corporation Cannon Lake PCH PCI Express Root Port #9 (rev f0)
+00:1f.0 ISA bridge: Intel Corporation Z390 Chipset LPC/eSPI Controller (rev 10)
+00:1f.3 Audio device: Intel Corporation Cannon Lake PCH cAVS (rev 10)
+00:1f.4 SMBus: Intel Corporation Cannon Lake PCH SMBus Controller (rev 10)
+00:1f.5 Serial bus controller: Intel Corporation Cannon Lake PCH SPI Controller (rev 10)
+01:00.0 VGA compatible controller: NVIDIA Corporation GA104 [GeForce RTX 3060 Ti Lite Hash Rate] (rev a1)
+01:00.1 Audio device: NVIDIA Corporation GA104 High Definition Audio Controller (rev a1)
+02:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller PM9C1a (DRAM-less)
+03:00.0 Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller S4LV008[Pascal]
+05:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+
+--- USB Devices ---
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 003: ID 046d:c539 Logitech, Inc. Lightspeed Receiver
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 13fe:6700 Phison Electronics Corp. USB DISK 3.0
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp5s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master vmbr0 state UP group default qlen 1000
+    link/ether 7c:10:c9:3d:54:b8 brd ff:ff:ff:ff:ff:ff
+    altname enx7c10c93d54b8
+3: vmbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 7c:10:c9:3d:54:b8 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.86.88/24 scope global vmbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7e10:c9ff:fe3d:54b8/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+4: tailscale0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet 100.99.51.49/32 scope global tailscale0
+       valid_lft forever preferred_lft forever
+    inet6 fd7a:115c:a1e0::e33:3331/128 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::fbe3:adab:6745:be77/64 scope link stable-privacy proto kernel_ll 
+       valid_lft forever preferred_lft forever
+
+--- Routing Table ---
+default via 192.168.86.1 dev vmbr0 proto kernel onlink 
+192.168.86.0/24 dev vmbr0 proto kernel scope link src 192.168.86.88 
+
+--- DNS Configuration ---
+# resolv.conf(5) file generated by tailscale
+# For more info, see https://tailscale.com/s/resolvconf-overwrite
+# DO NOT EDIT THIS FILE BY HAND -- CHANGES WILL BE OVERWRITTEN
+
+nameserver 100.100.100.100
+search tailef17b3.ts.net local
+
+--- Network Connections ---
+Netid  State   Recv-Q  Send-Q                Local Address:Port    Peer Address:Port  
+udp    UNCONN  0       0                           0.0.0.0:111          0.0.0.0:*     
+udp    UNCONN  0       0                         127.0.0.1:323          0.0.0.0:*     
+udp    UNCONN  0       0                           0.0.0.0:41641        0.0.0.0:*     
+udp    UNCONN  0       0                              [::]:111             [::]:*     
+udp    UNCONN  0       0                             [::1]:323             [::]:*     
+udp    UNCONN  0       0                              [::]:41641           [::]:*     
+tcp    LISTEN  0       100                       127.0.0.1:25           0.0.0.0:*     
+tcp    LISTEN  0       4096                      127.0.0.1:85           0.0.0.0:*     
+tcp    LISTEN  0       4096                        0.0.0.0:111          0.0.0.0:*     
+tcp    LISTEN  0       128                         0.0.0.0:22           0.0.0.0:*     
+tcp    LISTEN  0       4096                   100.99.51.49:51553        0.0.0.0:*     
+tcp    LISTEN  0       100                           [::1]:25              [::]:*     
+tcp    LISTEN  0       4096                              *:8006               *:*     
+tcp    LISTEN  0       4096     [fd7a:115c:a1e0::e33:3331]:59345           [::]:*     
+tcp    LISTEN  0       4096                              *:3128               *:*     
+tcp    LISTEN  0       4096                           [::]:111             [::]:*     
+tcp    LISTEN  0       128                            [::]:22              [::]:*     
+
+--- Tailscale Status ---
+100.99.51.49    kapmox               kennytran88@ linux   -
+100.97.61.81    forest-point         kennytran88@ windows offline
+100.91.132.102  iphone               kennytran88@ iOS     offline
+100.98.212.77   kappys-mac-mini      kennytran88@ macOS   active; direct 72.229.169.169:41641, tx 135716316 rx 157938756
+100.115.151.114 kapserver            kennytran88@ linux   offline
+100.109.117.14  kaptop               kennytran88@ macOS   offline
+100.121.136.23  minikapserver        kennytran88@ linux   -
+100.107.45.13   ridgeserver          kennytran88@ linux   -
+100.78.240.7    tower                tagged-devices linux   -
+
+=========================================
+DOCKER INFORMATION
+=========================================
+Docker not installed
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+  UNIT                                                  LOAD   ACTIVE SUB     DESCRIPTION
+  apparmor.service                                      loaded active exited  Load AppArmor profiles
+  blk-availability.service                              loaded active exited  Availability of block devices
+  chrony.service                                        loaded active running chrony, an NTP client/server
+  console-setup.service                                 loaded active exited  Set console font and keymap
+  cron.service                                          loaded active running Regular background program processing daemon
+  dbus.service                                          loaded active running D-Bus System Message Bus
+  dm-event.service                                      loaded active running Device-mapper event daemon
+  getty@tty1.service                                    loaded active running Getty on tty1
+  ifupdown2-pre.service                                 loaded active exited  Helper to synchronize boot up for ifupdown
+  keyboard-setup.service                                loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                             loaded active exited  Create List of Static Device Nodes
+  ksmtuned.service                                      loaded active running Kernel Samepage Merging (KSM) Tuning Daemon
+  ldconfig.service                                      loaded active exited  Rebuild Dynamic Linker Cache
+  lvm2-monitor.service                                  loaded active exited  Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
+  lxc-monitord.service                                  loaded active running LXC Container Monitoring Daemon
+  lxc-net.service                                       loaded active exited  LXC network bridge setup
+  lxc.service                                           loaded active exited  LXC Container Initialization and Autoboot Code
+  lxcfs.service                                         loaded active running FUSE filesystem for LXC
+  networking.service                                    loaded active exited  Network initialization
+
+--- Enabled Services ---
+UNIT FILE                              STATE   PRESET
+apparmor.service                       enabled enabled
+blk-availability.service               enabled enabled
+chrony.service                         enabled enabled
+console-setup.service                  enabled enabled
+corosync.service                       enabled enabled
+cron.service                           enabled enabled
+e2scrub_reap.service                   enabled enabled
+getty@.service                         enabled enabled
+grub-common.service                    enabled enabled
+keyboard-setup.service                 enabled enabled
+ksmtuned.service                       enabled enabled
+lvm2-monitor.service                   enabled enabled
+lxc-monitord.service                   enabled enabled
+lxc-net.service                        enabled enabled
+lxc.service                            enabled enabled
+lxcfs.service                          enabled enabled
+networking.service                     enabled enabled
+nfs-blkmap.service                     enabled enabled
+open-iscsi.service                     enabled enabled
+
+--- Top Processes by CPU ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      815625  6.2  0.0  22288 12868 ?        Ss   12:20   0:00 /usr/lib/systemd/systemd --user
+root        1183  0.1  0.1 175672 108532 ?       Ss   Oct17   8:57 pve-firewall
+root        1181  0.1  0.1 177712 114820 ?       Ss   Oct17   7:44 pvestatd
+root        3704  0.0  0.0 1321536 49184 ?       Ssl  Oct17   2:09 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641
+root        1011  0.0  0.0 559824 65128 ?        Ssl  Oct17   2:09 /usr/bin/pmxcfs
+www-data  804823  0.0  0.2 226952 157524 ?       S    11:12   0:00 pveproxy worker
+www-data  810169  0.0  0.2 226048 156452 ?       S    11:46   0:00 pveproxy worker
+www-data  813542  0.0  0.2 231116 162704 ?       S    12:07   0:00 pveproxy worker
+root        1526  0.0  0.1 201884 120920 ?       Ss   Oct17   0:21 pve-ha-lrm
+root        1541  0.0  0.1 198600 122404 ?       Ss   Oct17   0:17 pvescheduler
+root      805161  0.0  0.0      0     0 ?        I    11:14   0:00 [kworker/u32:3-events_power_efficient]
+root      809304  0.0  0.0      0     0 ?        I    11:41   0:00 [kworker/u32:1-flush-252:1]
+root         115  0.0  0.0      0     0 ?        I    Oct17   0:15 [kworker/3:1-events]
+root         132  0.0  0.0      0     0 ?        I    Oct17   0:14 [kworker/7:1-events]
+
+--- Top Processes by Memory ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+www-data    1528  0.0  0.2 217332 176304 ?       Ss   Oct17   0:04 pveproxy
+www-data  813542  0.0  0.2 231116 162704 ?       S    12:07   0:00 pveproxy worker
+www-data  804823  0.0  0.2 226952 157524 ?       S    11:12   0:00 pveproxy worker
+root        1211  0.0  0.2 225272 156980 ?       S    Oct17   0:03 pvedaemon worker
+www-data  810169  0.0  0.2 226048 156452 ?       S    11:46   0:00 pveproxy worker
+root        1210  0.0  0.2 224776 152812 ?       S    Oct17   0:04 pvedaemon worker
+root        1212  0.0  0.2 224684 152364 ?       S    Oct17   0:03 pvedaemon worker
+root      815614  0.0  0.2 225272 149108 ?       Ss   12:20   0:00 task UPID:kapmox:000C71FE:01D909A8:68F7B2D8:vncshell::root@pam:
+root        1209  0.0  0.2 216076 146984 ?       Ss   Oct17   0:01 pvedaemon
+root        1541  0.0  0.1 198600 122404 ?       Ss   Oct17   0:17 pvescheduler
+root        1225  0.0  0.1 202652 121576 ?       Ss   Oct17   0:14 pve-ha-crm
+root        1526  0.0  0.1 201884 120920 ?       Ss   Oct17   0:21 pve-ha-lrm
+root        1181  0.1  0.1 177712 114820 ?       Ss   Oct17   7:44 pvestatd
+root        1183  0.1  0.1 175672 108532 ?       Ss   Oct17   8:57 pve-firewall
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+/dev/mapper/pve-root on / type ext4 (rw,relatime,errors=remount-ro)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+/dev/nvme1n1p2 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+sunrpc on /run/rpc_pipefs type rpc_pipefs (rw,relatime)
+lxcfs on /var/lib/lxcfs type fuse.lxcfs (rw,nosuid,nodev,relatime,user_id=0,group_id=0,allow_other)
+/dev/fuse on /etc/pve type fuse (rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other)
+
+--- Disk I/O Statistics ---
+iostat not available
+
+--- ZFS Pools (if available) ---
+no pools available
+
+--- LVM Information ---
+LVM commands require sudo
+LVM commands require sudo
+LVM commands require sudo
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+No crontab for current user
+
+--- System Crontab ---
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
+25 6    * * *   root    test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }
+47 6    * * 7   root    test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
+52 6    1 * *   root    test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
+#
+
+--- SSH Configuration ---
+PermitRootLogin yes
+
+--- Firewall Status ---
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+Proxmox detected
+┌─────────┬──────────────────┐
+│ key     │ value            │
+╞═════════╪══════════════════╡
+│ release │ 9.0              │
+├─────────┼──────────────────┤
+│ repoid  │ 025864202ebb6109 │
+├─────────┼──────────────────┤
+│ version │ 9.0.3            │
+└─────────┴──────────────────┘
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/root
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SHELL=/bin/bash
+USER=root
+
+--- Installed Packages (sample) ---
+ii  librtmp1:amd64                       2.4+20151223.gitfa8646d.1-2+b5  amd64        toolkit for RTMP streams (shared library)
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+Oct 21 12:20:41 kapmox systemd[815625]: Reached target paths.target - Paths.
+Oct 21 12:20:41 kapmox systemd[815625]: Reached target timers.target - Timers.
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 21 12:20:41 kapmox systemd[815625]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 21 12:20:41 kapmox systemd[815625]: Starting gpg-agent.socket - GnuPG cryptographic agent and passphrase cache...
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on keyboxd.socket - GnuPG public key management service.
+Oct 21 12:20:41 kapmox systemd[815625]: Starting ssh-agent.socket - OpenSSH Agent socket...
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 21 12:20:41 kapmox systemd[815625]: Listening on ssh-agent.socket - OpenSSH Agent socket.
+Oct 21 12:20:41 kapmox systemd[815625]: Reached target sockets.target - Sockets.
+Oct 21 12:20:41 kapmox systemd[815625]: Reached target basic.target - Basic System.
+Oct 21 12:20:41 kapmox systemd[815625]: Reached target default.target - Main User Target.
+Oct 21 12:20:41 kapmox systemd[815625]: Startup finished in 178ms.
+Oct 21 12:20:41 kapmox systemd[1]: Started user@0.service - User Manager for UID 0.
+Oct 21 12:20:41 kapmox systemd[1]: Started session-100.scope - Session 100 of User root.
+Oct 21 12:20:41 kapmox login[815617]: ROOT LOGIN ON pts/0
+Oct 21 12:20:43 kapmox crontab[815700]: (root) LIST (root)
+
+--- Docker Logs (if available) ---
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/TeliaSonera_Root_CA_v1.pem
+/etc/ssl/certs/Secure_Global_CA.pem
+/etc/ssl/certs/CommScope_Public_Trust_RSA_Root-02.pem
+/etc/ssl/certs/DigiCert_Trusted_Root_G4.pem
+/etc/ssl/certs/QuoVadis_Root_CA_3.pem
+/etc/ssl/certs/emSign_Root_CA_-_C1.pem
+/etc/ssl/certs/SSL.com_EV_Root_Certification_Authority_ECC.pem
+/etc/ssl/certs/CommScope_Public_Trust_RSA_Root-01.pem
+/etc/ssl/certs/Baltimore_CyberTrust_Root.pem
+/etc/ssl/certs/vTrus_ECC_Root_CA.pem
+
+--- Users with Shell Access ---
+root:x:0:0:root:/root:/bin/bash
+
+--- Sudo Configuration ---
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: kapmox
+Completed: Tue Oct 21 12:20:45 PM EDT 2025

@@ -1,0 +1,621 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: a0d7b954-ssh
+Date: Tue Oct 21 13:09:58 EDT 2025
+User: root
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux a0d7b954-ssh 6.12.34-haos-raspi #1 SMP PREEMPT Mon Sep  8 16:42:48 UTC 2025 aarch64 Linux
+
+--- OS Release ---
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.22.1
+PRETTY_NAME="Alpine Linux v3.22"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+
+--- Uptime ---
+ 13:09:58 up  1:08,  0 user,  load average: 0.14, 0.10, 0.07
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+processor	: 0
+processor	: 1
+processor	: 2
+processor	: 3
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       711Mi        61Mi       1.9Mi       1.2Gi       1.2Gi
+Swap:          651Mi       256Ki       651Mi
+
+--- Memory Details ---
+MemTotal:        2026744 kB
+MemFree:           62572 kB
+MemAvailable:    1298532 kB
+SwapTotal:        667468 kB
+SwapFree:         667212 kB
+
+--- Disk Information ---
+Filesystem                Size      Used Available Use% Mounted on
+overlay                 113.6G      5.4G    103.5G   5% /
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /homeassistant
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /ssl
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /backup
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /share
+devtmpfs                956.6M         0    956.6M   0% /dev
+tmpfs                   989.6M         0    989.6M   0% /dev/shm
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /media
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /addon_configs
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /addons
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /data
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /run/audio
+tmpfs                   989.6M         0    989.6M   0% /dev/shm
+tmpfs                   395.9M      1.6M    394.3M   0% /run/dbus
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/asound.conf
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /run/cid
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/resolv.conf
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/hostname
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/hosts
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/pulse/client.conf
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /var/log/journal
+tmpfs                   395.9M      1.6M    394.3M   0% /run/log/journal
+tmpfs                   989.6M         0    989.6M   0% /proc/asound
+devtmpfs                956.6M         0    956.6M   0% /proc/interrupts
+devtmpfs                956.6M         0    956.6M   0% /proc/keys
+devtmpfs                956.6M         0    956.6M   0% /proc/latency_stats
+devtmpfs                956.6M         0    956.6M   0% /proc/timer_list
+tmpfs                   989.6M         0    989.6M   0% /sys/firmware
+
+--- Disk Usage ---
+Filesystem                Size      Used Available Use% Mounted on
+overlay                 113.6G      5.4G    103.5G   5% /
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /homeassistant
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /ssl
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /backup
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /share
+devtmpfs                956.6M         0    956.6M   0% /dev
+tmpfs                   989.6M         0    989.6M   0% /dev/shm
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /media
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /addon_configs
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /addons
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /data
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /run/audio
+tmpfs                   989.6M         0    989.6M   0% /dev/shm
+tmpfs                   395.9M      1.6M    394.3M   0% /run/dbus
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/asound.conf
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /run/cid
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/resolv.conf
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/hostname
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/hosts
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /etc/pulse/client.conf
+/dev/mmcblk0p8          113.6G      5.4G    103.5G   5% /var/log/journal
+tmpfs                   395.9M      1.6M    394.3M   0% /run/log/journal
+tmpfs                   989.6M         0    989.6M   0% /proc/asound
+devtmpfs                956.6M         0    956.6M   0% /proc/interrupts
+devtmpfs                956.6M         0    956.6M   0% /proc/keys
+devtmpfs                956.6M         0    956.6M   0% /proc/latency_stats
+devtmpfs                956.6M         0    956.6M   0% /proc/timer_list
+tmpfs                   989.6M         0    989.6M   0% /sys/firmware
+
+--- Storage Details ---
+H/W path  Device        Class          Description
+==================================================
+/1/5048   /dev/mmcblk0  disk           SD128
+
+--- PCI Devices ---
+
+--- USB Devices ---
+Bus 003 Device 001: ID 1d6b:0002 Linux 6.12.34-haos-raspi xhci-hcd xHCI Host Controller
+Bus 001 Device 001: ID 1d6b:0002 Linux 6.12.34-haos-raspi xhci-hcd xHCI Host Controller
+Bus 004 Device 001: ID 1d6b:0003 Linux 6.12.34-haos-raspi xhci-hcd xHCI Host Controller
+Bus 002 Device 001: ID 1d6b:0003 Linux 6.12.34-haos-raspi xhci-hcd xHCI Host Controller
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP qlen 1000
+    link/ether 2c:cf:67:bd:9d:a3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.50.220/24 brd 192.168.50.255 scope global dynamic noprefixroute end0
+       valid_lft 82395sec preferred_lft 82395sec
+    inet6 fd74:7fd2:616f:594b:ce20:42e:f34d:711d/64 scope global dynamic noprefixroute 
+       valid_lft 1718sec preferred_lft 1718sec
+    inet6 fe80::4347:d9d7:28ec:a074/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN qlen 1000
+    link/ether 2c:cf:67:bd:9d:a5 brd ff:ff:ff:ff:ff:ff
+4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP 
+    link/ether 86:9b:05:4b:63:69 brd ff:ff:ff:ff:ff:ff
+    inet 172.30.232.1/23 brd 172.30.233.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::849b:5ff:fe4b:6369/64 scope link 
+       valid_lft forever preferred_lft forever
+5: hassio: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP 
+    link/ether be:87:6c:c9:3d:80 brd ff:ff:ff:ff:ff:ff
+    inet 172.30.32.1/23 brd 172.30.33.255 scope global hassio
+       valid_lft forever preferred_lft forever
+    inet6 fd0c:ac1e:2100::1/48 scope global flags 02 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::bc87:6cff:fec9:3d80/64 scope link 
+       valid_lft forever preferred_lft forever
+6: vethb0a5003@end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master hassio state UP 
+    link/ether 46:15:00:cf:60:2a brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::4415:ff:fecf:602a/64 scope link 
+       valid_lft forever preferred_lft forever
+7: veth644f8b9@end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master hassio state UP 
+    link/ether be:c8:0a:1d:b2:46 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::bcc8:aff:fe1d:b246/64 scope link 
+       valid_lft forever preferred_lft forever
+8: veth308fa13@wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP 
+    link/ether 52:dd:db:11:35:a0 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::50dd:dbff:fe11:35a0/64 scope link 
+       valid_lft forever preferred_lft forever
+9: veth1e3987f@end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master hassio state UP 
+    link/ether 4a:f8:fb:99:04:83 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::48f8:fbff:fe99:483/64 scope link 
+       valid_lft forever preferred_lft forever
+11: veth86e8d61@end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master hassio state UP 
+    link/ether 7e:64:23:69:ae:c8 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::7c64:23ff:fe69:aec8/64 scope link 
+       valid_lft forever preferred_lft forever
+13: veth84eb972@end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master hassio state UP 
+    link/ether d2:21:47:5d:61:e1 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::d021:47ff:fe5d:61e1/64 scope link 
+       valid_lft forever preferred_lft forever
+
+--- Routing Table ---
+default via 192.168.50.1 dev end0  src 192.168.50.220  metric 100 
+172.30.32.0/23 dev hassio scope link  src 172.30.32.1 
+172.30.232.0/23 dev docker0 scope link  src 172.30.232.1 
+192.168.50.0/24 dev end0 scope link  src 192.168.50.220  metric 100 
+
+--- DNS Configuration ---
+# Generated by Docker Engine.
+# This file can be edited; Docker Engine will not make further changes once it
+# has been modified.
+
+nameserver 172.30.32.3
+search local.hass.io
+options timeout:10
+
+# Based on host file: '/etc/resolv.conf'
+# Overrides: [nameservers search options]
+
+--- Network Connections ---
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:11984         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:5355            0.0.0.0:*               LISTEN     
+tcp        0      0 172.30.32.1:64989       0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:4357            0.0.0.0:*               LISTEN     
+tcp        0      0 172.30.32.1:64482       0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:18554         0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:8123            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:64989         0.0.0.0:*               LISTEN     
+tcp6       0      0 :::5355                 :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 :::18555                :::*                    LISTEN     
+tcp6       0      0 :::111                  :::*                    LISTEN     
+tcp6       0      0 :::4357                 :::*                    LISTEN     
+tcp6       0      0 :::8123                 :::*                    LISTEN     
+udp        0      0 0.0.0.0:1900            0.0.0.0:*                          
+udp        0      0 0.0.0.0:1900            0.0.0.0:*                          
+udp        0      0 0.0.0.0:39925           0.0.0.0:*                          
+udp        0      0 0.0.0.0:111             0.0.0.0:*                          
+udp        0      0 172.30.32.1:5353        0.0.0.0:*                          
+udp        0      0 172.30.232.1:5353       0.0.0.0:*                          
+udp        0      0 172.30.232.1:5353       0.0.0.0:*                          
+udp        0      0 172.30.32.1:5353        0.0.0.0:*                          
+udp        0      0 127.0.0.1:5353          0.0.0.0:*                          
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+udp        0      0 172.30.32.1:5353        0.0.0.0:*                          
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+
+--- Tailscale Status ---
+Tailscale not installed
+
+=========================================
+DOCKER INFORMATION
+=========================================
+--- Docker Version ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- Docker System Info ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- Running Containers ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- All Containers ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- Docker Images ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- Docker Networks ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- Docker Volumes ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+--- Docker Compose Files ---
+
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+Systemd not available
+
+--- Top Processes by CPU ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         376  4.5  0.2   5492  4248 pts/1    S    13:09   0:00 -zsh
+root         434  1.4  0.0   2628  1432 pts/1    S+   13:09   0:00 bash
+root         370  0.1  0.2   7024  5148 ?        Ss   13:09   0:00 sshd-session: kappy [priv]
+kappy        372  0.1  0.2   7180  4076 ?        S    13:09   0:00 sshd-session: kappy@pts/0
+root         330  0.1  0.5  16248 10956 ?        Ss   13:09   0:00 ttyd -d1 -i hassio --writable -p 64482 tmux -u new -A -s homeassistant zsh -l
+root         331  0.0  0.2   6304  4312 ?        Ss   13:09   0:00 sshd: /usr/sbin/sshd -D -e [listener] 0 of 10-100 startups
+root         373  0.0  0.0   2140  1388 pts/0    Ss+  13:09   0:00 sudo -i
+root           1  0.0  0.0    432     0 ?        Ss   13:09   0:00 /package/admin/s6/command/s6-svscan -d4 -- /run/service
+root          32  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise sshd
+root          31  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise ttyd
+root          40  0.0  0.0    204     0 ?        Ss   13:09   0:00 /package/admin/s6/command/s6-ipcserverd -1 -- /package/admin/s6/command/s6-ipcserver-access -v0 -E -l0 -i data/rules -- /package/admin/s6/command/s6-sudod -t 30000 -- /package/admin/s6-rc/command/s6-rc-oneshot-run -l ../.. --
+root          29  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise s6rc-oneshot-runner
+root          17  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise s6-linux-init-shutdownd
+root         375  0.0  0.0   2140   784 pts/1    Ss   13:09   0:00 sudo -i
+
+--- Top Processes by Memory ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         330  0.1  0.5  16248 10956 ?        Ss   13:09   0:00 ttyd -d1 -i hassio --writable -p 64482 tmux -u new -A -s homeassistant zsh -l
+root         370  0.1  0.2   7024  5148 ?        Ss   13:09   0:00 sshd-session: kappy [priv]
+root         331  0.0  0.2   6304  4312 ?        Ss   13:09   0:00 sshd: /usr/sbin/sshd -D -e [listener] 0 of 10-100 startups
+root         376  4.5  0.2   5492  4248 pts/1    S    13:09   0:00 -zsh
+kappy        372  0.1  0.2   7180  4076 ?        S    13:09   0:00 sshd-session: kappy@pts/0
+root         503  0.0  0.0   3272  1868 pts/1    R+   13:09   0:00 ps aux --sort=-%mem
+root         434  1.4  0.0   2628  1432 pts/1    S+   13:09   0:00 bash
+root         373  0.0  0.0   2140  1388 pts/0    Ss+  13:09   0:00 sudo -i
+root         504  0.0  0.0   1680   840 pts/1    S+   13:09   0:00 head -15
+root         375  0.0  0.0   2140   784 pts/1    Ss   13:09   0:00 sudo -i
+root          32  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise sshd
+root          31  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise ttyd
+root          40  0.0  0.0    204     0 ?        Ss   13:09   0:00 /package/admin/s6/command/s6-ipcserverd -1 -- /package/admin/s6/command/s6-ipcserver-access -v0 -E -l0 -i data/rules -- /package/admin/s6/command/s6-sudod -t 30000 -- /package/admin/s6-rc/command/s6-rc-oneshot-run -l ../.. --
+root          29  0.0  0.0    216     0 ?        S    13:09   0:00 s6-supervise s6rc-oneshot-runner
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+overlay on / type overlay (rw,relatime,lowerdir=/mnt/data/docker/overlay2/l/C3PG4DCNSLBUD7RFTS3UR2AZUV:/mnt/data/docker/overlay2/l/FJFU6SX2L5J5C4EJFXHBBSUEO7:/mnt/data/docker/overlay2/l/X6HTYYOBOSXZ755ZFFZURFNYN4:/mnt/data/docker/overlay2/l/NVDS2IKEV3MMNEDF3DBTBB6PZE:/mnt/data/docker/overlay2/l/OH256UANXVOZKHTH6OPNSZI6QF:/mnt/data/docker/overlay2/l/SIMRYWUFF7E6HVF76TLQVYR66Q:/mnt/data/docker/overlay2/l/5PC3765ZR33NZ2RGMBBPVP6AI4:/mnt/data/docker/overlay2/l/2NA6WEBH5DIS3P7ORBP2QN4S6Z:/mnt/data/docker/overlay2/l/CACNFXWWU43NBMOTBRULK54W4R:/mnt/data/docker/overlay2/l/RUJZHJ4VO4GR6RXUTDZD2UP4FJ,upperdir=/mnt/data/docker/overlay2/e4bec57d518bb5e345251fb5aaeeb72bbb85ae0f692863b581310e48c9b15649/diff,workdir=/mnt/data/docker/overlay2/e4bec57d518bb5e345251fb5aaeeb72bbb85ae0f692863b581310e48c9b15649/work)
+cgroup on /sys/fs/cgroup type cgroup2 (ro,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+/dev/mmcblk0p8 on /homeassistant type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /ssl type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /backup type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /share type ext4 (rw,relatime,commit=30)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+/dev/mmcblk0p8 on /media type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /addon_configs type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /addons type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /data type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /run/audio type ext4 (ro,relatime,commit=30)
+/dev/mmcblk0p8 on /etc/asound.conf type ext4 (ro,relatime,commit=30)
+/dev/mmcblk0p8 on /run/cid type ext4 (ro,relatime,commit=30)
+/dev/mmcblk0p8 on /etc/resolv.conf type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /etc/hostname type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /etc/hosts type ext4 (rw,relatime,commit=30)
+/dev/mmcblk0p8 on /etc/pulse/client.conf type ext4 (ro,relatime,commit=30)
+/dev/mmcblk0p8 on /var/log/journal type ext4 (ro,relatime,commit=30)
+
+--- Disk I/O Statistics ---
+
+--- ZFS Pools (if available) ---
+ZFS not available
+
+--- LVM Information ---
+LVM not available
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+# do daily/weekly/monthly maintenance
+# min	hour	day	month	weekday	command
+*/15	*	*	*	*	run-parts /etc/periodic/15min
+0	*	*	*	*	run-parts /etc/periodic/hourly
+0	2	*	*	*	run-parts /etc/periodic/daily
+0	3	*	*	6	run-parts /etc/periodic/weekly
+0	5	1	*	*	run-parts /etc/periodic/monthly
+
+
+--- System Crontab ---
+/etc/crontab not readable
+
+--- SSH Configuration ---
+Port 22
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication yes
+
+--- Firewall Status ---
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/root
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+SHELL=/bin/zsh
+SUDO_HOME=/home/kappy
+SUDO_USER=kappy
+USER=root
+
+--- Installed Packages (sample) ---
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+System logs not accessible
+
+--- Docker Logs (if available) ---
+Recent container logs:
+--- PROTECTION MODE ENABLED! ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+---  ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+--- To be able to use this command, you'll need to disable ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+--- protection mode on this add-on. Without it, the add-on ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+--- is unable to access Docker. ---
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+Access to Docker allows you to do really powerful things
+including complete destruction of your system.
+Please, be sure you know what you are doing before enabling
+this feature!
+
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/ca-certificates.crt
+/etc/ssl/cert.pem
+
+--- Users with Shell Access ---
+root:x:0:0:root:/root:/bin/zsh
+kappy:x:1000:1000::/home/kappy:/bin/zsh
+
+--- Sudo Configuration ---
+Defaults!/usr/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+root ALL=(ALL:ALL) ALL
+@includedir /etc/sudoers.d
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: a0d7b954-ssh
+Completed: Tue Oct 21 13:09:59 EDT 2025

@@ -1,0 +1,711 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: minikapserver
+Date: Mon Oct 20 09:47:29 PM UTC 2025
+User: kappy
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux minikapserver 6.8.0-79-generic #79-Ubuntu SMP PREEMPT_DYNAMIC Tue Aug 12 14:42:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+--- OS Release ---
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+--- Uptime ---
+ 21:47:29 up 40 days, 12 min,  2 users,  load average: 0.01, 0.09, 0.09
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        39 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               4
+On-line CPU(s) list:                  0-3
+Vendor ID:                            GenuineIntel
+Model name:                           Intel(R) N100
+CPU family:                           6
+Model:                                190
+Thread(s) per core:                   1
+Core(s) per socket:                   4
+Socket(s):                            1
+Stepping:                             0
+CPU(s) scaling MHz:                   54%
+CPU max MHz:                          3400.0000
+CPU min MHz:                          700.0000
+BogoMIPS:                             1612.80
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Virtualization:                       VT-x
+L1d cache:                            128 KiB (4 instances)
+L1i cache:                            256 KiB (4 instances)
+L2 cache:                             2 MiB (1 instance)
+L3 cache:                             6 MiB (1 instance)
+NUMA node(s):                         1
+NUMA node0 CPU(s):                    0-3
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          Not affected
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Not affected
+Vulnerability Reg file data sampling: Mitigation; Clear Register File
+Vulnerability Retbleed:               Not affected
+Vulnerability Spec rstack overflow:   Not affected
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       2.3Gi       5.8Gi        32Mi       7.7Gi        13Gi
+Swap:          4.0Gi          0B       4.0Gi
+
+--- Memory Details ---
+MemTotal:       16152340 kB
+MemFree:         6072088 kB
+MemAvailable:   13748180 kB
+SwapTotal:       4194300 kB
+SwapFree:        4194300 kB
+
+--- Disk Information ---
+NAME                      FSTYPE      FSVER    LABEL UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
+loop0                                                                                             0   100% /snap/snapd/25577
+loop1                     squashfs    4.0                                                         0   100% /snap/core22/2111
+loop2                     squashfs    4.0                                                         0   100% /snap/snapd/25202
+loop3                                                                                             0   100% /snap/core22/2133
+sda                                                                                                        
+├─sda1                    vfat        FAT32          62B5-87EA                                   1G     1% /boot/efi
+├─sda2                    ext4        1.0            8f259822-b69d-4447-9ba2-f88f0d85295b      1.6G    10% /boot
+└─sda3                    LVM2_member LVM2 001       dRvl0Z-6T8Z-ukWm-qk6n-fBkD-hYlD-2yX14T                
+  └─ubuntu--vg-ubuntu--lv ext4        1.0            11cbcdde-74e9-4c99-9639-39b5720df4fd     78.6G    15% /
+
+--- Disk Usage ---
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              1.6G   20M  1.6G   2% /run
+efivarfs                           192K   90K   98K  48% /sys/firmware/efi/efivars
+/dev/mapper/ubuntu--vg-ubuntu--lv   98G   15G   79G  16% /
+tmpfs                              7.8G     0  7.8G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/sda2                          2.0G  193M  1.6G  11% /boot
+/dev/sda1                          1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                              1.6G   12K  1.6G   1% /run/user/1000
+
+--- Storage Details ---
+H/W path           Device     Class          Description
+========================================================
+/0/100/17/0.0.0    /dev/sda   disk           512GB FORESEE 512GB SS
+
+--- PCI Devices ---
+00:00.0 Host bridge: Intel Corporation Device 461c
+00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics]
+00:14.0 USB controller: Intel Corporation Alder Lake-N PCH USB 3.2 xHCI Host Controller
+00:14.2 RAM memory: Intel Corporation Alder Lake-N PCH Shared SRAM
+00:14.3 Network controller: Intel Corporation CNVi: Wi-Fi
+00:15.0 Serial bus controller: Intel Corporation Device 54e8
+00:15.1 Serial bus controller: Intel Corporation Device 54e9
+00:16.0 Communication controller: Intel Corporation Alder Lake-N PCH HECI Controller
+00:17.0 SATA controller: Intel Corporation Device 54d3
+00:19.0 Serial bus controller: Intel Corporation Device 54c5
+00:19.1 Serial bus controller: Intel Corporation Device 54c6
+00:1c.0 PCI bridge: Intel Corporation Device 54be
+00:1e.0 Communication controller: Intel Corporation Device 54a8
+00:1e.3 Serial bus controller: Intel Corporation Device 54ab
+00:1f.0 ISA bridge: Intel Corporation Alder Lake-N PCH eSPI Controller
+00:1f.3 Audio device: Intel Corporation Alder Lake-N PCH High Definition Audio Controller
+00:1f.4 SMBus: Intel Corporation Device 54a3
+00:1f.5 Serial bus controller: Intel Corporation Device 54a4
+01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+
+--- USB Devices ---
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 8087:0026 Intel Corp. AX201 Bluetooth
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether e8:ff:1e:d9:01:03 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.50.31/24 metric 100 brd 192.168.50.255 scope global dynamic enp1s0
+       valid_lft 54647sec preferred_lft 54647sec
+    inet6 fd74:7fd2:616f:594b:eaff:1eff:fed9:103/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 1793sec preferred_lft 1793sec
+    inet6 fe80::eaff:1eff:fed9:103/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlo1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether e8:62:be:2f:e0:a4 brd ff:ff:ff:ff:ff:ff
+    altname wlp0s20f3
+4: tailscale0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq_codel state UNKNOWN group default qlen 500
+    link/none 
+    inet 100.121.136.23/32 scope global tailscale0
+       valid_lft forever preferred_lft forever
+    inet6 fd7a:115c:a1e0::b933:8817/128 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7239:a9df:54ba:5d0f/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+5: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 86:f7:51:8f:f7:60 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::84f7:51ff:fe8f:f760/64 scope link 
+       valid_lft forever preferred_lft forever
+6: br-07e1944b8b9d: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 92:57:50:ba:4b:ea brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-07e1944b8b9d
+       valid_lft forever preferred_lft forever
+    inet6 fe80::9057:50ff:feba:4bea/64 scope link 
+       valid_lft forever preferred_lft forever
+7: veth1d4c703@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-07e1944b8b9d state UP group default 
+    link/ether 7e:89:99:2f:44:af brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::7c89:99ff:fe2f:44af/64 scope link 
+       valid_lft forever preferred_lft forever
+14: br-025c5dfbaf2e: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 76:73:c2:b1:32:13 brd ff:ff:ff:ff:ff:ff
+    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-025c5dfbaf2e
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7473:c2ff:feb1:3213/64 scope link 
+       valid_lft forever preferred_lft forever
+15: veth14a12d4@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-025c5dfbaf2e state UP group default 
+    link/ether ba:1f:12:96:7b:0e brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::b81f:12ff:fe96:7b0e/64 scope link 
+       valid_lft forever preferred_lft forever
+70: veth5e23f7a@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether ae:87:e5:04:56:1f brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::ac87:e5ff:fe04:561f/64 scope link 
+       valid_lft forever preferred_lft forever
+92: br-560875fc5620: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 26:ce:1d:b3:77:38 brd ff:ff:ff:ff:ff:ff
+    inet 172.20.0.1/16 brd 172.20.255.255 scope global br-560875fc5620
+       valid_lft forever preferred_lft forever
+    inet6 fe80::24ce:1dff:feb3:7738/64 scope link 
+       valid_lft forever preferred_lft forever
+93: vethc304da7@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-560875fc5620 state UP group default 
+    link/ether ce:57:a7:cf:e6:15 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+    inet6 fe80::cc57:a7ff:fecf:e615/64 scope link 
+       valid_lft forever preferred_lft forever
+94: vethb216d04@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 2a:c9:b8:88:42:be brd ff:ff:ff:ff:ff:ff link-netnsid 4
+    inet6 fe80::28c9:b8ff:fe88:42be/64 scope link 
+       valid_lft forever preferred_lft forever
+
+--- Routing Table ---
+default via 192.168.50.1 dev enp1s0 proto dhcp src 192.168.50.31 metric 100 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+172.18.0.0/16 dev br-07e1944b8b9d proto kernel scope link src 172.18.0.1 
+172.19.0.0/16 dev br-025c5dfbaf2e proto kernel scope link src 172.19.0.1 
+172.20.0.0/16 dev br-560875fc5620 proto kernel scope link src 172.20.0.1 
+192.168.50.0/24 dev enp1s0 proto kernel scope link src 192.168.50.31 metric 100 
+192.168.50.1 dev enp1s0 proto dhcp scope link src 192.168.50.31 metric 100 
+
+--- DNS Configuration ---
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+# This file might be symlinked as /etc/resolv.conf. If you're looking at
+# /etc/resolv.conf and seeing this text, you have followed the symlink.
+#
+# This is a dynamic resolv.conf file for connecting local clients to the
+# internal DNS stub resolver of systemd-resolved. This file lists all
+# configured search domains.
+#
+# Run "resolvectl status" to see details about the uplink DNS servers
+# currently in use.
+#
+# Third party programs should typically not access this file directly, but only
+# through the symlink at /etc/resolv.conf. To manage man:resolv.conf(5) in a
+# different way, replace this symlink by a static file or a different symlink.
+#
+# See man:systemd-resolved.service(8) for details about the supported modes of
+# operation for /etc/resolv.conf.
+
+nameserver 127.0.0.53
+options edns0 trust-ad
+search tailef17b3.ts.net
+
+--- Network Connections ---
+Netid State  Recv-Q Send-Q                               Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0                                          0.0.0.0:49326      0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:49336      0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:41641      0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:60159      0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:45786      0.0.0.0:*          
+udp   UNCONN 0      0                                       172.17.0.1:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                        127.0.0.1:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                       172.19.0.1:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                    192.168.50.31:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                   100.121.136.23:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                       172.18.0.1:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:55379      0.0.0.0:*          
+udp   UNCONN 0      0                                          0.0.0.0:48633      0.0.0.0:*          
+udp   UNCONN 0      0                                       127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0                                    127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0                             192.168.50.31%enp1s0:68         0.0.0.0:*          
+udp   UNCONN 0      0                                             [::]:49569         [::]:*          
+udp   UNCONN 0      0                                             [::]:41641         [::]:*          
+udp   UNCONN 0      0                                             [::]:34225         [::]:*          
+udp   UNCONN 0      0                                             [::]:50793         [::]:*          
+udp   UNCONN 0      0                                                *:59534            *:*          
+udp   UNCONN 0      0                                             [::]:60104         [::]:*          
+udp   UNCONN 0      0                                             [::]:44685         [::]:*          
+udp   UNCONN 0      0                                                *:45176            *:*          
+udp   UNCONN 0      0                                             [::]:54003         [::]:*          
+udp   UNCONN 0      0                                             [::]:37627         [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                             [::]:5353          [::]:*          
+udp   UNCONN 0      0                                                *:5353             *:*          
+udp   UNCONN 0      0      [fe80::7473:c2ff:feb1:3213]%br-025c5dfbaf2e:5353          [::]:*          
+udp   UNCONN 0      0           [fe80::7239:a9df:54ba:5d0f]%tailscale0:5353          [::]:*          
+udp   UNCONN 0      0          [fe80::7c89:99ff:fe2f:44af]%veth1d4c703:5353          [::]:*          
+udp   UNCONN 0      0                                            [::1]:5353          [::]:*          
+udp   UNCONN 0      0      [fe80::9057:50ff:feba:4bea]%br-07e1944b8b9d:5353          [::]:*          
+udp   UNCONN 0      0              [fe80::84f7:51ff:fe8f:f760]%docker0:5353          [::]:*          
+udp   UNCONN 0      0         [fd74:7fd2:616f:594b:eaff:1eff:fed9:103]:5353          [::]:*          
+udp   UNCONN 0      0          [fe80::b81f:12ff:fe96:7b0e]%veth14a12d4:5353          [::]:*          
+udp   UNCONN 0      0                                                *:46904            *:*          
+udp   UNCONN 0      0                                                *:39487            *:*          
+udp   UNCONN 0      0                                             [::]:40617         [::]:*          
+tcp   LISTEN 0      4096                                       0.0.0.0:3001       0.0.0.0:*          
+tcp   LISTEN 0      4096                                 127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                                100.121.136.23:40265      0.0.0.0:*          
+tcp   LISTEN 0      4096                                     127.0.0.1:20241      0.0.0.0:*          
+tcp   LISTEN 0      4096                                       0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096                                       0.0.0.0:8501       0.0.0.0:*          
+tcp   LISTEN 0      4096                                    127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                                       0.0.0.0:7575       0.0.0.0:*          
+tcp   LISTEN 0      4096                                       0.0.0.0:5678       0.0.0.0:*          
+tcp   LISTEN 0      128                                        0.0.0.0:5580       0.0.0.0:*          
+tcp   LISTEN 0      4096                                          [::]:3001          [::]:*          
+tcp   LISTEN 0      4096                                          [::]:22            [::]:*          
+tcp   LISTEN 0      4096                                          [::]:8501          [::]:*          
+tcp   LISTEN 0      4096                   [fd7a:115c:a1e0::b933:8817]:38239         [::]:*          
+tcp   LISTEN 0      4096                                          [::]:7575          [::]:*          
+tcp   LISTEN 0      4096                                          [::]:5678          [::]:*          
+tcp   LISTEN 0      128                                           [::]:5580          [::]:*          
+
+--- Tailscale Status ---
+100.121.136.23  minikapserver        kennytran88@ linux   -
+100.97.61.81    forest-point         kennytran88@ windows offline
+100.91.132.102  iphone               kennytran88@ iOS     offline
+100.99.51.49    kapmox               kennytran88@ linux   -
+100.98.212.77   kappys-mac-mini      kennytran88@ macOS   active; direct 192.168.50.209:41641, tx 2451828 rx 206332
+100.115.151.114 kapserver            kennytran88@ linux   offline
+100.109.117.14  kaptop               kennytran88@ macOS   offline
+100.107.45.13   ridgeserver          kennytran88@ linux   active; direct 74.108.219.34:41641, tx 322891532 rx 535494988
+100.78.240.7    tower                tagged-devices linux   active; direct 74.108.219.34:48692, tx 242865548 rx 284833828
+
+=========================================
+DOCKER INFORMATION
+=========================================
+--- Docker Version ---
+Docker version 28.4.0, build d8eb465
+
+--- Docker System Info ---
+Client: Docker Engine - Community
+ Version:    28.4.0
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.27.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.39.2
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 6
+  Running: 6
+  Paused: 0
+  Stopped: 0
+ Images: 7
+ Server Version: 28.4.0
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+
+--- Running Containers ---
+NAMES           IMAGE                                                     STATUS                   PORTS
+dashdot         mauricenino/dashdot:latest                                Up 3 days                0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+homarr          ghcr.io/homarr-labs/homarr:latest                         Up 3 days                0.0.0.0:7575->7575/tcp, [::]:7575->7575/tcp
+nebula-sync     ghcr.io/lovelaze/nebula-sync:latest                       Up 4 weeks (unhealthy)   
+matter-server   ghcr.io/home-assistant-libs/python-matter-server:stable   Up 4 weeks               
+re-data-app     re-data-app:latest                                        Up 5 weeks (unhealthy)   0.0.0.0:8501->8501/tcp, [::]:8501->8501/tcp
+n8n-server      n8nio/n8n                                                 Up 5 weeks               0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp
+
+--- All Containers ---
+NAMES           IMAGE                                                     STATUS                   PORTS
+dashdot         mauricenino/dashdot:latest                                Up 3 days                0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+homarr          ghcr.io/homarr-labs/homarr:latest                         Up 3 days                0.0.0.0:7575->7575/tcp, [::]:7575->7575/tcp
+nebula-sync     ghcr.io/lovelaze/nebula-sync:latest                       Up 4 weeks (unhealthy)   
+matter-server   ghcr.io/home-assistant-libs/python-matter-server:stable   Up 4 weeks               
+re-data-app     re-data-app:latest                                        Up 5 weeks (unhealthy)   0.0.0.0:8501->8501/tcp, [::]:8501->8501/tcp
+n8n-server      n8nio/n8n                                                 Up 5 weeks               0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp
+
+--- Docker Images ---
+REPOSITORY                                         TAG       SIZE      CREATED AT
+ghcr.io/homarr-labs/homarr                         latest    428MB     2025-10-10 19:20:16 +0000 UTC
+lissy93/dashy                                      latest    521MB     2025-09-12 14:35:18 +0000 UTC
+lovelaze/nebula-sync                               latest    6.66MB    2025-09-11 21:07:55 +0000 UTC
+ghcr.io/lovelaze/nebula-sync                       latest    6.66MB    2025-09-11 21:07:55 +0000 UTC
+re-data-app                                        latest    832MB     2025-09-11 02:23:14 +0000 UTC
+n8nio/n8n                                          latest    974MB     2025-09-03 08:21:18 +0000 UTC
+ghcr.io/home-assistant-libs/python-matter-server   stable    431MB     2025-08-14 07:58:57 +0000 UTC
+mauricenino/dashdot                                latest    204MB     2025-08-10 11:06:59 +0000 UTC
+
+--- Docker Networks ---
+NETWORK ID     NAME                      DRIVER    SCOPE
+3f840b5d8188   bridge                    bridge    local
+560875fc5620   homarr_default            bridge    local
+328b85962bb8   host                      host      local
+07e1944b8b9d   n8n-server_default        bridge    local
+5f6337462688   none                      null      local
+025c5dfbaf2e   re-data-agg_app-network   bridge    local
+
+--- Docker Volumes ---
+DRIVER    VOLUME NAME
+
+--- Docker Compose Files ---
+/home/kappy/homarr/docker-compose.yml
+/home/kappy/n8n-server/docker-compose.yml
+/home/kappy/homeassistant/docker-compose.yml
+/home/kappy/matter-server/docker-compose.yml
+/home/kappy/nebula-sync/docker-compose.yml
+/home/kappy/re-data-agg/docker-compose.yml
+
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+  UNIT                                                                                      LOAD   ACTIVE SUB     DESCRIPTION
+  apparmor.service                                                                          loaded active exited  Load AppArmor profiles
+  apport.service                                                                            loaded active exited  automatic crash report generation
+  blk-availability.service                                                                  loaded active exited  Availability of block devices
+  cloudflared.service                                                                       loaded active running cloudflared
+  console-setup.service                                                                     loaded active exited  Set console font and keymap
+  containerd.service                                                                        loaded active running containerd container runtime
+  cron.service                                                                              loaded active running Regular background program processing daemon
+  dbus.service                                                                              loaded active running D-Bus System Message Bus
+  docker.service                                                                            loaded active running Docker Application Container Engine
+  finalrd.service                                                                           loaded active exited  Create final runtime dir for shutdown pivot root
+  fwupd.service                                                                             loaded active running Firmware update daemon
+  getty@tty1.service                                                                        loaded active running Getty on tty1
+  keyboard-setup.service                                                                    loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                                                                 loaded active exited  Create List of Static Device Nodes
+  lvm2-monitor.service                                                                      loaded active exited  Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
+  ModemManager.service                                                                      loaded active running Modem Manager
+  multipathd.service                                                                        loaded active running Device-Mapper Multipath Device Controller
+  plymouth-quit-wait.service                                                                loaded active exited  Hold until boot process finishes up
+  plymouth-quit.service                                                                     loaded active exited  Terminate Plymouth Boot Screen
+
+--- Enabled Services ---
+UNIT FILE                              STATE   PRESET
+apparmor.service                       enabled enabled
+apport.service                         enabled enabled
+blk-availability.service               enabled enabled
+cloud-config.service                   enabled enabled
+cloud-final.service                    enabled enabled
+cloud-init-local.service               enabled enabled
+cloud-init.service                     enabled enabled
+cloudflared.service                    enabled enabled
+console-setup.service                  enabled enabled
+containerd.service                     enabled enabled
+cron.service                           enabled enabled
+dmesg.service                          enabled enabled
+docker.service                         enabled enabled
+e2scrub_reap.service                   enabled enabled
+finalrd.service                        enabled enabled
+getty@.service                         enabled enabled
+gpu-manager.service                    enabled enabled
+grub-common.service                    enabled enabled
+grub-initrd-fallback.service           enabled enabled
+
+--- Top Processes by CPU ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     3923951  4.7  2.0 32418220 324104 ?     Sl   Oct17 220:47 node apps/tasks/tasks.cjs
+root     3932729  1.5  0.4 713428 77516 ?        Ssl  Oct17  68:00 node .
+root     3840856  0.5  0.2 1263128 41624 ?       Ssl  Oct17  29:46 /usr/bin/cloudflared --no-autoupdate --config /etc/cloudflared/config.yml tunnel run
+kappy    1807532  0.4  0.0   7340  3584 pts/0    S+   21:47   0:00 bash
+root     1807380  0.4  0.0  14736 10240 ?        Ss   21:47   0:00 sshd: kappy [priv]
+root        3265  0.4  0.1 1238360 16896 ?       Sl   Sep11 255:04 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 2a5b215adfbb3432147036a8a0ffa36dae8b7213caae2f9c530f35d8d95f3b19 -address /run/containerd/containerd.sock
+root     3923950  0.3  0.0  27412 11456 ?        Sl   Oct17  17:19 redis-server *:6379
+kappy    1807480  0.2  0.0   8648  5632 pts/0    Ss   21:47   0:00 -bash
+kappy    1807479  0.2  0.0  14964  6816 ?        S    21:47   0:00 sshd: kappy@pts/0
+root         743  0.1  0.3 1321016 56216 ?       Ssl  Sep10  98:34 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641
+root         986  0.1  0.6 2927972 104388 ?      Ssl  Sep10  76:22 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+kappy       2164  0.1  2.7 43536804 441160 ?     Sl   Sep11  72:43 node /usr/local/bin/n8n
+root      309399  0.1  0.8 526564 142368 ?       Ssl  Sep16  58:04 /usr/local/bin/python3.12 /usr/local/bin/matter-server --storage-path /data --paa-root-cert-dir /data/credentials
+root     1189626  0.1  0.3 1951156 53540 ?       Ssl  Sep24  44:27 /usr/bin/containerd
+
+--- Top Processes by Memory ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+kappy       2164  0.1  2.7 43536804 441160 ?     Sl   Sep11  72:43 node /usr/local/bin/n8n
+root     3923953  0.0  2.0 42915192 336448 ?     Sl   Oct17   4:12 next-server (v15.5.4)
+root     3923951  4.7  2.0 32418220 324104 ?     Sl   Oct17 220:47 node apps/tasks/tasks.cjs
+root     3923952  0.1  1.7 32389256 287408 ?     Sl   Oct17   5:18 node apps/websocket/wssServer.cjs
+root        3289  0.0  1.1 2049768 189448 ?      Ssl  Sep11   0:15 /usr/local/bin/python3.11 /usr/local/bin/streamlit run app.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true --browser.gatherUsageStats=false
+root      309399  0.1  0.8 526564 142368 ?       Ssl  Sep16  58:04 /usr/local/bin/python3.12 /usr/local/bin/matter-server --storage-path /data --paa-root-cert-dir /data/credentials
+root     2007379  0.0  0.7 194112 117588 ?       S<s  Oct01   1:04 /usr/lib/systemd/systemd-journald
+root         986  0.1  0.6 2927972 104388 ?      Ssl  Sep10  76:22 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root     3932729  1.5  0.4 713428 77516 ?        Ssl  Oct17  68:00 node .
+root         743  0.1  0.3 1321016 56216 ?       Ssl  Sep10  98:34 /usr/sbin/tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641
+root     1189626  0.1  0.3 1951156 53540 ?       Ssl  Sep24  44:27 /usr/bin/containerd
+kappy     309722  0.0  0.3 1883576 49396 ?       Sl   Sep16   6:09 /usr/libexec/docker/cli-plugins/docker-compose compose logs -f
+root     2007351  0.0  0.2 596712 44556 ?        Ssl  Oct01   2:26 /usr/libexec/fwupd/fwupd
+root     3840856  0.5  0.2 1263128 41624 ?       Ssl  Oct17  29:46 /usr/bin/cloudflared --no-autoupdate --config /etc/cloudflared/config.yml tunnel run
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)
+/dev/mapper/ubuntu--vg-ubuntu--lv on / type ext4 (rw,relatime)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+/var/lib/snapd/snaps/core22_2111.snap on /snap/core22/2111 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/var/lib/snapd/snaps/snapd_25202.snap on /snap/snapd/25202 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+/dev/sda2 on /boot type ext4 (rw,relatime)
+/dev/sda1 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+overlay on /var/snap/docker/common/var-lib-docker/overlay2/683d2721bbd47f92079200a8571d923ebb574bc81f1cb77e150c8973fbe38e33/merged type overlay (rw,relatime,lowerdir=/var/snap/docker/common/var-lib-docker/overlay2/l/HMUDADNNCY4F7XH4U7KCFI5MNO:/var/snap/docker/common/var-lib-docker/overlay2/l/ETPCCIBQ6EPG3XOY2AJFNKEORH:/var/snap/docker/common/var-lib-docker/overlay2/l/7KWOGRYWDPVBV2R2CRFINEQWVN:/var/snap/docker/common/var-lib-docker/overlay2/l/6XLWYJM77MV26LVON3PWDR3LJH:/var/snap/docker/common/var-lib-docker/overlay2/l/TEILVDR2EXYAJM5EWSMLTTBPBQ:/var/snap/docker/common/var-lib-docker/overlay2/l/PDW3GP64WRP72KF3OXS67M4F2H:/var/snap/docker/common/var-lib-docker/overlay2/l/I4UXQRO5KXTX35FIUJLIXNBXNN:/var/snap/docker/common/var-lib-docker/overlay2/l/AG2WCY3ACAPNECRBM44QOCOYPT:/var/snap/docker/common/var-lib-docker/overlay2/l/YKOE6P7LI2NTLEXW4EN7S7EQ5S:/var/snap/docker/common/var-lib-docker/overlay2/l/XLTYG7245H2Q5OTFHLS3F6BMYC:/var/snap/docker/common/var-lib-docker/overlay2/l/6ABQPSYA2LXQTHJAPK4JQLXPC2:/var/snap/docker/common/var-lib-docker/overlay2/l/SNG5PYEVCL7VLJXQOENV6WTRXU:/var/snap/docker/common/var-lib-docker/overlay2/l/VPRTD4JNAU3KUYBZOLXF5XKZSU:/var/snap/docker/common/var-lib-docker/overlay2/l/DST5F6VQJF4IZFKMMFJP7SZJRG,upperdir=/var/snap/docker/common/var-lib-docker/overlay2/683d2721bbd47f92079200a8571d923ebb574bc81f1cb77e150c8973fbe38e33/diff,workdir=/var/snap/docker/common/var-lib-docker/overlay2/683d2721bbd47f92079200a8571d923ebb574bc81f1cb77e150c8973fbe38e33/work,nouserxattr)
+nsfs on /run/docker/netns/1e78d3dea4d9 type nsfs (rw)
+overlay on /var/snap/docker/common/var-lib-docker/overlay2/b0a8b8b3f2331d4d56454f35f5310dc5bf6c8909d9209c7ea280e9c6863e2edb/merged type overlay (rw,relatime,lowerdir=/var/snap/docker/common/var-lib-docker/overlay2/l/LFAUSFJ5EUMYL4LFSYCTYU34P5:/var/snap/docker/common/var-lib-docker/overlay2/l/PND5SEYEZPYWGUZYPBDDOJWZVP:/var/snap/docker/common/var-lib-docker/overlay2/l/U7EYXWESLERQFOK6HBE7VILKHE:/var/snap/docker/common/var-lib-docker/overlay2/l/37R7MIB7CTHGTB2Z3A7GUXQU3H:/var/snap/docker/common/var-lib-docker/overlay2/l/GRMMOHRAQMJTX655B5I3C2QTZN:/var/snap/docker/common/var-lib-docker/overlay2/l/DPOFYPI73AOVH6I6YWVDGPSFUP:/var/snap/docker/common/var-lib-docker/overlay2/l/F7WSXKB5TMYAVOGDZXSRLWDQON:/var/snap/docker/common/var-lib-docker/overlay2/l/UFE7XSGKFKRXGA4X5PBVQ3CUL5:/var/snap/docker/common/var-lib-docker/overlay2/l/UVS4675B7IX73BHI62ERR6Z2XX:/var/snap/docker/common/var-lib-docker/overlay2/l/O5GUAUCMG5OZWWQVRALS7VLSKH:/var/snap/docker/common/var-lib-docker/overlay2/l/7M2OX5KN6R7TBTHTKEIYCM5S3M,upperdir=/var/snap/docker/common/var-lib-docker/overlay2/b0a8b8b3f2331d4d56454f35f5310dc5bf6c8909d9209c7ea280e9c6863e2edb/diff,workdir=/var/snap/docker/common/var-lib-docker/overlay2/b0a8b8b3f2331d4d56454f35f5310dc5bf6c8909d9209c7ea280e9c6863e2edb/work,nouserxattr)
+nsfs on /run/docker/netns/12d4cdffefc8 type nsfs (rw)
+nsfs on /run/docker/netns/default type nsfs (rw)
+overlay on /var/snap/docker/common/var-lib-docker/overlay2/6840d830c7d7d8ac904673e0c51603d6c8fd2b4ad2796adec47d27957a258302/merged type overlay (rw,relatime,lowerdir=/var/snap/docker/common/var-lib-docker/overlay2/l/JQE4VF72PLJC36ZTH6NV3BM5BU:/var/snap/docker/common/var-lib-docker/overlay2/l/HWWM52YYSNRC5DALTUAUUDCIJ4:/var/snap/docker/common/var-lib-docker/overlay2/l/KPOSLTEM37YXFSJKLSHRPIHTZY:/var/snap/docker/common/var-lib-docker/overlay2/l/ZCEIBWIJV3NOJICNTRDIJESVZE:/var/snap/docker/common/var-lib-docker/overlay2/l/7L4HJWEQUE3BSTHDEENWBOEBTG:/var/snap/docker/common/var-lib-docker/overlay2/l/V3Z6CKIHLGOYCYQLAU3DUUVE6O:/var/snap/docker/common/var-lib-docker/overlay2/l/VRNKPSL6YG3KCAXMTWDLV5XJCP:/var/snap/docker/common/var-lib-docker/overlay2/l/T4HYE3QEUJ2DN5EE5VPJV35EOS:/var/snap/docker/common/var-lib-docker/overlay2/l/J4MJV7RJHUSH7OOLAM2XLTCDAL,upperdir=/var/snap/docker/common/var-lib-docker/overlay2/6840d830c7d7d8ac904673e0c51603d6c8fd2b4ad2796adec47d27957a258302/diff,workdir=/var/snap/docker/common/var-lib-docker/overlay2/6840d830c7d7d8ac904673e0c51603d6c8fd2b4ad2796adec47d27957a258302/work,nouserxattr)
+overlay on /var/snap/docker/common/var-lib-docker/overlay2/29260834d1f666e4e05a5bf634f48fce77550e092d7162463ea69314d57e570e/merged type overlay (rw,relatime,lowerdir=/var/snap/docker/common/var-lib-docker/overlay2/l/SD43AXZU5TUWT6MTLMYFX6556T:/var/snap/docker/common/var-lib-docker/overlay2/l/Z3QALYACMNEI3VD6UFTATHPCKO:/var/snap/docker/common/var-lib-docker/overlay2/l/LEIQY32P4XVR5L5RCTE2YPJ66A:/var/snap/docker/common/var-lib-docker/overlay2/l/5JOPTB5M45CHNBPHOH7T2ADEI4,upperdir=/var/snap/docker/common/var-lib-docker/overlay2/29260834d1f666e4e05a5bf634f48fce77550e092d7162463ea69314d57e570e/diff,workdir=/var/snap/docker/common/var-lib-docker/overlay2/29260834d1f666e4e05a5bf634f48fce77550e092d7162463ea69314d57e570e/work,nouserxattr)
+nsfs on /run/docker/netns/a36118313e89 type nsfs (rw)
+/var/lib/snapd/snaps/core22_2133.snap on /snap/core22/2133 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+overlay on /var/snap/docker/common/var-lib-docker/overlay2/bf00c77489e67a132e2ce48bac5863b607e70249f9a4ea9868eb92400f992c7c/merged type overlay (rw,relatime,lowerdir=/var/snap/docker/common/var-lib-docker/overlay2/l/LOTSVY32NHMXPAIQUJ2IVNXC6K:/var/snap/docker/common/var-lib-docker/overlay2/l/LCBC2AU64QTDXAJ5ILP6YAWG3T:/var/snap/docker/common/var-lib-docker/overlay2/l/AE6MLFVABZ2FC7PIPW2QO2FIOW:/var/snap/docker/common/var-lib-docker/overlay2/l/XYUZYWSLD5D26C66MGLTPRVX4X:/var/snap/docker/common/var-lib-docker/overlay2/l/R7NJP4YKPECN55DTJHOLAYBET3:/var/snap/docker/common/var-lib-docker/overlay2/l/TKTG3ZR5OZE4P67P3Z5YD5TGI5:/var/snap/docker/common/var-lib-docker/overlay2/l/DM7FVOYRK7NQZGLJKA6MME6FEG:/var/snap/docker/common/var-lib-docker/overlay2/l/JEOQIULV7Z6HPETQSUWL2AOMZF:/var/snap/docker/common/var-lib-docker/overlay2/l/7YZSWXKTQZX2FX3CZEEEDKBN4R:/var/snap/docker/common/var-lib-docker/overlay2/l/WHBYDVR6LRRMD6OLG2SWZ7D7RD:/var/snap/docker/common/var-lib-docker/overlay2/l/U5FU3NVC2MYPUMRRF7KFQ5ZNIC:/var/snap/docker/common/var-lib-docker/overlay2/l/ZSURASRFHBP225BSXL6JMBLAFG:/var/snap/docker/common/var-lib-docker/overlay2/l/GO6BEZBH47XDP7QDE3MIVRSH4E:/var/snap/docker/common/var-lib-docker/overlay2/l/22O22UBEAGFJCZKTIIP2VE5NTL:/var/snap/docker/common/var-lib-docker/overlay2/l/AVVQKRHDUGKV3UXXCY67LS6BTA:/var/snap/docker/common/var-lib-docker/overlay2/l/F52EHIXD5YC543JMNPW3IKBFT4:/var/snap/docker/common/var-lib-docker/overlay2/l/I4XTC3KIF657L7TA64XWEPHHT6:/var/snap/docker/common/var-lib-docker/overlay2/l/SLYK4NQP4BWDEFNYNGGZW5L2CZ:/var/snap/docker/common/var-lib-docker/overlay2/l/JG6YURWACPB4R7VTASV5C63MX2:/var/snap/docker/common/var-lib-docker/overlay2/l/P6SXHYUH37AWTMU7NYME7FKDNF:/var/snap/docker/common/var-lib-docker/overlay2/l/2QUPYCZ6VQMWFP4D77IBO6ZU7Y:/var/snap/docker/common/var-lib-docker/overlay2/l/V4KNHG3QR6DIURH4NZH6T6VRNK:/var/snap/docker/common/var-lib-docker/overlay2/l/JEQRZNW6KITWMPC6UGXFCB2TXN:/var/snap/docker/common/var-lib-docker/overlay2/l/RDP3OUWJPGNASRKHXHJ5CXKOKU:/var/snap/docker/common/var-lib-docker/overlay2/l/EP4Q7WHSFN7SXF2C4MLNJBZOIM,upperdir=/var/snap/docker/common/var-lib-docker/overlay2/bf00c77489e67a132e2ce48bac5863b607e70249f9a4ea9868eb92400f992c7c/diff,workdir=/var/snap/docker/common/var-lib-docker/overlay2/bf00c77489e67a132e2ce48bac5863b607e70249f9a4ea9868eb92400f992c7c/work,nouserxattr)
+nsfs on /run/docker/netns/e7bb8b0609ea type nsfs (rw)
+overlay on /var/snap/docker/common/var-lib-docker/overlay2/d0f16d757d6f29223583c488d29dcfc5238fef4ff6b81800ab93fd6b90d3a1f7/merged type overlay (rw,relatime,lowerdir=/var/snap/docker/common/var-lib-docker/overlay2/l/DMGBETVW6OA6YXGX7K2HO5ZQNO:/var/snap/docker/common/var-lib-docker/overlay2/l/RWTV433MNPDUBLM2M55DO4LZA3:/var/snap/docker/common/var-lib-docker/overlay2/l/FWGYYANCX7NL5FQS4QWDEWVBU3:/var/snap/docker/common/var-lib-docker/overlay2/l/5HZX47FQXIL72VCGVAXTDWBXV5:/var/snap/docker/common/var-lib-docker/overlay2/l/FSUN2VR64YUM32JC45KRLU2QNK:/var/snap/docker/common/var-lib-docker/overlay2/l/7XKF75Z7223AIUDMZT6FKZXU6R:/var/snap/docker/common/var-lib-docker/overlay2/l/MUGDOJXHLSDRRCJJKW4X5PLDEU:/var/snap/docker/common/var-lib-docker/overlay2/l/RXT4XMQ7FAPDAOOZHLXXUBCVL4:/var/snap/docker/common/var-lib-docker/overlay2/l/JZBNOVUTPVCW6CQOJHZBMGCEKU:/var/snap/docker/common/var-lib-docker/overlay2/l/SBOGEMYJZBRLZFLADUNBAM7A5N:/var/snap/docker/common/var-lib-docker/overlay2/l/PNTRQCDNXGYTRPIV7GKTMEBWFX:/var/snap/docker/common/var-lib-docker/overlay2/l/ODGIRYCX3VO4DQJL3MTZAULZUT:/var/snap/docker/common/var-lib-docker/overlay2/l/IXBIUTHYH7NE2HFL55R5L26FQC:/var/snap/docker/common/var-lib-docker/overlay2/l/JCFAA3Z4IYA5XBL2V2B5KPITR3:/var/snap/docker/common/var-lib-docker/overlay2/l/DST5F6VQJF4IZFKMMFJP7SZJRG,upperdir=/var/snap/docker/common/var-lib-docker/overlay2/d0f16d757d6f29223583c488d29dcfc5238fef4ff6b81800ab93fd6b90d3a1f7/diff,workdir=/var/snap/docker/common/var-lib-docker/overlay2/d0f16d757d6f29223583c488d29dcfc5238fef4ff6b81800ab93fd6b90d3a1f7/work,nouserxattr)
+nsfs on /run/docker/netns/bf29517059f5 type nsfs (rw)
+/var/lib/snapd/snaps/snapd_25577.snap on /snap/snapd/25577 type squashfs (ro,nodev,relatime,errors=continue,threads=single,x-gdu.hide,x-gvfs-hide)
+
+--- Disk I/O Statistics ---
+Linux 6.8.0-79-generic (minikapserver) 	10/20/2025 	_x86_64_	(4 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.59    0.00    0.28    0.01    0.00   99.11
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+dm-0             0.01      0.37     0.00   0.00    0.40    31.64    2.54     16.26     0.00   0.00    1.01     6.40    0.01     30.15     0.00   0.00    0.31  5731.27    0.00    0.00    0.00   0.85
+loop0            0.00      0.00     0.00   0.00    0.05    19.88    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop1            0.00      0.00     0.00   0.00    0.12     5.25    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop2            0.00      0.01     0.00   0.00    0.22    34.17    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop3            0.00      0.00     0.00   0.00    0.02     9.66    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop4            0.00      0.00     0.00   0.00    0.00     1.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sda              0.01      0.49     0.00  26.31    0.42    42.95    1.65     16.34     0.89  35.04    0.64     9.89    0.01     32.71     0.00   0.00    0.32  6190.02    0.32    1.50    0.00   0.05
+
+
+
+--- ZFS Pools (if available) ---
+ZFS not available
+
+--- LVM Information ---
+  LV        VG        Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  ubuntu-lv ubuntu-vg -wi-ao---- 100.00g                                                    
+  VG        #PV #LV #SN Attr   VSize    VFree   
+  ubuntu-vg   1   1   0 wz--n- <473.89g <373.89g
+  PV         VG        Fmt  Attr PSize    PFree   
+  /dev/sda3  ubuntu-vg lvm2 a--  <473.89g <373.89g
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+No crontab for current user
+
+--- System Crontab ---
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+# You can also override PATH, but by default, newer versions inherit it from the environment
+#PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root	cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }
+47 6	* * 7	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
+52 6	1 * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
+#
+
+--- SSH Configuration ---
+
+--- Firewall Status ---
+Status: inactive
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/home/kappy
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SHELL=/bin/bash
+USER=kappy
+
+--- Installed Packages (sample) ---
+ii  docker-buildx-plugin                 0.27.0-1~ubuntu.24.04~noble             amd64        Docker Buildx cli plugin.
+ii  docker-ce                            5:28.4.0-1~ubuntu.24.04~noble           amd64        Docker: the open-source application container engine
+ii  docker-ce-cli                        5:28.4.0-1~ubuntu.24.04~noble           amd64        Docker CLI: the open-source application container engine
+ii  docker-ce-rootless-extras            5:28.4.0-1~ubuntu.24.04~noble           amd64        Rootless support for Docker.
+ii  docker-compose-plugin                2.39.2-1~ubuntu.24.04~noble             amd64        Docker Compose (V2) plugin for the Docker CLI.
+ii  fonts-ubuntu-console                 0.869+git20240321-0ubuntu1              all          console version of the Ubuntu Mono font
+ii  git                                  1:2.43.0-1ubuntu7.3                     amd64        fast, scalable, distributed revision control system
+ii  git-man                              1:2.43.0-1ubuntu7.3                     all          fast, scalable, distributed revision control system (manual pages)
+ii  librtmp1:amd64                       2.4+20151223.gitfa8646d.1-2build7       amd64        toolkit for RTMP streams (shared library)
+ii  libtiff6:amd64                       4.5.1+git230720-4ubuntu2.4              amd64        Tag Image File Format (TIFF) library
+ii  libwebp7:amd64                       1.3.2-0.4build3                         amd64        Lossy compression of digital photographic images
+ii  linux-firmware                       20240318.git3b128b60-0ubuntu2.17        amd64        Firmware for Linux kernel drivers
+ii  lshw                                 02.19.git.2021.06.19.996aaad9c7-2build3 amd64        information about hardware configuration
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+Oct 20 21:47:27 minikapserver systemd[1]: Started session-7440.scope - Session 7440 of User kappy.
+Oct 20 21:47:29 minikapserver sudo[1807564]:    kappy : TTY=pts/0 ; PWD=/home/kappy ; USER=root ; COMMAND=/usr/bin/lshw -class disk -short
+Oct 20 21:47:29 minikapserver sudo[1807564]: pam_unix(sudo:session): session opened for user root(uid=0) by kappy(uid=1000)
+Oct 20 21:47:29 minikapserver dockerd[986]: time="2025-10-20T21:47:29.819749618Z" level=error msg="copy stream failed" error="reading from a closed fifo" stream=stderr
+Oct 20 21:47:29 minikapserver dockerd[986]: time="2025-10-20T21:47:29.819767647Z" level=error msg="copy stream failed" error="reading from a closed fifo" stream=stdout
+Oct 20 21:47:29 minikapserver dockerd[986]: time="2025-10-20T21:47:29.820958749Z" level=warning msg="Health check for container 2a5b215adfbb3432147036a8a0ffa36dae8b7213caae2f9c530f35d8d95f3b19 error: OCI runtime exec failed: exec failed: unable to start container process: exec: \"curl\": executable file not found in $PATH: unknown"
+Oct 20 21:47:30 minikapserver sudo[1807564]: pam_unix(sudo:session): session closed for user root
+Oct 20 21:47:31 minikapserver sudo[1807723]:    kappy : TTY=pts/0 ; PWD=/home/kappy ; USER=root ; COMMAND=/usr/sbin/lvs
+Oct 20 21:47:31 minikapserver sudo[1807723]: pam_unix(sudo:session): session opened for user root(uid=0) by kappy(uid=1000)
+Oct 20 21:47:31 minikapserver sudo[1807723]: pam_unix(sudo:session): session closed for user root
+Oct 20 21:47:31 minikapserver sudo[1807726]:    kappy : TTY=pts/0 ; PWD=/home/kappy ; USER=root ; COMMAND=/usr/sbin/vgs
+Oct 20 21:47:31 minikapserver sudo[1807726]: pam_unix(sudo:session): session opened for user root(uid=0) by kappy(uid=1000)
+Oct 20 21:47:31 minikapserver sudo[1807726]: pam_unix(sudo:session): session closed for user root
+Oct 20 21:47:31 minikapserver sudo[1807729]:    kappy : TTY=pts/0 ; PWD=/home/kappy ; USER=root ; COMMAND=/usr/sbin/pvs
+Oct 20 21:47:31 minikapserver sudo[1807729]: pam_unix(sudo:session): session opened for user root(uid=0) by kappy(uid=1000)
+Oct 20 21:47:31 minikapserver sudo[1807729]: pam_unix(sudo:session): session closed for user root
+Oct 20 21:47:31 minikapserver crontab[1807732]: (kappy) LIST (kappy)
+Oct 20 21:47:31 minikapserver sudo[1807735]:    kappy : TTY=pts/0 ; PWD=/home/kappy ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+Oct 20 21:47:31 minikapserver sudo[1807735]: pam_unix(sudo:session): session opened for user root(uid=0) by kappy(uid=1000)
+Oct 20 21:47:31 minikapserver sudo[1807735]: pam_unix(sudo:session): session closed for user root
+
+--- Docker Logs (if available) ---
+Recent container logs:
+--- dashdot ---
+Speed-test completed successfully [speedtest-cli] {
+  speedDown: 755223734.1254297,
+  speedUp: 40298366.339207135,
+  publicIp: undefined
+}
+--- homarr ---
+2025-10-20T21:47:10.077Z [32minfo[39m: No active video sessions found in MediaContainer
+2025-10-20T21:47:15.070Z [32minfo[39m: No active video sessions found in MediaContainer
+2025-10-20T21:47:20.076Z [32minfo[39m: No active video sessions found in MediaContainer
+2025-10-20T21:47:25.101Z [32minfo[39m: No active video sessions found in MediaContainer
+2025-10-20T21:47:30.062Z [32minfo[39m: No active video sessions found in MediaContainer
+--- nebula-sync ---
+[90m2025-10-20T21:45:00Z[0m [32mINF[0m [1mRunning sync[0m [36mmode=[0mfull [36mreplicas=[0m1
+[90m2025-10-20T21:45:00Z[0m [32mINF[0m [1mAuthenticating clients...[0m
+[90m2025-10-20T21:45:00Z[0m [32mINF[0m [1mInvalidating sessions...[0m
+--- matter-server ---
+--- re-data-app ---
+  See what's new at https://discuss.streamlit.io/c/announcements
+
+  Enter the following command to upgrade:
+  $ pip install streamlit --upgrade
+
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/ACCVRAIZ1.pem
+/etc/ssl/certs/QuoVadis_Root_CA_2_G3.pem
+/etc/ssl/certs/GTS_Root_R3.pem
+/etc/ssl/certs/HARICA_TLS_RSA_Root_CA_2021.pem
+/etc/ssl/certs/QuoVadis_Root_CA_1_G3.pem
+/etc/ssl/certs/Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+/etc/ssl/certs/emSign_ECC_Root_CA_-_G3.pem
+/etc/ssl/certs/Entrust_Root_Certification_Authority_-_G4.pem
+/etc/ssl/certs/SwissSign_Silver_CA_-_G2.pem
+/etc/ssl/certs/SwissSign_Gold_CA_-_G2.pem
+
+--- Users with Shell Access ---
+root:x:0:0:root:/root:/bin/bash
+kappy:x:1000:1000:kappy:/home/kappy:/bin/bash
+
+--- Sudo Configuration ---
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: minikapserver
+Completed: Mon Oct 20 09:47:31 PM UTC 2025
+
+Please save this output and share it for documentation enhancement.
+Note: Some commands may require sudo privileges for complete information.

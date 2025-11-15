@@ -1,0 +1,792 @@
+=========================================
+HOMELAB SYSTEM INFORMATION COLLECTOR
+=========================================
+Hostname: Tower
+Date: Mon Oct 20 16:04:05 EDT 2025
+User: root
+
+=========================================
+SYSTEM INFORMATION
+=========================================
+--- Basic System Info ---
+Linux Tower 6.1.64-Unraid #1 SMP PREEMPT_DYNAMIC Wed Nov 29 12:48:16 PST 2023 x86_64 AMD Ryzen 5 2600X Six-Core Processor AuthenticAMD GNU/Linux
+
+--- OS Release ---
+NAME=Slackware
+VERSION="15.0"
+ID=slackware
+VERSION_ID=15.0
+PRETTY_NAME="Slackware 15.0 x86_64 (post 15.0 -current)"
+ANSI_COLOR="0;34"
+CPE_NAME="cpe:/o:slackware:slackware_linux:15.0"
+HOME_URL="http://slackware.com/"
+SUPPORT_URL="http://www.linuxquestions.org/questions/slackware-14/"
+BUG_REPORT_URL="http://www.linuxquestions.org/questions/slackware-14/"
+VERSION_CODENAME=current
+
+--- Uptime ---
+ 16:04:05 up 92 days, 13:10,  0 users,  load average: 0.44, 0.26, 0.18
+
+=========================================
+HARDWARE INFORMATION
+=========================================
+--- CPU Information ---
+Architecture:            x86_64
+  CPU op-mode(s):        32-bit, 64-bit
+  Address sizes:         43 bits physical, 48 bits virtual
+  Byte Order:            Little Endian
+CPU(s):                  12
+  On-line CPU(s) list:   0-11
+Vendor ID:               AuthenticAMD
+  BIOS Vendor ID:        Advanced Micro Devices, Inc.
+  Model name:            AMD Ryzen 5 2600X Six-Core Processor
+    BIOS Model name:     AMD Ryzen 5 2600X Six-Core Processor            Unknown CPU @ 3.6GHz
+    BIOS CPU family:     107
+    CPU family:          23
+    Model:               8
+    Thread(s) per core:  2
+    Core(s) per socket:  6
+    Socket(s):           1
+    Stepping:            2
+    Frequency boost:     enabled
+    CPU(s) scaling MHz:  64%
+    CPU max MHz:         3600.0000
+    CPU min MHz:         2200.0000
+    BogoMIPS:            7199.51
+    Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht sysc
+                         all nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmp
+                         erf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_l
+                         m cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw skinit wdt tce topoext perfc
+                         tr_core perfctr_nb bpext perfctr_llc mwaitx cpb hw_pstate ssbd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 
+                         rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero irperf xsaveerptr arat npt lbrv svm_lock
+                          nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vg
+                         if overflow_recov succor smca sev sev_es
+Virtualization features: 
+  Virtualization:        AMD-V
+Caches (sum of all):     
+  L1d:                   192 KiB (6 instances)
+  L1i:                   384 KiB (6 instances)
+  L2:                    3 MiB (6 instances)
+  L3:                    16 MiB (2 instances)
+NUMA:                    
+  NUMA node(s):          1
+  NUMA node0 CPU(s):     0-11
+Vulnerabilities:         
+  Gather data sampling:  Not affected
+  Itlb multihit:         Not affected
+  L1tf:                  Not affected
+  Mds:                   Not affected
+  Meltdown:              Not affected
+  Mmio stale data:       Not affected
+  Retbleed:              Mitigation; untrained return thunk; SMT vulnerable
+  Spec rstack overflow:  Mitigation; safe RET
+  Spec store bypass:     Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:            Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:            Mitigation; Retpolines, IBPB conditional, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected
+  Srbds:                 Not affected
+  Tsx async abort:       Not affected
+
+--- Memory Information ---
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       4.7Gi       1.0Gi       1.1Gi        25Gi        25Gi
+Swap:             0B          0B          0B
+
+--- Memory Details ---
+MemTotal:       32809432 kB
+MemFree:         1098868 kB
+MemAvailable:   26320504 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+
+--- Disk Information ---
+NAME        FSTYPE   FSVER LABEL  UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0       squashfs 4.0                                                 15.2G     3% /lib
+loop1       squashfs 4.0                                                 15.2G     3% /usr
+loop2       btrfs                 c868b3cb-89c6-49b6-a8b2-ccdb9bcc4549   86.4G    12% /var/lib/docker/btrfs
+                                                                                      /var/lib/docker
+loop3       btrfs                 022a0910-c24a-45da-8093-bcc3753132b6  904.4M     0% /etc/libvirt
+sda                                                                                   
+└─sda1      vfat     FAT32 UNRAID 2732-64F5                              28.1G     2% /boot
+sdb                                                                                   
+└─sdb1      btrfs                 11f67198-2485-486c-84f4-395d727ebda0                
+sdc                                                                                   
+└─sdc1      btrfs                 81093b66-fcb4-46a8-8d82-43cea8d2c84b                
+md1p1                                                                    10.2T    20% /mnt/disk1
+md2p1                                                                    12.2T     3% /mnt/disk2
+nvme0n1                                                                               
+└─nvme0n1p1 btrfs                 c6cbe3c5-eedc-4276-9bee-12331b06aaa9    2.9T     0% /mnt/cache
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs           16G  411M   16G   3% /
+tmpfs            32M  1.2M   31M   4% /run
+/dev/sda1        29G  500M   29G   2% /boot
+overlay          16G  411M   16G   3% /lib
+overlay          16G  411M   16G   3% /usr
+devtmpfs        8.0M     0  8.0M   0% /dev
+tmpfs            16G     0   16G   0% /dev/shm
+tmpfs           128M   52M   77M  41% /var/log
+tmpfs           1.0M     0  1.0M   0% /mnt/disks
+tmpfs           1.0M     0  1.0M   0% /mnt/remotes
+tmpfs           1.0M     0  1.0M   0% /mnt/addons
+tmpfs           1.0M     0  1.0M   0% /mnt/rootshare
+/dev/md1p1       13T  2.5T   11T  20% /mnt/disk1
+/dev/md2p1       13T  436G   13T   4% /mnt/disk2
+/dev/nvme0n1p1  3.0T  4.7G  3.0T   1% /mnt/cache
+shfs             26T  2.9T   23T  12% /mnt/user0
+shfs             26T  2.9T   23T  12% /mnt/user
+/dev/loop2      100G   12G   87G  13% /var/lib/docker
+/dev/loop3      1.0G  4.1M  905M   1% /etc/libvirt
+
+--- Storage Details ---
+H/W path                Device          Class       Description
+===============================================================
+/0/100/1.3/0.2/4/0/0    hwmon1          disk        NVMe disk
+/0/100/1.3/0.2/4/0/2    /dev/ng0n1      disk        NVMe disk
+/0/100/1.3/0.2/4/0/1    /dev/nvme0n1    disk        3200GB NVMe disk
+/0/100/3.2/0/1.4.0      /dev/sdb        disk        13TB ST14000NM0288 E
+/0/100/3.2/0/1.7.0      /dev/sdc        disk        13TB ST14000NM0288 E
+/0/6/0.0.0              /dev/sda        disk        30GB Cruzer Fit
+/0/6/0.0.0/0            /dev/sda        disk        30GB 
+
+--- PCI Devices ---
+00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Root Complex
+00:00.2 IOMMU: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) I/O Memory Management Unit
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
+00:01.3 PCI bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) PCIe GPP Bridge
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
+00:03.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) PCIe GPP Bridge
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
+00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
+00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Internal PCIe GPP Bridge 0 to Bus B
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-1fh) PCIe Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Internal PCIe GPP Bridge 0 to Bus B
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 59)
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Data Fabric: Device 18h; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Data Fabric: Device 18h; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Data Fabric: Device 18h; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Data Fabric: Device 18h; Function 3
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Data Fabric: Device 18h; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Family 17h (Models 00h-0fh) Data Fabric: Device 18h; Function 5
+
+--- USB Devices ---
+Bus 006 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 005 Device 002: ID 0781:5571 SanDisk Corp. Cruzer Fit
+Bus 005 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 002: ID 8087:0aa7 Intel Corp. Wireless-AC 3168 Bluetooth
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+=========================================
+NETWORK INFORMATION
+=========================================
+--- Network Interfaces ---
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: eth0: <BROADCAST,MULTICAST,SLAVE,UP,LOWER_UP> mtu 1500 qdisc mq master bond0 state UP group default qlen 1000
+    link/ether 70:85:c2:c5:42:30 brd ff:ff:ff:ff:ff:ff
+4: bond0: <BROADCAST,MULTICAST,MASTER,UP,LOWER_UP> mtu 1500 qdisc noqueue master br0 state UP group default qlen 1000
+    link/ether 70:85:c2:c5:42:30 brd ff:ff:ff:ff:ff:ff
+5: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 70:85:c2:c5:42:30 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.86.46/24 metric 1 scope global br0
+       valid_lft forever preferred_lft forever
+7: tailscale1: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1280 qdisc fq state UNKNOWN group default qlen 500
+    link/none 
+    inet 100.78.240.7/32 scope global tailscale1
+       valid_lft forever preferred_lft forever
+    inet6 fd7a:115c:a1e0::f801:f008/128 scope global 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::15f:4765:5402:ac67/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+8: br-bcd86f8186bc: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:89:e8:77:f0 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-bcd86f8186bc
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:89ff:fee8:77f0/64 scope link 
+       valid_lft forever preferred_lft forever
+9: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:93:78:44:98 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+20: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:9d:29:14 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+22: veth80a67d3@if21: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 56:1f:c1:a7:f2:a2 brd ff:ff:ff:ff:ff:ff link-netnsid 5
+    inet6 fe80::541f:c1ff:fea7:f2a2/64 scope link 
+       valid_lft forever preferred_lft forever
+26: veth166d5e2@if25: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 16:50:76:f8:c3:3b brd ff:ff:ff:ff:ff:ff link-netnsid 7
+    inet6 fe80::1450:76ff:fef8:c33b/64 scope link 
+       valid_lft forever preferred_lft forever
+91594: veth4a26ee0@if91593: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether fa:8d:5f:2c:d2:76 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::f88d:5fff:fe2c:d276/64 scope link 
+       valid_lft forever preferred_lft forever
+91600: veth0bc0b18@if91599: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether f6:bf:22:a2:ff:0e brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::f4bf:22ff:fea2:ff0e/64 scope link 
+       valid_lft forever preferred_lft forever
+91602: veth60399ff@if91601: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether ba:ed:bf:33:67:c1 brd ff:ff:ff:ff:ff:ff link-netnsid 4
+    inet6 fe80::b8ed:bfff:fe33:67c1/64 scope link 
+       valid_lft forever preferred_lft forever
+91604: vethacf54e0@if91603: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-bcd86f8186bc state UP group default 
+    link/ether 5e:f8:a7:52:89:3b brd ff:ff:ff:ff:ff:ff link-netnsid 6
+    inet6 fe80::5cf8:a7ff:fe52:893b/64 scope link 
+       valid_lft forever preferred_lft forever
+91606: veth6848d2a@if91605: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether d6:83:b4:27:c2:a6 brd ff:ff:ff:ff:ff:ff link-netnsid 8
+    inet6 fe80::d483:b4ff:fe27:c2a6/64 scope link 
+       valid_lft forever preferred_lft forever
+91608: veth0bdb092@if91607: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-bcd86f8186bc state UP group default 
+    link/ether 36:a6:07:c8:9b:4a brd ff:ff:ff:ff:ff:ff link-netnsid 9
+    inet6 fe80::34a6:7ff:fec8:9b4a/64 scope link 
+       valid_lft forever preferred_lft forever
+91610: vethcc03d65@if91609: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default 
+    link/ether 2e:c8:ed:7d:88:88 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::2cc8:edff:fe7d:8888/64 scope link 
+       valid_lft forever preferred_lft forever
+91612: veth28f8743@if91611: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-bcd86f8186bc state UP group default 
+    link/ether 66:72:ad:6f:98:cd brd ff:ff:ff:ff:ff:ff link-netnsid 10
+    inet6 fe80::6472:adff:fe6f:98cd/64 scope link 
+       valid_lft forever preferred_lft forever
+
+--- Routing Table ---
+default via 192.168.86.1 dev br0 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+172.18.0.0/16 dev br-bcd86f8186bc proto kernel scope link src 172.18.0.1 
+192.168.86.0/24 dev br0 proto kernel scope link src 192.168.86.46 metric 1 
+192.168.122.0/24 dev virbr0 proto kernel scope link src 192.168.122.1 linkdown 
+
+--- DNS Configuration ---
+# resolv.conf(5) file generated by tailscale
+# For more info, see https://tailscale.com/s/resolvconf-overwrite
+# DO NOT EDIT THIS FILE BY HAND -- CHANGES WILL BE OVERWRITTEN
+
+nameserver 100.100.100.100
+search tailef17b3.ts.net
+
+--- Network Connections ---
+Netid      State       Recv-Q      Send-Q                         Local Address:Port            Peer Address:Port     Process     
+udp        UNCONN      0           0                                    0.0.0.0:57319                0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:57545                0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:45517                0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:48692                0.0.0.0:*                    
+udp        UNCONN      0           0                              192.168.122.1:53                   0.0.0.0:*                    
+udp        UNCONN      0           0                             0.0.0.0%virbr0:67                   0.0.0.0:*                    
+udp        UNCONN      0           0                              192.168.86.46:111                  0.0.0.0:*                    
+udp        UNCONN      0           0                               100.78.240.7:111                  0.0.0.0:*                    
+udp        UNCONN      0           0                                  127.0.0.1:111                  0.0.0.0:*                    
+udp        UNCONN      0           0                                  127.0.0.1:1001                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:51046                0.0.0.0:*                    
+udp        UNCONN      0           0                               100.78.240.7:2049                 0.0.0.0:*                    
+udp        UNCONN      0           0                                  127.0.0.1:2049                 0.0.0.0:*                    
+udp        UNCONN      0           0                              192.168.86.46:2049                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:35239                0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:51703                0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:36054                0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:3702                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:3702                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:3702                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:5353                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:5355                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:5355                 0.0.0.0:*                    
+udp        UNCONN      0           0                                    0.0.0.0:5355                 0.0.0.0:*                    
+udp        UNCONN      0           0                                       [::]:40815                   [::]:*                    
+udp        UNCONN      0           0                                       [::]:58293                   [::]:*                    
+udp        UNCONN      0           0                                       [::]:60168                   [::]:*                    
+udp        UNCONN      0           0                                       [::]:61109                   [::]:*                    
+udp        UNCONN      0           0                [fd7a:115c:a1e0::f801:f008]:111                     [::]:*                    
+udp        UNCONN      0           0                                      [::1]:111                     [::]:*                    
+udp        UNCONN      0           0                                       [::]:49798                   [::]:*                    
+udp        UNCONN      0           0                [fd7a:115c:a1e0::f801:f008]:2049                    [::]:*                    
+udp        UNCONN      0           0                                       [::]:52487                   [::]:*                    
+udp        UNCONN      0           0                                       [::]:3702                    [::]:*                    
+udp        UNCONN      0           0                                       [::]:3702                    [::]:*                    
+udp        UNCONN      0           0                                       [::]:5355                    [::]:*                    
+udp        UNCONN      0           0                                       [::]:5355                    [::]:*                    
+udp        UNCONN      0           0                                       [::]:54694                   [::]:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:47209                0.0.0.0:*                    
+tcp        LISTEN      0           64                                 127.0.0.1:2049                 0.0.0.0:*                    
+tcp        LISTEN      0           32                             192.168.122.1:53                   0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:8543                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:8384                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:42837                0.0.0.0:*                    
+tcp        LISTEN      0           1000                               127.0.0.1:16509                0.0.0.0:*                    
+tcp        LISTEN      0           511                                127.0.0.1:80                   0.0.0.0:*                    
+tcp        LISTEN      0           50                                 127.0.0.1:139                  0.0.0.0:*                    
+tcp        LISTEN      0           50                                 127.0.0.1:445                  0.0.0.0:*                    
+tcp        LISTEN      0           511                                127.0.0.1:443                  0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:56045                0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:6379                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:8081                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                            100.78.240.7:5252                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:6060                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:54823                0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:5690                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:5433                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:5432                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:22000                0.0.0.0:*                    
+tcp        LISTEN      0           5                    0.0.0.0%br-bcd86f8186bc:5355                 0.0.0.0:*                    
+tcp        LISTEN      0           5                         0.0.0.0%tailscale1:5355                 0.0.0.0:*                    
+tcp        LISTEN      0           5                                0.0.0.0%br0:5355                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:3000                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                            100.78.240.7:36294                0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:2112                 0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:2283                 0.0.0.0:*                    
+tcp        LISTEN      0           64                              100.78.240.7:2049                 0.0.0.0:*                    
+tcp        LISTEN      0           5                    0.0.0.0%br-bcd86f8186bc:3702                 0.0.0.0:*                    
+tcp        LISTEN      0           5                         0.0.0.0%tailscale1:3702                 0.0.0.0:*                    
+tcp        LISTEN      0           5                                0.0.0.0%br0:3702                 0.0.0.0:*                    
+tcp        LISTEN      0           511                            192.168.86.46:443                  0.0.0.0:*                    
+tcp        LISTEN      0           50                             192.168.86.46:445                  0.0.0.0:*                    
+tcp        LISTEN      0           5                                    0.0.0.0:3551                 0.0.0.0:*                    
+tcp        LISTEN      0           511                            192.168.86.46:80                   0.0.0.0:*                    
+tcp        LISTEN      0           50                             192.168.86.46:139                  0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:50059                0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:111                  0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:180                  0.0.0.0:*                    
+tcp        LISTEN      0           511                             100.78.240.7:80                   0.0.0.0:*                    
+tcp        LISTEN      0           50                              100.78.240.7:139                  0.0.0.0:*                    
+tcp        LISTEN      0           50                              100.78.240.7:445                  0.0.0.0:*                    
+tcp        LISTEN      0           511                             100.78.240.7:443                  0.0.0.0:*                    
+tcp        LISTEN      0           4096                                 0.0.0.0:1443                 0.0.0.0:*                    
+tcp        LISTEN      0           64                             192.168.86.46:2049                 0.0.0.0:*                    
+tcp        LISTEN      0           64                                   0.0.0.0:34035                0.0.0.0:*                    
+tcp        LISTEN      0           511                                    [::1]:443                     [::]:*                    
+tcp        LISTEN      0           511                                    [::1]:80                      [::]:*                    
+tcp        LISTEN      0           64                                      [::]:45879                   [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:46123                   [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:8543                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:8384                    [::]:*                    
+tcp        LISTEN      0           64               [fd7a:115c:a1e0::f801:f008]:2049                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:6379                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:8081                    [::]:*                    
+tcp        LISTEN      0           511              [fd7a:115c:a1e0::f801:f008]:80                      [::]:*                    
+tcp        LISTEN      0           50               [fd7a:115c:a1e0::f801:f008]:139                     [::]:*                    
+tcp        LISTEN      0           511              [fd7a:115c:a1e0::f801:f008]:443                     [::]:*                    
+tcp        LISTEN      0           50               [fd7a:115c:a1e0::f801:f008]:445                     [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:6060                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:5690                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:54961                   [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:5433                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:5432                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:22000                   [::]:*                    
+tcp        LISTEN      0           5                            [::]%tailscale1:5355                    [::]:*                    
+tcp        LISTEN      0           5                       [::]%br-bcd86f8186bc:5355                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:52047                   [::]:*                    
+tcp        LISTEN      0           511                                        *:3001                       *:*                    
+tcp        LISTEN      0           4096                                    [::]:3000                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:35513                   [::]:*                    
+tcp        LISTEN      0           4096             [fd7a:115c:a1e0::f801:f008]:55978                   [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:2112                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:2283                    [::]:*                    
+tcp        LISTEN      0           5                            [::]%tailscale1:3702                    [::]:*                    
+tcp        LISTEN      0           5                       [::]%br-bcd86f8186bc:3702                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:50059                   [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:111                     [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:180                     [::]:*                    
+tcp        LISTEN      0           4096             [fd7a:115c:a1e0::f801:f008]:5252                    [::]:*                    
+tcp        LISTEN      0           4096                                    [::]:1443                    [::]:*                    
+
+--- Tailscale Status ---
+100.78.240.7    tower                tower.tailef17b3.ts.net linux   -
+100.97.61.81    forest-point         kennytran88@ windows offline
+100.91.132.102  iphone               kennytran88@ iOS     offline
+100.99.51.49    kapmox               kennytran88@ linux   -
+100.98.212.77   kappys-mac-mini      kennytran88@ macOS   -
+100.115.151.114 kapserver            kennytran88@ linux   offline
+100.109.117.14  kaptop               kennytran88@ macOS   active; direct 72.229.169.169:1384, tx 2516156 rx 122596
+100.121.136.23  minikapserver        kennytran88@ linux   active; direct 72.229.169.169:1333, tx 299912392 rx 240619288
+100.107.45.13   ridgeserver          kennytran88@ linux   -
+
+# Health check:
+#     - Tailscale SSH enabled, but access controls don't allow anyone to access this device. Ask your admin to update your tailnet's ACLs to allow access.
+
+=========================================
+DOCKER INFORMATION
+=========================================
+--- Docker Version ---
+Docker version 20.10.24, build 297e128
+
+--- Docker System Info ---
+Client:
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  compose: Docker Compose (Docker Inc., v2.35.1)
+
+Server:
+ Containers: 13
+  Running: 12
+  Paused: 0
+  Stopped: 1
+ Images: 18
+ Server Version: 20.10.24
+ Storage Driver: btrfs
+  Build Version: Btrfs v5.10.1 
+  Library Version: 102
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 io.containerd.runtime.v1.linux runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 2806fc1057397dbaeefbea0e4e17bddfbd388f38
+ runc version: v1.1.5-0-gf19387a6
+ init version: de40ad0
+
+--- Running Containers ---
+NAMES                         IMAGE                                     STATUS                 PORTS
+dashdot                       mauricenino/dashdot:latest                Up 3 days              
+Wizarr                        ghcr.io/wizarrrr/wizarr                   Up 4 weeks (healthy)   0.0.0.0:5690->5690/tcp, :::5690->5690/tcp
+syncthing                     binhex/arch-syncthing                     Up 4 weeks (healthy)   0.0.0.0:8384->8384/tcp, :::8384->8384/tcp, 0.0.0.0:22000->22000/tcp, :::22000->22000/tcp
+swag                          lscr.io/linuxserver/swag                  Up 4 weeks             0.0.0.0:180->80/tcp, :::180->80/tcp, 0.0.0.0:1443->443/tcp, :::1443->443/tcp
+ImmichRedis                   redis                                     Up 4 weeks             0.0.0.0:6379->6379/tcp, :::6379->6379/tcp
+immich                        ghcr.io/imagegenius/immich                Up 4 weeks             0.0.0.0:2283->8080/tcp, :::2283->8080/tcp
+crowdsec-dashboard            metabase/metabase:latest                  Up 4 weeks             0.0.0.0:3000->3000/tcp, :::3000->3000/tcp
+crowdsec                      crowdsecurity/crowdsec                    Up 4 weeks             0.0.0.0:6060->6060/tcp, :::6060->6060/tcp, 0.0.0.0:8081->8080/tcp, :::8081->8080/tcp
+immich-postgreSQL             tensorchord/pgvecto-rs:pg16-v0.2.0        Up 3 months            0.0.0.0:5433->5432/tcp, :::5433->5432/tcp
+studio-server                 allebb/studio-server:latest               Up 7 weeks             0.0.0.0:5432->5432/tcp, :::5432->5432/tcp, 0.0.0.0:8543->8543/tcp, :::8543->8543/tcp, 0.0.0.0:50059->50059/tcp, :::50059->50059/tcp
+crowdsec-cloudflare-bouncer   crowdsecurity/cloudflare-bouncer:latest   Up 3 months            0.0.0.0:2112->2112/tcp, :::2112->2112/tcp
+Cloudflare-DDNS               oznu/cloudflare-ddns                      Up 3 months            
+
+--- All Containers ---
+NAMES                         IMAGE                                     STATUS                 PORTS
+dashdot                       mauricenino/dashdot:latest                Up 3 days              
+Wizarr                        ghcr.io/wizarrrr/wizarr                   Up 4 weeks (healthy)   0.0.0.0:5690->5690/tcp, :::5690->5690/tcp
+syncthing                     binhex/arch-syncthing                     Up 4 weeks (healthy)   0.0.0.0:8384->8384/tcp, :::8384->8384/tcp, 0.0.0.0:22000->22000/tcp, :::22000->22000/tcp
+swag                          lscr.io/linuxserver/swag                  Up 4 weeks             0.0.0.0:180->80/tcp, :::180->80/tcp, 0.0.0.0:1443->443/tcp, :::1443->443/tcp
+ImmichRedis                   redis                                     Up 4 weeks             0.0.0.0:6379->6379/tcp, :::6379->6379/tcp
+immich                        ghcr.io/imagegenius/immich                Up 4 weeks             0.0.0.0:2283->8080/tcp, :::2283->8080/tcp
+crowdsec-dashboard            metabase/metabase:latest                  Up 4 weeks             0.0.0.0:3000->3000/tcp, :::3000->3000/tcp
+crowdsec                      crowdsecurity/crowdsec                    Up 4 weeks             0.0.0.0:6060->6060/tcp, :::6060->6060/tcp, 0.0.0.0:8081->8080/tcp, :::8081->8080/tcp
+AutheliaPostgresql            postgres:17                               Created                
+immich-postgreSQL             tensorchord/pgvecto-rs:pg16-v0.2.0        Up 3 months            0.0.0.0:5433->5432/tcp, :::5433->5432/tcp
+studio-server                 allebb/studio-server:latest               Up 7 weeks             0.0.0.0:5432->5432/tcp, :::5432->5432/tcp, 0.0.0.0:8543->8543/tcp, :::8543->8543/tcp, 0.0.0.0:50059->50059/tcp, :::50059->50059/tcp
+crowdsec-cloudflare-bouncer   crowdsecurity/cloudflare-bouncer:latest   Up 3 months            0.0.0.0:2112->2112/tcp, :::2112->2112/tcp
+Cloudflare-DDNS               oznu/cloudflare-ddns                      Up 3 months            
+
+--- Docker Images ---
+REPOSITORY                         TAG               SIZE      CREATED AT
+ghcr.io/wizarrrr/wizarr            latest            298MB     2025-09-21 09:27:27 -0400 EDT
+lscr.io/linuxserver/swag           latest            416MB     2025-09-19 23:35:47 -0400 EDT
+metabase/metabase                  latest            868MB     2025-09-17 05:42:33 -0400 EDT
+ghcr.io/imagegenius/immich         latest            4.61GB    2025-09-16 12:52:09 -0400 EDT
+binhex/arch-syncthing              latest            1.11GB    2025-09-13 17:18:07 -0400 EDT
+postgres                           17                454MB     2025-09-08 16:04:25 -0400 EDT
+crowdsecurity/crowdsec             latest            322MB     2025-09-03 09:39:48 -0400 EDT
+redis                              latest            137MB     2025-08-18 12:44:26 -0400 EDT
+mauricenino/dashdot                latest            204MB     2025-08-10 07:06:59 -0400 EDT
+redis                              7-alpine          41.4MB    2025-05-29 10:46:25 -0400 EDT
+ghcr.io/coollabsio/coolify         latest            368MB     2025-05-09 02:31:08 -0400 EDT
+kappy1928/building-monitor         20250508_100039   578MB     2025-05-08 10:01:02 -0400 EDT
+tensorchord/pgvecto-rs             pg16-v0.2.0       701MB     2025-02-25 04:09:24 -0500 EST
+crowdsecurity/cloudflare-bouncer   latest            20.8MB    2024-09-16 03:49:09 -0400 EDT
+traefik                            v2.10             153MB     2024-01-26 22:56:16 -0500 EST
+allebb/studio-server               latest            691MB     2023-07-24 10:40:41 -0400 EDT
+quay.io/soketi/soketi              1.4-16-alpine     285MB     2022-08-21 13:32:17 -0400 EDT
+oznu/cloudflare-ddns               latest            36.3MB    2021-03-01 08:12:31 -0500 EST
+
+--- Docker Networks ---
+NETWORK ID     NAME      DRIVER    SCOPE
+139826539ea1   br0       macvlan   local
+a0b1e787940d   bridge    bridge    local
+8574da98c92c   host      host      local
+bcd86f8186bc   immich    bridge    local
+353512f4a13e   none      null      local
+
+--- Docker Volumes ---
+DRIVER    VOLUME NAME
+local     1bd69a159467f1612a60f503cdb36702328373646aaf08c2a3c3ddf226851f4f
+local     5a5f32eb86b7c0a69f1c7896360475e778b465157fe7108c8e450833533094c9
+local     6b890975452fa9d0bcfe4a035ed8a49e11e7e316d039da4579c0b753730731ad
+local     6c17177bf99974d67000fa92ad5d75d71ab944ce993b9485e4e7430ce12cd5bc
+local     8fa6096c3f562492231fe021826b7255c09f3e58577e1c1abe9ba09506b48545
+local     66d413029f2194834182649a020296594168b8fb2151a62307e68461f252320a
+local     83c663df48527d7ed161f996995c54c1857639804759aa31c408ceb33b9a666b
+local     681ca46b601d20e03c866f96ebada138d52451a2e8b42b46b04a44dac4535575
+local     1847ca89b1531de1cf346e1101add3e9f37d6a006a91ea36c67a61936e68c7ed
+local     5408c1917156a929ca665e1a7d436604a601facc1388105c8eed5ee901ede9a9
+local     7604f501e0e514c5fc1196c14677aefd5a6d32b280e61ef5e50ecb9bad81396e
+local     3090572d3f75e682d1754b92e4e1de2db77e32c963c3facf794c7eda89f73657
+local     a394f974705d37edeb3b8bf4926395ef175a6a4e90caea69c62693aa4b6a5946
+local     b7f46beb04d7b9648090c717ccdb455314c579444662405291cbe3e969b8fa8a
+local     b91aac4a8e14a58b8abf8ffb3f5332857b74e5d54c011ccd2511095a0bf38383
+local     coolify_coolify-data
+local     coolify_coolify-redis-data
+local     d00a3f4d4e1724721c2dadf3ba1a3c4afc4b72758c6d6c1bfd10285474840d55
+
+--- Docker Compose Files ---
+
+=========================================
+SERVICES AND PROCESSES
+=========================================
+--- Systemd Services (Active) ---
+Systemd not available
+
+--- Top Processes by CPU ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     11924  2.0  0.1 775412 45332 ?        Ssl  Jul20 2791:49 /usr/local/bin/shfs /mnt/user -disks 7 -o default_permissions,allow_other,noatime -o remember=330
+root      5652  1.1  0.2 683396 78468 ?        Ssl  Oct17  54:18 node .
+root     16475  1.1  0.9 1514552 297760 ?      Ssl  Jul20 1552:29 /usr/local/bin/crowdsec-cloudflare-bouncer -c /etc/crowdsec/bouncers/crowdsec-cloudflare-bouncer.yaml
+root     13463  1.0  0.0  11884  8532 pts/0    Ss   16:04   0:00 bash --login
+root     13574  1.0  0.0   7192  3896 pts/0    S+   16:04   0:00 bash homelab-info-collector.sh
+nobody    7920  0.9  0.4 1572632 150912 ?      SNl  Sep22 403:07 /usr/bin/syncthing --config=/config/syncthing/config --data=/config/syncthing/data --gui-address=http://0.0.0.0:8384
+root     12452  0.6  0.4 1322236 144048 ?      Sl   Jul20 869:41 /usr/local/sbin/tailscaled -statedir /boot/config/plugins/tailscale/state -tun tailscale1
+nobody   31173  0.6  3.1 10246856 1044792 ?    Ssl  Sep22 253:43 java -XX:+IgnoreUnrecognizedVMOptions -Dfile.encoding=UTF-8 -Dlogfile.path=target/log -XX:+CrashOnOutOfMemoryError -server --add-opens java.base/java.nio=ALL-UNNAMED -jar /app/metabase.jar
+root     13008  0.5  0.0  95756 30672 ?        SL   16:03   0:00 /usr/bin/php -q /usr/local/emhttp/webGui/nchan/update_3
+root     29425  0.5  0.4 1461216 153752 ?      Ssl  Sep22 241:26 crowdsec -c /etc/crowdsec/config.yaml
+root      2844  0.4  0.0 413300  9032 ?        Ssl  Jul20 587:14 /usr/local/bin/emhttpd
+999       3403  0.4  0.0 135352 24916 ?        Ssl  Sep22 170:56 redis-server *:6379
+root     12907  0.3  0.0  95992 19860 ?        S    16:03   0:00 php-fpm: pool www
+root      5895  0.2  0.0  52512 20924 ?        Ssl  Sep22  92:57 /usr/bin/python3 /usr/bin/fail2ban-client -x -f start
+
+--- Top Processes by Memory ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nobody   31173  0.6  3.1 10246856 1044792 ?    Ssl  Sep22 253:43 java -XX:+IgnoreUnrecognizedVMOptions -Dfile.encoding=UTF-8 -Dlogfile.path=target/log -XX:+CrashOnOutOfMemoryError -server --add-opens java.base/java.nio=ALL-UNNAMED -jar /app/metabase.jar
+999      17134  0.2  1.5 2565504 501440 ?      Ssl  Jul20 372:52 postgres: vectors 
+nobody    3017  0.1  1.2 16314088 426448 ?     Ssl  Sep22  71:52 immich
+root     16475  1.1  0.9 1514552 297760 ?      Ssl  Jul20 1552:29 /usr/local/bin/crowdsec-cloudflare-bouncer -c /etc/crowdsec/bouncers/crowdsec-cloudflare-bouncer.yaml
+nobody   28304  0.0  0.8 2337960 283536 ?      Sl   Oct18   3:14 python -m gunicorn immich_ml.main:app -k immich_ml.config.CustomUvicornWorker -c /app/immich/machine-learning/immich_ml/gunicorn_conf.py -b 0.0.0.0:3003 -w 1 -t 120 --log-config-json /app/immich/machine-learning/immich_ml/log_conf.json --keep-alive 2 --graceful-timeout 10
+nobody    2875  0.0  0.8 12459796 263236 ?     Sl   Sep22  30:48 immich-api
+1000      8427  0.0  0.5 190536 164468 ?       S    Sep22   3:02 /app/.venv/bin/python /app/.venv/bin/gunicorn --config gunicorn.conf.py --bind 0.0.0.0:5690 --umask 007 run:app
+1000      8428  0.0  0.4 188880 159756 ?       S    Sep22   2:58 /app/.venv/bin/python /app/.venv/bin/gunicorn --config gunicorn.conf.py --bind 0.0.0.0:5690 --umask 007 run:app
+nobody    2796  0.0  0.4 1888956 154804 ?      Ssl  Sep22   2:01 immich
+root     29425  0.5  0.4 1461216 153752 ?      Ssl  Sep22 241:26 crowdsec -c /etc/crowdsec/config.yaml
+nobody    7920  0.9  0.4 1572632 150912 ?      SNl  Sep22 403:07 /usr/bin/syncthing --config=/config/syncthing/config --data=/config/syncthing/data --gui-address=http://0.0.0.0:8384
+999      17131  0.0  0.4 227276 145520 ?       Ss   Jul20   0:15 postgres: checkpointer 
+999      17132  0.0  0.4 226972 144444 ?       Ss   Jul20   0:33 postgres: background writer 
+root     12452  0.6  0.4 1322236 144048 ?      Sl   Jul20 869:41 /usr/local/sbin/tailscaled -statedir /boot/config/plugins/tailscale/state -tun tailscale1
+
+=========================================
+STORAGE AND FILESYSTEM
+=========================================
+--- Mounted Filesystems ---
+rootfs on / type rootfs (rw,size=16387956k,nr_inodes=4096989,inode64)
+/dev/sda1 on /boot type vfat (rw,noatime,nodiratime,fmask=0177,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,flush,errors=remount-ro)
+/boot/bzmodules on /lib type squashfs (ro,relatime,errors=continue)
+overlay on /lib type overlay (rw,relatime,lowerdir=/lib,upperdir=/var/local/overlay/lib,workdir=/var/local/overlay-work/lib)
+/boot/bzfirmware on /usr type squashfs (ro,relatime,errors=continue)
+overlay on /usr type overlay (rw,relatime,lowerdir=/usr,upperdir=/var/local/overlay/usr,workdir=/var/local/overlay-work/usr)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,relatime)
+hugetlbfs on /hugetlbfs type hugetlbfs (rw,relatime,pagesize=2M)
+none on /sys/fs/cgroup type cgroup2 (rw,relatime)
+rootfs on /mnt type rootfs (rw,size=16387956k,nr_inodes=4096989,inode64)
+/dev/md1p1 on /mnt/disk1 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/md2p1 on /mnt/disk2 type btrfs (rw,noatime,space_cache=v2,subvolid=5,subvol=/)
+/dev/nvme0n1p1 on /mnt/cache type btrfs (rw,noatime,ssd,discard=async,space_cache=v2,subvolid=5,subvol=/)
+shfs on /mnt/user0 type fuse.shfs (rw,nosuid,nodev,noatime,user_id=0,group_id=0,default_permissions,allow_other)
+shfs on /mnt/user type fuse.shfs (rw,nosuid,nodev,noatime,user_id=0,group_id=0,default_permissions,allow_other)
+/mnt/disk1/system/docker/docker.img on /var/lib/docker type btrfs (rw,noatime,ssd,space_cache=v2,subvolid=5,subvol=/)
+/mnt/disk1/system/docker/docker.img on /var/lib/docker/btrfs type btrfs (rw,noatime,ssd,space_cache=v2,subvolid=5,subvol=/)
+/mnt/disk1/system/libvirt/libvirt.img on /etc/libvirt type btrfs (rw,noatime,ssd,space_cache=v2,subvolid=5,subvol=/)
+nsfs on /run/docker/netns/default type nsfs (rw)
+nsfs on /run/docker/netns/8f835f872393 type nsfs (rw)
+nsfs on /run/docker/netns/0cdb13bd04eb type nsfs (rw)
+nsfs on /run/docker/netns/6b70b7f24533 type nsfs (rw)
+nsfs on /run/docker/netns/b39540656ef7 type nsfs (rw)
+nsfs on /run/docker/netns/378776235ea6 type nsfs (rw)
+nsfs on /run/docker/netns/bf3fccf7f5e0 type nsfs (rw)
+nsfs on /run/docker/netns/07a1b39f4179 type nsfs (rw)
+nsfs on /run/docker/netns/4f131cf19c40 type nsfs (rw)
+nsfs on /run/docker/netns/2817d106e2ea type nsfs (rw)
+nsfs on /run/docker/netns/6e372ecab0ff type nsfs (rw)
+
+--- Disk I/O Statistics ---
+Linux 6.1.64-Unraid (Tower)     10/20/2025      _x86_64_        (12 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.52    0.02    0.47    0.27    0.00   98.72
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+loop0            0.00      0.01     0.00   0.00    0.50    64.79    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop1            0.00      0.10     0.00   0.00    1.82    27.91    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+loop2            0.07      2.81     0.00   0.00   26.61    42.31    3.79     96.62     0.00   0.00    1.95    25.47    0.00      0.00     0.00   0.00    0.00     0.00    0.71    7.57    0.01   0.61
+loop3            0.00      0.00     0.00   0.00    6.95    13.65    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+nvme0n1          0.45     52.72     0.00   0.07    1.86   115.97    3.42    131.59     0.01   0.26    0.29    38.43    0.89    390.39     0.00   0.00    0.87   436.36    0.00    0.00    0.00   0.22
+sda              0.00      0.11     0.00  45.85    9.69    44.23    0.00      0.00     0.00   0.04    3.19     0.60    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdb              0.08      4.03     0.85  91.24   13.37    49.59    7.07    230.78    50.62  87.74    3.22    32.63    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.02   0.70
+sdc              0.02      0.38     0.00   1.44    0.17    23.39    0.00      0.00     0.00  86.96    0.87    30.67    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+
+--- ZFS Pools (if available) ---
+no pools available
+
+--- LVM Information ---
+
+=========================================
+CONFIGURATION FILES
+=========================================
+--- Crontab ---
+# If you don't want the output of a cron job mailed to you, you have to direct
+# any output to /dev/null.  We'll do this here since these jobs should run
+# properly on a newly installed system.  If a script fails, run-parts will
+# mail a notice to root.
+#
+# Run the hourly, daily, weekly, and monthly cron jobs.
+# Jobs that need different timing may be entered into the crontab as before,
+# but most really don't need greater granularity than this.  If the exact
+# times of the hourly, daily, weekly, and monthly cron jobs do not suit your
+# needs, feel free to adjust them.
+#
+# Run hourly cron jobs at 47 minutes after the hour:
+47 * * * * /usr/bin/run-parts /etc/cron.hourly 1> /dev/null
+#
+# Run daily cron jobs at 4:40 every day:
+40 4 * * * /usr/bin/run-parts /etc/cron.daily 1> /dev/null
+#
+# Run weekly cron jobs at 4:30 on the first day of the week:
+30 4 * * 0 /usr/bin/run-parts /etc/cron.weekly 1> /dev/null
+#
+# Run monthly cron jobs at 4:20 on the first day of the month:
+20 4 1 * * /usr/bin/run-parts /etc/cron.monthly 1> /dev/null
+
+--- System Crontab ---
+/etc/crontab not readable
+
+--- SSH Configuration ---
+PermitRootLogin yes
+
+--- Firewall Status ---
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+LIBVIRT_INP  0    --  0.0.0.0/0            0.0.0.0/0           
+ts-input   0    --  0.0.0.0/0            0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+LIBVIRT_FWX  0    --  0.0.0.0/0            0.0.0.0/0           
+LIBVIRT_FWI  0    --  0.0.0.0/0            0.0.0.0/0           
+LIBVIRT_FWO  0    --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-USER  0    --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-ISOLATION-STAGE-1  0    --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     0    --  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+DOCKER     0    --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     0    --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     0    --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     0    --  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+DOCKER     0    --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     0    --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     0    --  0.0.0.0/0            0.0.0.0/0           
+
+=========================================
+APPLICATION-SPECIFIC INFORMATION
+=========================================
+--- Proxmox (if available) ---
+
+--- Pi-hole (if available) ---
+
+--- Home Assistant (if available) ---
+
+=========================================
+ENVIRONMENT INFORMATION
+=========================================
+--- Environment Variables (filtered) ---
+HOME=/root
+PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
+USER=root
+
+--- Installed Packages (sample) ---
+
+=========================================
+LOG INFORMATION
+=========================================
+--- Recent System Logs ---
+Oct 20 15:26:01 Tower apcupsd[25770]: Communications with UPS lost.
+Oct 20 15:36:01 Tower apcupsd[25770]: Communications with UPS lost.
+Oct 20 15:46:15 Tower apcupsd[25770]: Communications with UPS lost.
+Oct 20 15:56:15 Tower apcupsd[25770]: Communications with UPS lost.
+Oct 20 16:03:51 Tower webGUI: Successful login user root from 100.109.117.14
+Oct 20 16:04:05 Tower sudo:     root : TTY=pts/0 ; PWD=/mnt/user ; USER=root ; COMMAND=/usr/sbin/lshw -class disk -short
+Oct 20 16:04:05 Tower sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 16:04:06 Tower sudo:     root : TTY=pts/0 ; PWD=/mnt/user ; USER=root ; COMMAND=/sbin/lvs
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 16:04:06 Tower sudo:     root : TTY=pts/0 ; PWD=/mnt/user ; USER=root ; COMMAND=/sbin/vgs
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 16:04:06 Tower sudo:     root : TTY=pts/0 ; PWD=/mnt/user ; USER=root ; COMMAND=/sbin/pvs
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session closed for user root
+Oct 20 16:04:06 Tower sudo:     root : TTY=pts/0 ; PWD=/mnt/user ; USER=root ; COMMAND=/usr/sbin/iptables -L -n
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Oct 20 16:04:06 Tower sudo: pam_unix(sudo:session): session closed for user root
+
+--- Docker Logs (if available) ---
+Recent container logs:
+--- dashdot ---
+Speed-test completed successfully [speedtest-cli] {
+  speedDown: 708365444.9879032,
+  speedUp: 616244469.5541002,
+  publicIp: undefined
+}
+--- Wizarr ---
+2025-10-01 11:06:38,997  ERROR     Failed to get now playing from Plex: HTTPConnectionPool(host='192.168.86.44', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480cb7fa9c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-10-01 11:06:39,012  WARNING   Failed to get Plex session info: HTTPConnectionPool(host='192.168.86.44', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480cb4aacf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-10-01 11:06:39,013  ERROR     Failed to get Plex server info: HTTPConnectionPool(host='192.168.86.44', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480cb4ab350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-10-01 11:06:55,247  ERROR     Failed to get now playing from Plex: HTTPConnectionPool(host='192.168.86.44', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480cb7fb570>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-10-01 11:07:05,234  ERROR     Failed to get now playing from Plex: HTTPConnectionPool(host='192.168.86.44', port=32400): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1480ca201260>: Failed to establish a new connection: [Errno 111] Connection refused'))
+--- syncthing ---
+2025-10-20 15:47:17 WRN Failed to acquire open port (mapping="[::]:22000/TCP" id=NAT-PMP@172.17.0.1 error="getting new lease on NAT-PMP@172.17.0.1 (external port 63243 -> internal port 22000): read udp 172.17.0.5:51738->172.17.0.1:5351: recvfrom: connection refused" log.pkg=nat)
+
+2025-10-20 15:47:27,795 DEBG 'start-script' stdout output:
+2025-10-20 15:47:27 WRN Failed to acquire open port (mapping=0.0.0.0:22000/UDP id=NAT-PMP@172.17.0.1 error="getting new lease on NAT-PMP@172.17.0.1 (external port 63243 -> internal port 22000): read udp 172.17.0.5:39027->172.17.0.1:5351: recvfrom: connection refused" log.pkg=nat)
+
+--- swag ---
+Server ready
+--- ImmichRedis ---
+1:M 20 Oct 2025 15:59:49.098 * 100 changes in 300 seconds. Saving...
+1:M 20 Oct 2025 15:59:49.099 * Background saving started by pid 8200
+8200:C 20 Oct 2025 15:59:49.168 * DB saved on disk
+8200:C 20 Oct 2025 15:59:49.169 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+1:M 20 Oct 2025 15:59:49.200 * Background saving terminated with success
+
+=========================================
+SECURITY INFORMATION
+=========================================
+--- SSL Certificates ---
+/etc/ssl/certs/vTrus_Root_CA.pem
+/etc/ssl/certs/vTrus_ECC_Root_CA.pem
+/etc/ssl/certs/unraid_bundle.pem
+/etc/ssl/certs/emSign_Root_CA_-_G1.pem
+/etc/ssl/certs/emSign_Root_CA_-_C1.pem
+/etc/ssl/certs/emSign_ECC_Root_CA_-_G3.pem
+/etc/ssl/certs/emSign_ECC_Root_CA_-_C3.pem
+/etc/ssl/certs/ePKI_Root_Certification_Authority.pem
+/etc/ssl/certs/e-Szigno_Root_CA_2017.pem
+/etc/ssl/certs/certSIGN_Root_CA_G2.pem
+
+--- Users with Shell Access ---
+root:x:0:0:Console and webGui login account:/root:/bin/bash
+
+--- Sudo Configuration ---
+root ALL=(ALL:ALL) ALL
+@includedir /etc/sudoers.d
+
+=========================================
+COLLECTION COMPLETE
+=========================================
+System: Tower
+Completed: Mon Oct 20 16:04:07 EDT 2025
+
