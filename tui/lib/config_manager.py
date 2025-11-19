@@ -1,6 +1,7 @@
 """Configuration Manager - Manage TUI configuration and deployment history."""
 
 import json
+import os
 from pathlib import Path
 from typing import Optional, Dict, List, Any
 from datetime import datetime
@@ -83,12 +84,17 @@ class ConfigManager:
         Returns:
             Default configuration dictionary
         """
+        # Get Tailscale key from environment or use placeholder
+        tailscale_key = os.environ.get('TAILSCALE_AUTH_KEY', '')
+        if not tailscale_key:
+            tailscale_key = "REPLACE_WITH_YOUR_TAILSCALE_KEY"
+
         return {
             "last_vmid": 205,
             "ssh_key": "~/.ssh/homelab_rsa",
             "proxmox_host": "kapmox",
             "proxmox_user": "root",
-            "tailscale_key": "tskey-auth-kDUAQYw7oT11CNTRL-6GuU37A4AH8soSRSM7TKH8cBXw2NP6gCE",
+            "tailscale_key": tailscale_key,
             "locations": {
                 "brooklyn": {
                     "network": "192.168.86.0/24",

@@ -58,6 +58,7 @@ Issues = "https://github.com/[username]/kapnode-deployments/issues"
 
 [tool.setuptools]
 packages = ["components", "screens", "lib"]
+py-modules = ["deploy_node"]
 
 [tool.black]
 line-length = 100

@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import Dict, Iterator, Tuple, Optional
 import re
+import shlex
 from .ssh_manager import SSHManager
 
 
@@ -20,65 +21,64 @@ class ScriptExecutor:
 
     def prepare_deployment(self, params: Dict[str, any]) -> str:
         """
-        Build deployment command string from parameters.
+        Build deployment command string from parameters with proper shell escaping.
 
         Args:
             params: Dictionary of deployment parameters
 
         Returns:
-            Complete command string for deployment
+            Complete command string for deployment (shell-escaped)
         """
-        cmd_parts = ["bash /tmp/deploy-ubuntu-vm.sh"]
+        cmd_parts = ["bash", "/tmp/deploy-ubuntu-vm.sh"]
 
-        # Required parameters
+        # Required parameters - use shlex.quote for security
         if "name" in params:
-            cmd_parts.append(f"--name {params['name']}")
+            cmd_parts.extend(["--name", shlex.quote(str(params['name']))])
         if "vmid" in params:
-            cmd_parts.append(f"--vmid {params['vmid']}")
+            cmd_parts.extend(["--vmid", shlex.quote(str(params['vmid']))])
         if "ip" in params:
-            cmd_parts.append(f"--ip {params['ip']}")
+            cmd_parts.extend(["--ip", shlex.quote(str(params['ip']))])
 
         # Network parameters
         if "gateway" in params:
-            cmd_parts.append(f"--gateway {params['gateway']}")
+            cmd_parts.extend(["--gateway", shlex.quote(str(params['gateway']))])
         if "dns" in params:
-            cmd_parts.append(f"--dns '{params['dns']}'")
+            cmd_parts.extend(["--dns", shlex.quote(str(params['dns']))])
 
         # Resource parameters
         if "memory" in params:
-            cmd_parts.append(f"--memory {params['memory']}")
+            cmd_parts.extend(["--memory", shlex.quote(str(params['memory']))])
         if "cores" in params:
-            cmd_parts.append(f"--cores {params['cores']}")
+            cmd_parts.extend(["--cores", shlex.quote(str(params['cores']))])
         if "disk_size" in params:
-            cmd_parts.append(f"--disk-size {params['disk_size']}")
+            cmd_parts.extend(["--disk-size", shlex.quote(str(params['disk_size']))])
         if "storage" in params:
-            cmd_parts.append(f"--storage {params['storage']}")
+            cmd_parts.extend(["--storage", shlex.quote(str(params['storage']))])
 
         # Storage parameters
         if params.get("longhorn_size", 0) > 0:
-            cmd_parts.append(f"--longhorn-size {params['longhorn_size']}")
+            cmd_parts.extend(["--longhorn-size", shlex.quote(str(params['longhorn_size']))])
         if params.get("backup_size", 0) > 0:
-            cmd_parts.append(f"--backup-size {params['backup_size']}")
+            cmd_parts.extend(["--backup-size", shlex.quote(str(params['backup_size']))])
 
-        # Tailscale and SSH
+        # Tailscale and SSH - critical security: properly escape
         if "tailscale_key" in params:
-            cmd_parts.append(f"--tailscale-key '{params['tailscale_key']}'")
+            cmd_parts.extend(["--tailscale-key", shlex.quote(str(params['tailscale_key']))])
         if "ssh_pubkey" in params:
-            # SSH public key needs proper escaping
             pubkey = params['ssh_pubkey'].strip()
-            cmd_parts.append(f"--ssh-pubkey '{pubkey}'")
+            cmd_parts.extend(["--ssh-pubkey", shlex.quote(pubkey)])
 
         # Location and node type
         if "location" in params:
-            cmd_parts.append(f"--location '{params['location']}'")
+            cmd_parts.extend(["--location", shlex.quote(str(params['location']))])
         if "node_type" in params:
-            cmd_parts.append(f"--node-type {params['node_type']}")
+            cmd_parts.extend(["--node-type", shlex.quote(str(params['node_type']))])
 
         # K3s parameters
         if "k3s_master" in params and params["k3s_master"]:
-            cmd_parts.append(f"--k3s-master '{params['k3s_master']}'")
+            cmd_parts.extend(["--k3s-master", shlex.quote(str(params['k3s_master']))])
         if "k3s_token" in params and params["k3s_token"]:
-            cmd_parts.append(f"--k3s-token '{params['k3s_token']}'")
+            cmd_parts.extend(["--k3s-token", shlex.quote(str(params['k3s_token']))])
 
         # Auto-confirm
         cmd_parts.append("--yes")

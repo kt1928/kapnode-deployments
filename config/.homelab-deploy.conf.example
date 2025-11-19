@@ -3,7 +3,7 @@
   "ssh_key": "~/.ssh/homelab_rsa",
   "proxmox_host": "kapmox",
   "proxmox_user": "root",
-  "tailscale_key": "tskey-auth-kDUAQYw7oT11CNTRL-6GuU37A4AH8soSRSM7TKH8cBXw2NP6gCE",
+  "tailscale_key": "REPLACE_WITH_YOUR_TAILSCALE_KEY",
   "locations": {
     "brooklyn": {
       "network": "192.168.86.0/24",

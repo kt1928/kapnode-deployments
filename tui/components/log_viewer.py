@@ -86,24 +86,41 @@ class LogViewerScreen(Screen):
 
         yield Footer()
 
+    def _safe_write_log(self, message: str) -> None:
+        """Safely write to log from worker thread."""
+        self.app.call_from_thread(
+            self.query_one("#log-display", RichLog).write,
+            message
+        )
+
+    def _safe_update_status(self, message: str) -> None:
+        """Safely update status bar from worker thread."""
+        self.app.call_from_thread(
+            self.query_one("#status-bar", Static).update,
+            message
+        )
+
+    def _safe_enable_button(self, button_id: str) -> None:
+        """Safely enable button from worker thread."""
+        def enable():
+            self.query_one(button_id, Button).disabled = False
+        self.app.call_from_thread(enable)
+
     @work
     async def on_mount(self) -> None:
-        """Start deployment when screen mounts."""
-        log_display = self.query_one("#log-display", RichLog)
-        status_bar = self.query_one("#status-bar", Static)
-
+        """Start deployment when screen mounts (thread-safe)."""
         # Log deployment parameters
-        log_display.write("=== Kapnode Deployment Starting ===")
-        log_display.write(f"Hostname: {self.params['name']}")
-        log_display.write(f"VMID: {self.params['vmid']}")
-        log_display.write(f"IP: {self.params['ip']}")
-        log_display.write(f"Location: {self.params['location']}")
-        log_display.write("=" * 40)
-        log_display.write("")
+        self._safe_write_log("=== Kapnode Deployment Starting ===")
+        self._safe_write_log(f"Hostname: {self.params['name']}")
+        self._safe_write_log(f"VMID: {self.params['vmid']}")
+        self._safe_write_log(f"IP: {self.params['ip']}")
+        self._safe_write_log(f"Location: {self.params['location']}")
+        self._safe_write_log("=" * 40)
+        self._safe_write_log("")
 
         # Step 1: Copy script to Proxmox host
-        status_bar.update("Step 1/3: Copying deployment script...")
-        log_display.write("[yellow]Copying deployment script to Proxmox host...[/yellow]")
+        self._safe_update_status("Step 1/3: Copying deployment script...")
+        self._safe_write_log("[yellow]Copying deployment script to Proxmox host...[/yellow]")
 
         script_path = Path(__file__).parent.parent.parent / "scripts" / "deploy-ubuntu-vm.sh"
         ssh_key = Path(self.params['ssh_key_path']).expanduser()
@@ -116,26 +133,26 @@ class LogViewerScreen(Screen):
         )
 
         if not success:
-            log_display.write("[bold red]✗ Failed to copy script to Proxmox host[/bold red]")
-            status_bar.update("Deployment failed: Could not copy script")
-            self.query_one("#btn-close", Button).disabled = False
+            self._safe_write_log("[bold red]✗ Failed to copy script to Proxmox host[/bold red]")
+            self._safe_update_status("Deployment failed: Could not copy script")
+            self._safe_enable_button("#btn-close")
             return
 
-        log_display.write("[green]✓ Script copied successfully[/green]")
-        log_display.write("")
+        self._safe_write_log("[green]✓ Script copied successfully[/green]")
+        self._safe_write_log("")
 
         # Step 2: Prepare command
-        status_bar.update("Step 2/3: Preparing deployment command...")
-        log_display.write("[yellow]Building deployment command...[/yellow]")
+        self._safe_update_status("Step 2/3: Preparing deployment command...")
+        self._safe_write_log("[yellow]Building deployment command...[/yellow]")
 
         command = self.executor.prepare_deployment(self.params)
-        log_display.write(f"Command: {command[:100]}...")
-        log_display.write("")
+        self._safe_write_log(f"Command: {command[:100]}...")
+        self._safe_write_log("")
 
         # Step 3: Execute deployment
-        status_bar.update("Step 3/3: Executing deployment...")
-        log_display.write("[yellow]Starting VM deployment...[/yellow]")
-        log_display.write("")
+        self._safe_update_status("Step 3/3: Executing deployment...")
+        self._safe_write_log("[yellow]Starting VM deployment...[/yellow]")
+        self._safe_write_log("")
 
         try:
             output_iterator = self.executor.execute_deployment(
@@ -154,41 +171,41 @@ class LogViewerScreen(Screen):
 
                 # Color code based on type
                 if parsed["type"] == "error":
-                    log_display.write(f"[bold red]{line}[/bold red]")
+                    self._safe_write_log(f"[bold red]{line}[/bold red]")
                 elif parsed["type"] == "warning":
-                    log_display.write(f"[yellow]{line}[/yellow]")
+                    self._safe_write_log(f"[yellow]{line}[/yellow]")
                 elif parsed["type"] == "success":
-                    log_display.write(f"[green]{line}[/green]")
+                    self._safe_write_log(f"[green]{line}[/green]")
                 else:
-                    log_display.write(line)
+                    self._safe_write_log(line)
 
                 # Update status bar with stage info
                 if parsed["stage"]:
-                    status_bar.update(f"Stage: {parsed['stage']}")
+                    self._safe_update_status(f"Stage: {parsed['stage']}")
 
             # Deployment completed
             if "error" not in "\n".join(self.log_lines).lower():
-                log_display.write("")
-                log_display.write("[bold green]✓ Deployment completed successfully![/bold green]")
-                status_bar.update("Deployment successful!")
+                self._safe_write_log("")
+                self._safe_write_log("[bold green]✓ Deployment completed successfully![/bold green]")
+                self._safe_update_status("Deployment successful!")
                 self.deployment_success = True
 
                 # Add to inventory
                 self._add_to_inventory()
 
             else:
-                log_display.write("")
-                log_display.write("[bold red]✗ Deployment completed with errors[/bold red]")
-                status_bar.update("Deployment failed")
+                self._safe_write_log("")
+                self._safe_write_log("[bold red]✗ Deployment completed with errors[/bold red]")
+                self._safe_update_status("Deployment failed")
 
         except Exception as e:
-            log_display.write("")
-            log_display.write(f"[bold red]✗ Deployment error: {str(e)}[/bold red]")
-            status_bar.update(f"Error: {str(e)}")
+            self._safe_write_log("")
+            self._safe_write_log(f"[bold red]✗ Deployment error: {str(e)}[/bold red]")
+            self._safe_update_status(f"Error: {str(e)}")
 
-        # Enable buttons
-        self.query_one("#btn-save", Button).disabled = False
-        self.query_one("#btn-close", Button).disabled = False
+        # Enable buttons (thread-safe)
+        self._safe_enable_button("#btn-save")
+        self._safe_enable_button("#btn-close")
 
     def _add_to_inventory(self) -> None:
         """Add deployed node to inventory."""
@@ -220,12 +237,10 @@ class LogViewerScreen(Screen):
             # Increment VMID
             self.config.increment_vmid()
 
-            log_display = self.query_one("#log-display", RichLog)
-            log_display.write("[green]✓ Node added to inventory[/green]")
+            self._safe_write_log("[green]✓ Node added to inventory[/green]")
 
         except Exception as e:
-            log_display = self.query_one("#log-display", RichLog)
-            log_display.write(f"[yellow]Warning: Failed to add to inventory: {str(e)}[/yellow]")
+            self._safe_write_log(f"[yellow]Warning: Failed to add to inventory: {str(e)}[/yellow]")
 
     @on(Button.Pressed, "#btn-save")
     def save_log(self) -> None:
