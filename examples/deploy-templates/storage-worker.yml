@@ -1,0 +1,106 @@
+---
+# Storage-Heavy K3s Worker Node Deployment Template
+#
+# This template creates a K3s worker node optimized for storage workloads
+# with large Longhorn capacity for persistent volumes.
+#
+# Usage:
+#   - Use for nodes that will host many persistent volumes
+#   - Ideal for database workloads, media storage, etc.
+
+deployment:
+  type: k3s-worker
+  description: "Storage-optimized K3s worker with large Longhorn capacity"
+
+# VM Configuration
+vm:
+  hostname: storage-worker1
+  vmid: 220
+  location: brooklyn
+
+# Network Configuration
+network:
+  ip: 192.168.86.220
+  gateway: 192.168.86.1
+  dns:
+    - 192.168.86.1
+    - 8.8.8.8
+  netmask: 24
+
+# Resource Allocation (higher memory for storage workloads)
+resources:
+  cores: 6
+  memory_gb: 32
+  disk_gb: 200
+  storage_pool: local-lvm
+
+# Storage Configuration (large Longhorn disk)
+storage:
+  longhorn:
+    enabled: true
+    size_gb: 8192  # 8TB for persistent volumes
+    mount_path: /mnt/longhorn
+    replica_count: 2
+  backup:
+    enabled: false
+    size_gb: 0
+
+# K3s Configuration
+k3s:
+  master_url: https://minikapserver:6443
+  token: ""  # Fill in K3s join token
+  version: latest
+  labels:
+    - location=brooklyn
+    - node-type=storage-worker
+    - storage=longhorn-large
+    - workload=storage-heavy
+  taints: []
+  extra_args:
+    - "--kubelet-arg=max-pods=250"
+    - "--kubelet-arg=image-gc-high-threshold=85"
+    - "--kubelet-arg=image-gc-low-threshold=80"
+
+# Tailscale Configuration
+tailscale:
+  auth_key: ""  # Fill in Tailscale auth key
+  accept_routes: true
+  advertise_exit_node: false
+  hostname: storage-worker1
+
+# SSH Configuration
+ssh:
+  user: ubuntu
+  public_key_path: ~/.ssh/homelab_rsa.pub
+  authorized_keys:
+    - ""
+
+# Storage Optimization
+storage_optimization:
+  longhorn:
+    default_replica_count: 2
+    guarantee_engine_cpu: 0.25
+    priority_class: high-priority
+  filesystem:
+    type: ext4
+    mount_options:
+      - noatime
+      - nodiratime
+  io_scheduler: deadline
+
+# Post-Deployment Tasks
+post_deployment:
+  update_packages: true
+  install_monitoring: true
+  join_cluster: true
+  verify_tailscale: true
+  configure_firewall: false
+  optimize_storage: true
+  label_for_storage: true
+
+# Tags and Metadata
+metadata:
+  deployed_by: tui
+  environment: production
+  purpose: storage-worker
+  notes: "Optimized for storage-heavy workloads with 8TB Longhorn capacity"

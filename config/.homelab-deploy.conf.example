@@ -1,0 +1,91 @@
+{
+  "last_vmid": 205,
+  "ssh_key": "~/.ssh/homelab_rsa",
+  "proxmox_host": "kapmox",
+  "proxmox_user": "root",
+  "tailscale_key": "tskey-auth-kDUAQYw7oT11CNTRL-6GuU37A4AH8soSRSM7TKH8cBXw2NP6gCE",
+  "locations": {
+    "brooklyn": {
+      "network": "192.168.86.0/24",
+      "gateway": "192.168.86.1",
+      "dns": "192.168.86.1,8.8.8.8",
+      "description": "Main location with Proxmox host (Kapmox)"
+    },
+    "manhattan": {
+      "network": "192.168.50.0/24",
+      "gateway": "192.168.50.1",
+      "dns": "192.168.50.1,8.8.8.8",
+      "description": "Secondary location"
+    },
+    "staten_island": {
+      "network": "192.168.70.0/24",
+      "gateway": "192.168.70.1",
+      "dns": "192.168.70.1,8.8.8.8",
+      "description": "Tertiary location"
+    },
+    "forest_hills": {
+      "network": "192.168.50.0/24",
+      "gateway": "192.168.50.1",
+      "dns": "192.168.50.1,8.8.8.8",
+      "description": "Location with K3s master (Minikapserver)"
+    }
+  },
+  "k3s_master": "https://minikapserver:6443",
+  "k3s_token": "",
+  "defaults": {
+    "cores": 4,
+    "ram_gb": 16,
+    "disk_gb": 200,
+    "node_type": "k3s-worker",
+    "storage": "local-lvm"
+  },
+  "deployment_history": [
+    {
+      "hostname": "kapnode1",
+      "vmid": 201,
+      "location": "brooklyn",
+      "ip": "192.168.86.201",
+      "deployed_at": "2025-11-15T10:30:00Z",
+      "node_type": "k3s-worker",
+      "resources": {
+        "cores": 4,
+        "ram_gb": 16,
+        "disk_gb": 200,
+        "longhorn_gb": 2048
+      }
+    },
+    {
+      "hostname": "kapnode2",
+      "vmid": 202,
+      "location": "brooklyn",
+      "ip": "192.168.86.202",
+      "deployed_at": "2025-11-15T11:00:00Z",
+      "node_type": "k3s-worker",
+      "resources": {
+        "cores": 4,
+        "ram_gb": 16,
+        "disk_gb": 200,
+        "longhorn_gb": 2048
+      }
+    }
+  ],
+  "preferences": {
+    "auto_increment_vmid": true,
+    "save_logs": true,
+    "log_directory": "~/kapnode-logs",
+    "confirm_before_deploy": true,
+    "auto_add_to_inventory": true,
+    "default_username": "ubuntu"
+  },
+  "ui": {
+    "theme": "dark",
+    "show_tips": true,
+    "auto_refresh_status": false
+  },
+  "notifications": {
+    "enabled": true,
+    "deployment_complete": true,
+    "deployment_failed": true,
+    "ssh_connection_failed": true
+  }
+}

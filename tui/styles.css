@@ -1,0 +1,401 @@
+/* Kapnode Deployment Manager - TUI Styles */
+
+/* Global Application Styles */
+Screen {
+    background: $background;
+    color: $text;
+}
+
+/* Header and Footer */
+Header {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+    height: 3;
+}
+
+Footer {
+    background: $panel;
+    color: $text-muted;
+    height: 1;
+}
+
+/* Containers */
+Container {
+    background: $surface;
+}
+
+/* Buttons */
+Button {
+    min-width: 16;
+    height: 3;
+    background: $primary;
+    color: $text;
+    border: tall $primary-lighten-2;
+    text-style: bold;
+}
+
+Button:hover {
+    background: $primary-lighten-1;
+    border: tall $accent;
+}
+
+Button:focus {
+    background: $primary-darken-1;
+    border: tall $accent;
+}
+
+Button.-disabled {
+    opacity: 50%;
+    text-style: dim;
+}
+
+Button.-primary {
+    background: $accent;
+    color: $text;
+    border: tall $accent-lighten-2;
+}
+
+Button.-success {
+    background: $success;
+    color: $text;
+    border: tall $success-lighten-2;
+}
+
+Button.-warning {
+    background: $warning;
+    color: $text;
+    border: tall $warning-lighten-2;
+}
+
+Button.-error {
+    background: $error;
+    color: $text;
+    border: tall $error-lighten-2;
+}
+
+/* Input Fields */
+Input {
+    background: $surface;
+    border: tall $primary;
+    padding: 0 1;
+    height: 3;
+}
+
+Input:focus {
+    border: tall $accent;
+    background: $surface-lighten-1;
+}
+
+Input.-invalid {
+    border: tall $error;
+}
+
+/* Select Dropdowns */
+Select {
+    background: $surface;
+    border: tall $primary;
+    height: 3;
+}
+
+Select:focus {
+    border: tall $accent;
+}
+
+/* Data Tables */
+DataTable {
+    background: $surface;
+    height: 100%;
+}
+
+DataTable > .datatable--header {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: $accent;
+    color: $text;
+}
+
+DataTable > .datatable--hover {
+    background: $primary-darken-1;
+}
+
+/* Static Text */
+Static {
+    background: transparent;
+}
+
+/* Labels */
+Label {
+    background: transparent;
+    content-align: left middle;
+}
+
+/* Progress Bars */
+ProgressBar {
+    background: $panel;
+    color: $accent;
+    height: 2;
+}
+
+ProgressBar > .bar--complete {
+    background: $success;
+}
+
+ProgressBar > .bar--bar {
+    background: $accent;
+}
+
+/* RichLog (for log viewer) */
+RichLog {
+    background: $surface;
+    border: solid $primary;
+    scrollbar-background: $panel;
+    scrollbar-color: $primary;
+}
+
+/* Collapsible */
+Collapsible {
+    background: $surface;
+    border: solid $primary-darken-2;
+    margin: 1 0;
+}
+
+Collapsible > CollapsibleTitle {
+    background: $panel;
+    color: $text;
+    text-style: bold;
+}
+
+Collapsible > CollapsibleTitle:hover {
+    background: $panel-lighten-1;
+}
+
+Collapsible.-collapsed > Contents {
+    display: none;
+}
+
+/* Vertical Scroll */
+VerticalScroll {
+    background: transparent;
+    scrollbar-background: $panel;
+    scrollbar-color: $primary;
+    scrollbar-color-hover: $accent;
+    scrollbar-size: 2;
+}
+
+/* Horizontal Layout */
+Horizontal {
+    height: auto;
+    background: transparent;
+}
+
+Vertical {
+    height: auto;
+    background: transparent;
+}
+
+/* Color Classes */
+.error {
+    color: $error;
+    text-style: bold;
+}
+
+.warning {
+    color: $warning;
+    text-style: bold;
+}
+
+.success {
+    color: $success;
+    text-style: bold;
+}
+
+.info {
+    color: $accent;
+}
+
+.muted {
+    color: $text-muted;
+}
+
+/* Section Styles */
+.section {
+    border: solid $primary;
+    padding: 1 2;
+    margin: 1 0;
+    background: $surface;
+}
+
+.section-title {
+    text-style: bold;
+    color: $accent;
+    background: transparent;
+}
+
+/* Form Styles */
+.form-field {
+    height: 3;
+    background: transparent;
+}
+
+.field-label {
+    background: transparent;
+    width: 30%;
+    padding: 0 1;
+    content-align: left middle;
+}
+
+.field-input {
+    width: 70%;
+}
+
+.field-error {
+    color: $error;
+    text-style: italic;
+    background: transparent;
+}
+
+.field-valid {
+    color: $success;
+    background: transparent;
+}
+
+/* Stage Indicators */
+.stage-pending {
+    color: $text-muted;
+    background: transparent;
+}
+
+.stage-active {
+    color: $accent;
+    text-style: bold;
+    background: transparent;
+}
+
+.stage-complete {
+    color: $success;
+    background: transparent;
+}
+
+.stage-error {
+    color: $error;
+    text-style: bold;
+    background: transparent;
+}
+
+/* Custom Widgets */
+#menu-container {
+    align: center middle;
+    background: $surface;
+}
+
+#log-display {
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+/* Tooltips and Notifications */
+Notification {
+    background: $panel;
+    border: tall $primary;
+    padding: 1 2;
+}
+
+Notification.-information {
+    background: $accent 80%;
+}
+
+Notification.-warning {
+    background: $warning 80%;
+}
+
+Notification.-error {
+    background: $error 80%;
+}
+
+/* Loading Indicators */
+LoadingIndicator {
+    background: transparent;
+    color: $accent;
+}
+
+/* Focus Styles */
+*:focus {
+    border: tall $accent;
+}
+
+/* Disabled State */
+*.-disabled {
+    opacity: 50%;
+}
+
+/* Dark Mode Overrides */
+App.-dark-mode {
+    background: #0d0d0d;
+}
+
+App.-dark-mode Screen {
+    background: #0d0d0d;
+}
+
+App.-dark-mode Container {
+    background: #1a1a1a;
+}
+
+App.-dark-mode Input {
+    background: #262626;
+}
+
+/* Responsive Design */
+@media (max-width: 80) {
+    .field-label {
+        width: 100%;
+    }
+
+    .field-input {
+        width: 100%;
+    }
+
+    #menu-container {
+        width: 90%;
+    }
+}
+
+/* Animations */
+Button:hover {
+    transition: background 200ms;
+}
+
+Input:focus {
+    transition: border 200ms, background 200ms;
+}
+
+/* Custom IDs */
+#deployment-title {
+    text-style: bold;
+    text-align: center;
+    color: $accent;
+    margin-bottom: 2;
+}
+
+#status-bar {
+    background: $panel;
+    border: solid $primary;
+    padding: 1;
+    height: 3;
+}
+
+#button-container {
+    height: 5;
+    align: center middle;
+}
+
+#validation-summary {
+    margin: 1 0;
+    padding: 1;
+    background: $panel;
+}

@@ -1,0 +1,105 @@
+---
+# Backup Storage Node Deployment Template
+#
+# This template creates a backup storage node with large disk capacity
+# for Restic backup targets across the cluster.
+#
+# Usage:
+#   - Deploy one backup node per location
+#   - Configure Restic to use these as backup targets
+#   - Connect via Tailscale for cross-location backups
+
+deployment:
+  type: backup
+  description: "Backup storage node with large disk capacity"
+
+# VM Configuration
+vm:
+  hostname: backup-brooklyn
+  vmid: 211
+  location: brooklyn
+
+# Network Configuration
+network:
+  ip: 192.168.86.211
+  gateway: 192.168.86.1
+  dns:
+    - 192.168.86.1
+    - 8.8.8.8
+  netmask: 24
+
+# Resource Allocation (minimal for backup node)
+resources:
+  cores: 2
+  memory_gb: 8
+  disk_gb: 100  # OS disk
+  storage_pool: local-lvm
+
+# Storage Configuration (large backup disk)
+storage:
+  longhorn:
+    enabled: false
+    size_gb: 0
+  backup:
+    enabled: true
+    size_gb: 4096  # 4TB backup storage
+    mount_path: /mnt/backup
+    filesystem: ext4
+
+# K3s Configuration (not joining cluster)
+k3s:
+  enabled: false
+  master_url: ""
+  token: ""
+
+# Tailscale Configuration (for cross-location access)
+tailscale:
+  auth_key: ""  # Fill in Tailscale auth key
+  accept_routes: true
+  advertise_exit_node: false
+  hostname: backup-brooklyn
+
+# SSH Configuration
+ssh:
+  user: ubuntu
+  public_key_path: ~/.ssh/homelab_rsa.pub
+  authorized_keys:
+    - ""  # Add additional keys if needed
+
+# Backup Configuration
+backup:
+  restic:
+    enabled: true
+    repository_path: /mnt/backup/restic
+    password_file: /root/.restic-password
+    retention:
+      daily: 7
+      weekly: 4
+      monthly: 6
+      yearly: 2
+  services:
+    - name: restic-rest-server
+      enabled: true
+      port: 8000
+      auth: true
+    - name: samba
+      enabled: false
+      share_name: backup
+    - name: nfs
+      enabled: false
+
+# Post-Deployment Tasks
+post_deployment:
+  update_packages: true
+  install_monitoring: true
+  configure_restic: true
+  verify_tailscale: true
+  configure_firewall: true
+  test_backup_disk: true
+
+# Tags and Metadata
+metadata:
+  deployed_by: tui
+  environment: production
+  purpose: backup-storage
+  notes: "Backup node for Restic snapshots and cross-location redundancy"

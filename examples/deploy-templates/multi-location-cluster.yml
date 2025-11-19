@@ -1,0 +1,300 @@
+---
+# Multi-Location Cluster Deployment Template
+#
+# This template defines a complete distributed K3s cluster deployment
+# across all 5 NYC locations, connected via Tailscale mesh VPN.
+#
+# Usage:
+#   - Use this as a reference for full cluster deployment
+#   - Deploy nodes sequentially or in parallel
+#   - Ensure Tailscale connectivity before K3s joins
+
+cluster:
+  name: kapnode-cluster
+  description: "Distributed K3s cluster across 5 NYC locations"
+  version: v1.28.3+k3s1
+  architecture: multi-location
+  vpn: tailscale
+
+# Locations
+locations:
+  - brooklyn:
+      network: 192.168.86.0/24
+      gateway: 192.168.86.1
+      dns: 192.168.86.1,8.8.8.8
+      description: "Primary location with Proxmox host (Kapmox)"
+
+  - manhattan:
+      network: 192.168.50.0/24
+      gateway: 192.168.50.1
+      dns: 192.168.50.1,8.8.8.8
+      description: "Secondary location"
+
+  - staten_island:
+      network: 192.168.70.0/24
+      gateway: 192.168.70.1
+      dns: 192.168.70.1,8.8.8.8
+      description: "Tertiary location"
+
+  - forest_hills:
+      network: 192.168.50.0/24
+      gateway: 192.168.50.1
+      dns: 192.168.50.1,8.8.8.8
+      description: "Location with K3s master"
+
+# Master Node (already deployed)
+master:
+  hostname: minikapserver
+  location: forest_hills
+  ip: 192.168.50.10
+  tailscale_ip: 100.64.1.10
+  vmid: 100
+  resources:
+    cores: 8
+    memory_gb: 32
+    disk_gb: 500
+
+# Worker Nodes (to be deployed)
+workers:
+  # Brooklyn Workers
+  - hostname: kapnode1
+    vmid: 201
+    location: brooklyn
+    ip: 192.168.86.201
+    resources:
+      cores: 4
+      memory_gb: 16
+      disk_gb: 200
+      longhorn_gb: 2048
+    labels:
+      - location=brooklyn
+      - zone=primary
+      - storage=longhorn
+
+  - hostname: kapnode2
+    vmid: 202
+    location: brooklyn
+    ip: 192.168.86.202
+    resources:
+      cores: 4
+      memory_gb: 16
+      disk_gb: 200
+      longhorn_gb: 2048
+    labels:
+      - location=brooklyn
+      - zone=primary
+      - storage=longhorn
+
+  # Manhattan Worker
+  - hostname: kapnode3
+    vmid: 203
+    location: manhattan
+    ip: 192.168.50.203
+    resources:
+      cores: 4
+      memory_gb: 16
+      disk_gb: 200
+      longhorn_gb: 2048
+    labels:
+      - location=manhattan
+      - zone=secondary
+      - storage=longhorn
+
+  # Staten Island Worker
+  - hostname: kapnode4
+    vmid: 204
+    location: staten_island
+    ip: 192.168.70.204
+    resources:
+      cores: 4
+      memory_gb: 16
+      disk_gb: 200
+      longhorn_gb: 2048
+    labels:
+      - location=staten_island
+      - zone=tertiary
+      - storage=longhorn
+
+  # Forest Hills Worker
+  - hostname: kapnode5
+    vmid: 205
+    location: forest_hills
+    ip: 192.168.50.205
+    resources:
+      cores: 4
+      memory_gb: 16
+      disk_gb: 200
+      longhorn_gb: 2048
+    labels:
+      - location=forest_hills
+      - zone=master-location
+      - storage=longhorn
+
+# Backup Nodes (one per location)
+backup_nodes:
+  - hostname: backup-brooklyn
+    vmid: 211
+    location: brooklyn
+    ip: 192.168.86.211
+    resources:
+      cores: 2
+      memory_gb: 8
+      disk_gb: 100
+      backup_gb: 4096
+
+  - hostname: backup-manhattan
+    vmid: 212
+    location: manhattan
+    ip: 192.168.50.212
+    resources:
+      cores: 2
+      memory_gb: 8
+      disk_gb: 100
+      backup_gb: 4096
+
+  - hostname: backup-staten
+    vmid: 213
+    location: staten_island
+    ip: 192.168.70.213
+    resources:
+      cores: 2
+      memory_gb: 8
+      disk_gb: 100
+      backup_gb: 4096
+
+  - hostname: backup-forest
+    vmid: 214
+    location: forest_hills
+    ip: 192.168.50.214
+    resources:
+      cores: 2
+      memory_gb: 8
+      disk_gb: 100
+      backup_gb: 4096
+
+# Deployment Strategy
+deployment:
+  strategy: rolling
+  order:
+    1. Deploy all backup nodes (parallel)
+    2. Deploy worker nodes (sequential by location)
+    3. Verify K3s cluster health
+    4. Configure Longhorn storage
+    5. Setup cross-location backups
+    6. Deploy test workload
+
+  parallel_deploys: 2
+  wait_between_nodes: 5m
+  verify_before_continue: true
+
+# K3s Configuration (shared)
+k3s_config:
+  master_url: https://minikapserver:6443
+  token: ""  # Fill in from master
+  version: v1.28.3+k3s1
+  extra_args:
+    - "--kubelet-arg=max-pods=200"
+    - "--node-label=cluster=kapnode"
+    - "--flannel-backend=wireguard-native"
+
+# Tailscale Configuration (shared)
+tailscale_config:
+  auth_key: "tskey-auth-kDUAQYw7oT11CNTRL-6GuU37A4AH8soSRSM7TKH8cBXw2NP6gCE"
+  accept_routes: true
+  advertise_exit_node: false
+  auto_update: true
+
+# Storage Configuration
+storage:
+  longhorn:
+    enabled: true
+    default_replicas: 2
+    replica_auto_balance: true
+    storage_minimal_available_percentage: 25
+    backup_target: "nfs://backup-brooklyn.tail-xxxxx.ts.net:/mnt/backup/longhorn"
+
+  local_path:
+    enabled: true
+    path: /opt/local-path-provisioner
+
+# Monitoring and Observability
+monitoring:
+  prometheus:
+    enabled: true
+    retention: 15d
+    resources:
+      requests:
+        cpu: 500m
+        memory: 2Gi
+
+  grafana:
+    enabled: true
+    ingress: true
+    hostname: grafana.kapnode.local
+
+  loki:
+    enabled: true
+    retention: 7d
+
+# Backup Strategy
+backup:
+  schedule: "0 */6 * * *"  # Every 6 hours
+  retention:
+    daily: 7
+    weekly: 4
+    monthly: 6
+    yearly: 2
+
+  targets:
+    - type: restic
+      location: backup-brooklyn
+      path: /mnt/backup/restic
+    - type: restic
+      location: backup-manhattan
+      path: /mnt/backup/restic
+    - type: b2
+      bucket: kapnode-backups
+      region: us-west-002
+
+# Network Policies
+network_policies:
+  default_deny: false
+  allow_cross_location: true
+  allow_tailscale: true
+  egress_whitelist:
+    - 0.0.0.0/0  # Allow all egress initially
+
+# Post-Deployment Validation
+validation:
+  steps:
+    - name: Verify all nodes joined
+      command: kubectl get nodes
+      expect: 6 nodes Ready
+
+    - name: Verify Tailscale connectivity
+      command: tailscale status
+      expect: All nodes online
+
+    - name: Verify Longhorn storage
+      command: kubectl get storageclass
+      expect: longhorn available
+
+    - name: Deploy test workload
+      manifest: examples/test-deployment.yaml
+      expect: Pods Running across locations
+
+    - name: Verify cross-location communication
+      command: kubectl exec -it test-pod -- ping other-location-pod
+      expect: Successful ping
+
+# Metadata
+metadata:
+  deployed_by: tui
+  deployment_date: "2025-11-19"
+  environment: production
+  version: 1.0.0
+  notes: |
+    Complete multi-location cluster deployment.
+    Includes 1 master, 5 workers, and 4 backup nodes.
+    Connected via Tailscale mesh VPN.
+    Local storage per node, no cross-location replication.

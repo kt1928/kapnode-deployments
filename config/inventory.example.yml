@@ -1,0 +1,169 @@
+---
+# Example Ansible Inventory for Kapnode Cluster
+# Copy this to ~/.homelab/inventory.yml and customize
+
+all:
+  children:
+    # Proxmox Hypervisor Hosts
+    proxmox_hosts:
+      hosts:
+        kapmox:
+          ansible_host: 192.168.86.100
+          ansible_user: root
+          location: brooklyn
+          ssh_key: ~/.ssh/homelab_rsa
+
+    # K3s Master Nodes
+    k3s_masters:
+      hosts:
+        minikapserver:
+          ansible_host: 100.64.1.10  # Tailscale IP
+          initial_ip: 192.168.50.10
+          location: forest_hills
+          vmid: 100
+          deployed: 2025-11-01T10:00:00Z
+          tailscale_name: minikapserver
+          node_type: k3s-master
+          resources:
+            cores: 8
+            ram_gb: 32
+            disk_gb: 500
+
+    # K3s Worker Nodes
+    k3s_workers:
+      hosts:
+        kapnode1:
+          ansible_host: 100.64.1.201  # Tailscale IP
+          initial_ip: 192.168.86.201
+          vmid: 201
+          location: brooklyn
+          deployed: 2025-11-15T10:30:00Z
+          tailscale_name: kapnode1
+          node_type: k3s-worker
+          resources:
+            cores: 4
+            ram_gb: 16
+            disk_gb: 200
+            longhorn_gb: 2048
+
+        kapnode2:
+          ansible_host: 100.64.1.202
+          initial_ip: 192.168.86.202
+          vmid: 202
+          location: brooklyn
+          deployed: 2025-11-15T11:00:00Z
+          tailscale_name: kapnode2
+          node_type: k3s-worker
+          resources:
+            cores: 4
+            ram_gb: 16
+            disk_gb: 200
+            longhorn_gb: 2048
+
+        kapnode3:
+          ansible_host: 100.64.1.203
+          initial_ip: 192.168.50.203
+          vmid: 203
+          location: manhattan
+          deployed: 2025-11-16T09:00:00Z
+          tailscale_name: kapnode3
+          node_type: k3s-worker
+          resources:
+            cores: 4
+            ram_gb: 16
+            disk_gb: 200
+            longhorn_gb: 2048
+
+        kapnode4:
+          ansible_host: 100.64.1.204
+          initial_ip: 192.168.70.204
+          vmid: 204
+          location: staten_island
+          deployed: 2025-11-16T14:00:00Z
+          tailscale_name: kapnode4
+          node_type: k3s-worker
+          resources:
+            cores: 4
+            ram_gb: 16
+            disk_gb: 200
+            longhorn_gb: 2048
+
+        kapnode5:
+          ansible_host: 100.64.1.205
+          initial_ip: 192.168.50.205
+          vmid: 205
+          location: forest_hills
+          deployed: 2025-11-17T10:00:00Z
+          tailscale_name: kapnode5
+          node_type: k3s-worker
+          resources:
+            cores: 4
+            ram_gb: 16
+            disk_gb: 200
+            longhorn_gb: 2048
+
+    # Backup Storage Nodes
+    backup_nodes:
+      hosts:
+        backup-brooklyn:
+          ansible_host: 100.64.1.211
+          initial_ip: 192.168.86.211
+          vmid: 211
+          location: brooklyn
+          deployed: 2025-11-18T10:00:00Z
+          tailscale_name: backup-brooklyn
+          node_type: backup
+          resources:
+            cores: 2
+            ram_gb: 8
+            disk_gb: 100
+            backup_gb: 4096
+
+        backup-manhattan:
+          ansible_host: 100.64.1.212
+          initial_ip: 192.168.50.212
+          vmid: 212
+          location: manhattan
+          deployed: 2025-11-18T11:00:00Z
+          tailscale_name: backup-manhattan
+          node_type: backup
+          resources:
+            cores: 2
+            ram_gb: 8
+            disk_gb: 100
+            backup_gb: 4096
+
+        backup-staten:
+          ansible_host: 100.64.1.213
+          initial_ip: 192.168.70.213
+          vmid: 213
+          location: staten_island
+          deployed: 2025-11-18T12:00:00Z
+          tailscale_name: backup-staten
+          node_type: backup
+          resources:
+            cores: 2
+            ram_gb: 8
+            disk_gb: 100
+            backup_gb: 4096
+
+        backup-forest:
+          ansible_host: 100.64.1.214
+          initial_ip: 192.168.50.214
+          vmid: 214
+          location: forest_hills
+          deployed: 2025-11-18T13:00:00Z
+          tailscale_name: backup-forest
+          node_type: backup
+          resources:
+            cores: 2
+            ram_gb: 8
+            disk_gb: 100
+            backup_gb: 4096
+
+  # Global variables (optional)
+  vars:
+    ansible_user: ubuntu
+    ansible_ssh_private_key_file: ~/.ssh/homelab_rsa
+    k3s_version: v1.28.3+k3s1
+    tailscale_network: 100.64.0.0/10
