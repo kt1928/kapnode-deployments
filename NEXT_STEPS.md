@@ -634,7 +634,7 @@ python -c "from tui.lib.inventory import load_inventory; print(load_inventory('~
 
 ## Notes
 
-- **Tailscale Auth Key**: Update placeholder `tskey-auth-XXXX` with real key: `tskey-auth-kDUAQYw7oT11CNTRL-6GuU37A4AH8soSRSM7TKH8cBXw2NP6gCE` (90-day expiration)
+- **Tailscale Auth Key**: Set via environment variable `TAILSCALE_AUTH_KEY` (never commit keys to version control)
 - **SSH Key**: Recommended to use dedicated `~/.ssh/homelab_rsa` for deployments
 - **Inventory Location**: `~/.homelab/inventory.yml` (Ansible-compatible)
 - **Config Location**: `~/.homelab-deploy.conf` (TUI-specific)

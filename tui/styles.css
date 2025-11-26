@@ -184,7 +184,7 @@ VerticalScroll {
     scrollbar-background: $panel;
     scrollbar-color: $primary;
     scrollbar-color-hover: $accent;
-    scrollbar-size: 2;
+    scrollbar-size: 2 2;
 }
 
 /* Horizontal Layout */
@@ -350,20 +350,8 @@ App.-dark-mode Input {
     background: #262626;
 }
 
-/* Responsive Design */
-@media (max-width: 80) {
-    .field-label {
-        width: 100%;
-    }
-
-    .field-input {
-        width: 100%;
-    }
-
-    #menu-container {
-        width: 90%;
-    }
-}
+/* Responsive Design - Note: Textual CSS doesn't support @media queries */
+/* These styles apply globally; responsive behavior handled in Python code */
 
 /* Animations */
 Button:hover {
